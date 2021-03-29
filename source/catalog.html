@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>HTML Academy: Погнали</title>
+</head>
+<body class="page__body">
+  <header class="page-header page-header--scroll">
+    <div class="page-header__wrapper">
+      <div class="page-header__box">
+        <a class="page-header__logo" href="index.html">
+          <img src="img/mobile/logo_mobile.png" alt="Логотип Погнали" width="96" height="15">
+        </a>
+        <button class="page-header__toggle" aria-label="Открыть меню" type="button">-</button>
+      </div>
+      <nav class="page-header__menu main-nav">
+        <ul class="main-nav__list menu-list">
+          <li class="menu-list__item">
+            <a href="">О сервисе</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="form.html">Направления</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="catalog.html">Попутчики</a>
+          </li>
+        </ul>
+        <div class="main-nav__list user-list">
+          <a class="button user-list__login" href="">Aвторизация</a>
+        </div>
+        <div class="main-nav__list extra-contacts">
+          <a class="extra-contacts__item extra-contacts__item--phone" href="tel:88005558628">8 800 555-86-28</a>
+          <a class="extra-contacts__item extra-contacts__item--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </div>
+        <ul class="main-nav__list header-social">
+          <li class="header-social__item">
+            <a href="header-social__link" aria-label="Facebook">
+              <svg class="header-social__link-icon" width="11" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.488 20.813H2.129v-9.675H0V6.352h2.066c-.157-2.168.236-3.75 1.195-4.83A4.879 4.879 0 014.896.397 5.078 5.078 0 016.867 0h3.756v4.612H7.669a4.7 4.7 0 00-.197 1.74h3.143v4.785H7.472l.016 9.675zm-4.172-1.125h2.97v-9.675h3.143V7.5H6.286v-.57c0-1.5 0-2.842.785-3.345l.15-.098h2.208V1.125h-2.53a3.821 3.821 0 00-1.497.284c-.472.194-.897.48-1.246.841-.785.922-1.107 2.468-.864 4.605l.079.622H1.179v2.535h2.137v9.675z" fill="#192144"/></svg>
+            </a>
+          </li>
+          <li class="header-social__item">
+            <a href="header-social__link" aria-label="Вконтакте">
+              <svg class="header-social__link-icon" width="31" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.946 15.777a4.05 4.05 0 01-2.08-.63 10.17 10.17 0 01-1.78-1.53c-.44-.44-1.17-1.18-1.45-1.18s-.48.92-.47 1.57a1.75 1.75 0 01-.47 1.21 2.26 2.26 0 01-1.22.5h-1.92a11.32 11.32 0 01-7.43-3c-3.68-3.37-6.84-9.81-6.97-10.09a1.34 1.34 0 01.15-1.48 2.07 2.07 0 011.36-.48h4.2c.338.05.661.169.95.35.272.183.49.435.63.73a22.09 22.09 0 001.48 2.67c1.31 2 1.89 2.46 2.1 2.56.234-.937.298-1.91.19-2.87a2.702 2.702 0 00-.21-1.28 1.33 1.33 0 00-.77-.29l-.73-.69c-.14-.66.59-1.23 1.1-1.45a8.69 8.69 0 013.15-.38h.71a9.11 9.11 0 012.15.2c1.7.36 1.64 1.73 1.57 3.31 0 .46-.05 1-.05 1.62v.48c-.04.436-.009.875.09 1.3a9.09 9.09 0 002.07-2.48 20.396 20.396 0 001.52-2.8 1.58 1.58 0 011.6-.95h4.28a2 2 0 01.38 0c1 0 1.59.29 1.83.85s.17 1.66-2.36 4.61l-1 1.13a7.34 7.34 0 00-1.24 1.59c.379.431.809.814 1.28 1.14 1.15.867 2.16 1.902 3 3.07a1.6 1.6 0 01.26 1.68 2.3 2.3 0 01-1.88 1l-3.79.05-.23-.04zm-5.31-4.84c.9 0 1.68.79 2.51 1.62.448.49.952.926 1.5 1.3a2.51 2.51 0 001.4.42h.1l3.8-.05c.188-.01.371-.058.54-.14l-.1-.16a13.221 13.221 0 00-2.68-2.72c-1.19-1-1.8-1.47-1.87-2.24-.07-.77.49-1.44 1.61-2.71l1-1.11a10.731 10.731 0 002.05-2.95 5.66 5.66 0 00-.67 0h-4.37a.55.55 0 00-.24 0 20.507 20.507 0 01-1.65 3.05c-1.89 2.82-2.78 3.2-3.41 3.2a1.19 1.19 0 01-.56-.14c-1-.57-1-1.84-.94-2.76v-.43c0-.65 0-1.21.05-1.69.08-1.68 0-1.69-.38-1.78a8.561 8.561 0 00-1.86-.16h-.69a13 13 0 00-1.9.1c.096.07.18.155.25.25.413.65.618 1.41.59 2.18.13 1.65.06 3.8-1 4.32a1.38 1.38 0 01-.6.13c-.93 0-1.85-.88-3.42-3.26a23.42 23.42 0 01-1.61-2.85l-.08-.1a1.21 1.21 0 00-.32-.11h-4.07c.59 1.22 3.39 6.62 6.52 9.45a10 10 0 006.42 2.63h1.85a.999.999 0 00.27-.1v-.09c0-.27 0-2.6 1.58-3 .122-.048.25-.081.38-.1z" fill="#192144"/></svg>
+            </a>
+          </li>
+          <li class="header-social__item">
+            <a href="header-social__link" aria-label="Instagram">
+              <svg class="header-social__link-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.28 2.4a4.33 4.33 0 014.32 4.32v10.56a4.33 4.33 0 01-4.32 4.32H6.72a4.33 4.33 0 01-4.31-4.32V6.72A4.33 4.33 0 016.72 2.4h10.56zm0-1.44H6.72A5.76 5.76 0 00.96 6.72v10.56a5.76 5.76 0 005.76 5.76h10.56a5.76 5.76 0 005.76-5.76V6.72A5.76 5.76 0 0017.28.96z" fill="#192144"/><path d="M12.01 7.756a4.253 4.253 0 11-4.254 4.253 4.244 4.244 0 014.253-4.253zm0-1.44a5.693 5.693 0 105.682 5.693 5.681 5.681 0 00-5.683-5.693zM17.904 7.413a1.286 1.286 0 100-2.573 1.286 1.286 0 000 2.573z" fill="#192144"/></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="page-header__contacts contacts-list">
+        <li class="contacts-list__item">
+          <a class="contacts-list__link" href="" aria-label="Позвонить">
+            <svg class="contacts-list__link-icon" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.905 8.257a.34.34 0 00.341.337.34.34 0 00.341-.337c0-1.894-1.556-3.433-3.471-3.433a.34.34 0 00-.342.338c0 .189.154.337.342.337 1.54 0 2.789 1.239 2.789 2.758zM9.115.7a.34.34 0 00-.34.337.34.34 0 00.34.338c3.841 0 6.965 3.088 6.965 6.882 0 .185.15.337.341.337a.34.34 0 00.342-.337C16.763 4.089 13.332.7 9.116.7zm3.336 11.114l-.447.24c-.755.408-1.342 1.527-2.273.684L7.301 10.3 5.2 8.257c-1.055-1.334.126-1.65.54-2.4l.242-.439c.273-.5.372-1.06.29-1.62a2.557 2.557 0 00-.744-1.475 2.636 2.636 0 00-1.868-.762c-.706 0-1.372.27-1.87.762l-.174.176c-.922.911-1.028 2.48-.3 4.424C2 8.78 3.383 10.791 5.2 12.587c2.769 2.737 5.851 4.313 8.063 4.313.874 0 1.615-.246 2.14-.766l.178-.176c.495-.489.772-1.144.775-1.85a2.636 2.636 0 00-.775-1.845 2.683 2.683 0 00-3.13-.45z" fill="#161C35"/></svg>
+          </a>
+        </li>
+        <li class="contacts-list__item">
+          <a class="contacts-list__link" href="" aria-label="Написать на почту">
+            <svg class="contacts-list__link-icon" width="17" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.017 2.325l6.75 4.23c.226.142.52.21.815.21.295 0 .589-.068.815-.21l6.75-4.23c.44-.276.856-1.35.049-1.35H.969c-.807 0-.392 1.074.048 1.35zm15.335 2.313L9.397 8.867c-.306.187-.52.209-.815.209-.295 0-.51-.022-.815-.21-.306-.186-6.42-3.925-6.92-4.229-.35-.214-.347.037-.347.23v7.658c0 .441.51 1.05.9 1.05h14.4c.39 0 .9-.609.9-1.05V4.868c0-.193.004-.444-.348-.23z" fill="#161C35"/></svg>
+          </a>
+        </li>
+        <li class="contacts-list__item">
+          <a class="contacts-list__item-link" href="">Авторизация</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="main-content">
+    <div class="main-content__title-inner title-inner">
+      <div class="title-inner__wrapper">
+        <h1 class="title-inner__heading">Попутчики</h1>
+      </div>
+    </div>
+    <section class="main-content__sort sort">
+      <div class="sort__wrapper">
+        <div class="sort__sort-box sort-box">
+          <h2 class="sort-box__title">Фильтрация по странам:</h2>
+          <button class="sort-box__toggle" type="button"><span>Показать все</span></button>
+        </div>
+        <div class="sort__countries-sort countries-sort">
+          <ul class="countries-sort__world-list world-list">
+            <li class="world-list__item world-list__item-current">Европа</li>
+            <li class="world-list__item">Азия</li>
+            <li class="world-list__item">Америка</li>
+            <li class="world-list__item">острова</li>
+          </ul>
+          <ol class="countries-sort__alphabet alphabet">
+            <li class="alphabet__item">
+              <a class="alphabet__link alphabet__link--current" href="">A</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Австралия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Австрия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Азербайджан</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Албания</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Алжир</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Ангола</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Андорра</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Антигуа и Барбуда</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Аргентина</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Армения</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Афганистан</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Б</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Багамские Острова</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Бангладеш</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Барбадос</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Бахрейн</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Белоруссия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Белиз</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Бельгия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Бенин</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Болгария</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Боливия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Босния и Герцеговина</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Ботсвана</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Бразилия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Бруней</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Буркина-Фасо</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Бурунди</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Бутан</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">В</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Вануату</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Великобритания</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Венгрия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Венесуэла</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Восточный Тимор</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Вьетнам</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Г</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Габон</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Гаити</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Гайана</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Гамбия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Гана</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Гватемала</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Гвинея</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Гвинея-Бисау</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Германия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Гондурас</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Гренада</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Греция</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Грузия</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Д</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Дания</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Джибути</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Доминика</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Доминикана</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Е</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Египет</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">З</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Замбия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Зимбабве</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">И</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Израиль</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Индия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Индонезия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Иордания</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Ирак</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Иран</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Ирландия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Исландия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Испания</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Италия</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">К</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Кабо-Верде</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Казахстан</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Камбоджа</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Камерун</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Канада</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Катар</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Кения</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Кипр</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Киргизия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Кирибати</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Китай</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Колумбия</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Л</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Лаос</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Казахстан</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Латвия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Лесото</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Либерия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Ливан</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Ливия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Литва</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Лихтенштейн</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Люксембург</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">М</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Маврикий</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Мавритания</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Мадагаскар</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Малави</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Малайзия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Мали</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Мальдивы</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Мальта</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Марокко</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Н</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Намибия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Науру</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Непал</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Нигер</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Нигерия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Нидерланды</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Никарагуа</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Новая Зеландия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Норвегия</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">О</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">ОАЭ</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Оман</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">П</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Пакистан</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Палау</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Панама</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Папуа-Новая Гвинея</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Парагвай</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Перу</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Польша</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Португалия</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Р</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Руанда</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Румыния</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Россия</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">С</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Сальвадор</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Самоа</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Сан-Марино</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Саудовская Аравия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Сейшелы</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Сенегал</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Сербия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Сингапур</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Сирия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Словакия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Словения</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">США</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Т</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Таджикистан</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Таиланд</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Танзания</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Того</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Тонга</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Тринидад и Тобаго</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Тувалу</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Тунис</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Туркмения</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Турция</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">У</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Уганда</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Узбекистан</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Украина</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Уругвай</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Ф</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Фиджи</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Филиппины</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Финляндия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Франция</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Х</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Хорватия</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Ч</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Чад</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Черногория</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Чехия</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Чили</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Ш</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Швейцария</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Швеция</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Шри-Ланка</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Э</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Эквадор</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Эритрея</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Эсватини</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Эстония</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Эфиопия</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Ю</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">ЮАР</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Южный Судан</a>
+                </li>
+              </ol>
+            </li>
+            <li class="alphabet__item">
+              <a class="alphabet__link" href="">Я</a>
+              <ol class="alphabet__countries-alphabet countries-alphabet">
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Ямайка</a>
+                </li>
+                <li class="countries-alphabet__item">
+                  <a class="countries-alphabet__link" href="">Япония</a>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <button class="countries-sort__close" type="button">Cвернуть</button>
+        </div>
+      </div>
+    </section>
+    <section class="main-content__filters filters">
+      <div class="filters__wrapper">
+        <h2 class="visually-hidden">Фильтры для подброра попутчиков</h2>
+        <p class="filters__title">Подберите идеального попутчика</p>
+        <form class="filters__ideal-traveler-list ideal-travelers-list" action="https://echo.htmlacademy.ru/" method="GET">
+          <fieldset class="ideal-travelers-list__item">
+            <legend class="ideal-travelers-list__title">Хобби<span>:</span></legend>
+            <ul class="ideal-travelers-list__filter-list filter-list">
+              <li class="filter-list__item">
+                <input class="visually-hidden" type="checkbox" name="sport" id="sport" checked>
+                <label class="filter-list__item-name" for="sport">Спортзал</label>
+              </li>
+              <li class="filter-list__item">
+                <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
+                <label class="filter-list__item-name" for="hookah">Кальян</label>
+              </li>
+              <li class="filter-list__item">
+                <input class="visually-hidden" type="checkbox" name="couch" id="couch">
+                <label class="filter-list__item-name" for="couch">Диван</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="ideal-travelers-list__item">
+            <legend class="ideal-travelers-list__title">Музыка<span>:</span></legend>
+            <ul class="ideal-travelers-list__filter-list filter-list">
+              <li class="filter-list__item">
+                <input class="visually-hidden" type="checkbox" name="rock" id="rock" checked>
+                <label class="filter-list__item-name" for="rock">Тяжелый рок</label>
+              </li>
+              <li class="filter-list__item">
+                <input class="visually-hidden" type="checkbox" name="rap" id="rap">
+                <label class="filter-list__item-name" for="rap">Русский рэп</label>
+              </li>
+              <li class="filter-list__item">
+                <input class="visually-hidden" type="checkbox" name="euro" id="euro">
+                <label class="filter-list__item-name" for="euro">Евроденс</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="ideal-travelers-list__item">
+            <legend class="ideal-travelers-list__title">Еда<span>:</span></legend>
+            <ul class="ideal-travelers-list__filter-list filter-list">
+              <li class="filter-list__item">
+                <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
+                <label class="filter-list__item-name" for="meat">Мясоед</label>
+              </li>
+              <li class="filter-list__item">
+                <input class="visually-hidden" type="checkbox" name="healthy" id="healthy">
+                <label class="filter-list__item-name" for="healthy">Сидит на ПП</label>
+              </li>
+              <li class="filter-list__item">
+                <input class="visually-hidden" type="checkbox" name="vegan" id="vegan">
+                <label class="filter-list__item-name" for="vegan">Веган-сыроед</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="ideal-travelers-list__item">
+            <legend class="ideal-travelers-list__title">Транспорт<span>:</span></legend>
+            <ul class="ideal-travelers-list__filter-list filter-list transport-list">
+              <li class="transport-list__item transport-list__item--checkbox">
+                <label class="transport-list__item-hint" for="plane"><span class="visually-hidden">Авиаперелет</span></label>
+                <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
+              </li>
+              <li class="transport-list__item transport-list__item--checkbox">
+                <label class="transport-list__item-hint" for="bus"><span class="visually-hidden">Автотранспорт</span></label>
+                <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
+              </li>
+              <li class="transport-list__item transport-list__item--checkbox">
+                <label class="transport-list__item-hint" for="bycicle"><span class="visually-hidden">Велосипед</span></label>
+                <input class="visually-hidden" type="checkbox" name="bycicle" id="bycicle">
+              </li>
+              <li class="transport-list__item transport-list__item--checkbox">
+                <label class="transport-list__item-hint" for="run"><span class="visually-hidden">Пешком</span></label>
+                <input class="visually-hidden" type="checkbox" name="run" id="run" checked>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="ideal-travelers-list__item">
+            <legend class="ideal-travelers-list__title">Левел<span>:</span></legend>
+            <ul class="ideal-travelers-list__filter-list filter-list">
+              <li class="filter-list__item filter-level">
+                <input class="filter-level__item" type="text" name="min_level" id="min_level" placeholder="30">
+                <label class="visually-hidden" for="min_level">Минимальный уровень</label>
+                <input class="filter-level__item" type="text" name="max_level" id="max_level" placeholder="100">
+                <label class="visually-hidden" for="max_level">Максимальный уровень</label>
+              </li>
+              <li class="filter-list__item range">
+                <div class="range__line"></div>
+                <div class="range__control" aria-label="Ползунок минимального значения" tabindex="0"></div>
+                <div class="range__control" aria-label="Ползунок максимального значения" tabindex="0"></div>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button-light ideal-travelers-list__button" type="submit">Показать</button>
+        </form>
+      </div>
+    </section>
+    <section class="main-content__ideal-traveler-cards ideal-traveler-cards">
+      <div class="ideal-traveler-cards__wrapper">
+        <h2 class="visually-hidden">Карточки попутчиков</h2>
+        <ul class="ideal-traveler-cards__cards-list cards-list">
+          <li class="cards-list__item">
+            <div class="cards-list__card-box card-title">
+              <a href="card-title__avatar-link">
+                <img class="card-title__avatar" src="img/mobile/avatar_tanya_firsova.jpg" alt="Аватар Татьяны Фирсовой" width="70" height="70">
+              </a>
+              <div class="card-title__likes likes">
+                <button class="likes__button likes__button--active" type="button" aria-label="Лайки"></button>
+                <span class="likes__number">1,5 М</span>
+              </div>
+              <p class="card-title__name"><a class="card-title__name-link traveler-name" href="">Таня Фирсова</a></p>
+              <p class="card-title__tags tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            </div>
+            <div class="cards-list__card-box dreamland">
+              <p class="dreamland__title">хочет посетить:</p>
+              <ul class="dreamland__list dreamland-list">
+                <li class="dreamland-list__item">
+                  <p class="dreamland__item-name">шри-ланка</p>
+                </li>
+                <li class="dreamland-list__item">
+                  <p class="dreamland__item-name">Таиланд</p>
+                </li>
+                <li class="dreamland-list__item">
+                  <p class="dreamland__item-name">сейшелы</p>
+                </li>
+              </ul>
+            </div>
+            <div class="cards-list__card-box transport-level">
+              <div class="transport-level__transport transport">
+                <p class="transport__title">транспорт:</p>
+                <ul class="transport__transport-list transport-list">
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Авиаперелет</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Автотранспорт</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Велосипед</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Пешком</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="transport-level__level level level--card">
+                <p class="level__title">левел:</p>
+                <p class="level__number">99 <span>level</span></p>
+              </div>
+            </div>
+            <a class="cards-list__add-button" href="">Позвать</a>
+          </li>
+          <li class="cards-list__item">
+            <div class="cards-list__card-box card-title">
+              <a href="card-title__avatar-link">
+                <img class="card-title__avatar" src="img/mobile/avatar_demin.jpg" alt="Аватар Пети Демина" width="70" height="70">
+              </a>
+              <div class="card-title__likes likes">
+                <button class="likes__button" type="button" aria-label="Лайки"></button>
+                <span class="likes__number">1500</span>
+              </div>
+              <p class="card-title__name"><a class="card-title__name-link traveler-name" href="">Петя
+                Демин</a></p>
+              <p class="card-title__tags tags">#бургер #бар #футбол #концерт #крафт</p>
+            </div>
+            <div class="cards-list__card-box dreamland">
+              <p class="dreamland__title">хочет посетить:</p>
+              <ul class="dreamland__list dreamland-list">
+                <li class="dreamland-list__item">
+                  <p class="dreamland__item-name">бельгия</p>
+                </li>
+                <li class="dreamland-list__item">
+                  <p class="dreamland__item-name">чехия</p>
+                </li>
+              </ul>
+            </div>
+            <div class="cards-list__card-box transport-level">
+              <div class="transport-level__transport transport">
+                <p class="transport__title">транспорт:</p>
+                <ul class="transport__transport-list transport-list">
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Авиаперелет</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Автотранспорт</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Велосипед</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Пешком</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="transport-level__level level level--card">
+                <p class="level__title">левел:</p>
+                <p class="level__number">80 <span>level</span></p>
+              </div>
+            </div>
+            <a class="cards-list__add-button" href="">Позвать</a>
+          </li>
+          <li class="cards-list__item">
+            <div class="cards-list__card-box card-title">
+              <a href="card-title__avatar-link">
+                <img class="card-title__avatar" src="img/mobile/avatar_smolov.jpg" alt="Аватар Марка Смолова" width="70" height="70">
+              </a>
+              <div class="card-title__likes likes">
+                <button class="likes__button" type="button" aria-label="Лайки"></button>
+                <span class="likes__number">170</span>
+              </div>
+              <p class="card-title__name"><a class="card-title__name-link traveler-name" href="">Марк
+                Смолов</a></p>
+              <p class="card-title__tags tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            </div>
+            <div class="cards-list__card-box dreamland">
+              <p class="dreamland__title">хочет посетить:</p>
+              <ul class="dreamland__list dreamland-list">
+                <li class="dreamland-list__item">
+                  <p class="dreamland__item-name">сша</p>
+                </li>
+                <li class="dreamland-list__item">
+                  <p class="dreamland__item-name">австралия</p>
+                </li>
+                <li class="dreamland-list__item">
+                  <p class="dreamland__item-name">Доминикана</p>
+                </li>
+              </ul>
+            </div>
+            <div class="cards-list__card-box transport-level">
+              <div class="transport-level__transport transport">
+                <p class="transport__title">транспорт:</p>
+                <ul class="transport__transport-list transport-list">
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Авиаперелет</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Автотранспорт</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Велосипед</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Пешком</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="transport-level__level level level--card">
+                <p class="level__title">левел:</p>
+                <p class="level__number">25 <span>level</span></p>
+              </div>
+            </div>
+            <a class="cards-list__add-button" href="">Позвать</a>
+          </li>
+          <li class="cards-list__item">
+            <div class="cards-list__card-box card-title">
+              <a href="card-title__avatar-link">
+                <img class="card-title__avatar" src="img/mobile/avatar_rogovaya.jpg" alt="Аватар Ларисы Роговой" width="70" height="70">
+              </a>
+              <div class="card-title__likes likes">
+                <button class="likes__button" type="button" aria-label="Лайки"></button>
+                <span class="likes__number">23</span>
+              </div>
+              <p class="card-title__name"><a class="card-title__name-link traveler-name" href="">Лариса
+                Роговая</a></p>
+              <p class="card-title__tags tags">#образование #карьера
+                #учеба #линкедин
+                </p>
+            </div>
+            <div class="cards-list__card-box dreamland">
+              <p class="dreamland__title">хочет посетить:</p>
+              <ul class="dreamland__list dreamland-list">
+                <li class="dreamland-list__item">
+                  <p class="dreamland__item-name">Великобритания</p>
+                </li>
+                <li class="dreamland-list__item">
+                  <p class="dreamland__item-name">Германия</p>
+                </li>
+              </ul>
+            </div>
+            <div class="cards-list__card-box transport-level">
+              <div class="transport-level__transport transport">
+                <p class="transport__title">транспорт:</p>
+                <ul class="transport__transport-list transport-list">
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Авиаперелет</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Автотранспорт</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Велосипед</p>
+                  </li>
+                  <li class="transport-list__item">
+                    <p class="transport-list__item-hint">Пешком</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="transport-level__level level level--card">
+                <p class="level__title">левел:</p>
+                <p class="level__number">50 <span>level</span></p>
+              </div>
+            </div>
+            <a class="cards-list__add-button" href="">Позвать</a>
+          </li>
+        </ul>
+        <button class="ideal-traveler-cards__add-item" type="button"><span>Показать еще</span></button>
+        <div class="ideal-traveler-cards__pages pages">
+          <ul class="pages__pages-number pages-number">
+            <li class="pages-number__item"><a class="pages-number__item-link pages-number__item-link--current" href="">1</a></li>
+            <li class="pages-number__item"><a class="pages-number__item-link" href="">2</a></li>
+            <li class="pages-number__item"><a class="pages-number__item-link" href="">3</a></li>
+            <li class="pages-number__item"><a class="pages-number__item-link" href="">4</a></li>
+          </ul>
+          <div class="pages__pages-controls pages-controls">
+            <a class="pages-controls__back pages-controls__back--disabled" href="" aria-label="Назад на страницу"></a>
+            <a class="pages-controls__next" href="" aria-label="Вперед на страницу"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo">
+        <img src="img/mobile/logo_mobile_dark.png" alt="Логотип Погнали" width="96" height="15">
+      </a>
+      <ul class="page-footer__social social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="" aria-label="Facebook">
+            <svg class="social-list__link-icon" width="11" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.488 20.813H2.129v-9.675H0V6.352h2.066c-.157-2.168.236-3.75 1.195-4.83A4.879 4.879 0 014.896.397 5.078 5.078 0 016.867 0h3.756v4.612H7.669a4.7 4.7 0 00-.197 1.74h3.143v4.785H7.472l.016 9.675zm-4.172-1.125h2.97v-9.675h3.143V7.5H6.286v-.57c0-1.5 0-2.842.785-3.345l.15-.098h2.208V1.125h-2.53a3.821 3.821 0 00-1.497.284c-.472.194-.897.48-1.246.841-.785.922-1.107 2.468-.864 4.605l.079.622H1.179v2.535h2.137v9.675z" fill="#192144"/></svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="" aria-label="Вконтакте">
+            <svg class="social-list__link-icon" width="31" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.946 15.777a4.05 4.05 0 01-2.08-.63 10.17 10.17 0 01-1.78-1.53c-.44-.44-1.17-1.18-1.45-1.18s-.48.92-.47 1.57a1.75 1.75 0 01-.47 1.21 2.26 2.26 0 01-1.22.5h-1.92a11.32 11.32 0 01-7.43-3c-3.68-3.37-6.84-9.81-6.97-10.09a1.34 1.34 0 01.15-1.48 2.07 2.07 0 011.36-.48h4.2c.338.05.661.169.95.35.272.183.49.435.63.73a22.09 22.09 0 001.48 2.67c1.31 2 1.89 2.46 2.1 2.56.234-.937.298-1.91.19-2.87a2.702 2.702 0 00-.21-1.28 1.33 1.33 0 00-.77-.29l-.73-.69c-.14-.66.59-1.23 1.1-1.45a8.69 8.69 0 013.15-.38h.71a9.11 9.11 0 012.15.2c1.7.36 1.64 1.73 1.57 3.31 0 .46-.05 1-.05 1.62v.48c-.04.436-.009.875.09 1.3a9.09 9.09 0 002.07-2.48 20.396 20.396 0 001.52-2.8 1.58 1.58 0 011.6-.95h4.28a2 2 0 01.38 0c1 0 1.59.29 1.83.85s.17 1.66-2.36 4.61l-1 1.13a7.34 7.34 0 00-1.24 1.59c.379.431.809.814 1.28 1.14 1.15.867 2.16 1.902 3 3.07a1.6 1.6 0 01.26 1.68 2.3 2.3 0 01-1.88 1l-3.79.05-.23-.04zm-5.31-4.84c.9 0 1.68.79 2.51 1.62.448.49.952.926 1.5 1.3a2.51 2.51 0 001.4.42h.1l3.8-.05c.188-.01.371-.058.54-.14l-.1-.16a13.221 13.221 0 00-2.68-2.72c-1.19-1-1.8-1.47-1.87-2.24-.07-.77.49-1.44 1.61-2.71l1-1.11a10.731 10.731 0 002.05-2.95 5.66 5.66 0 00-.67 0h-4.37a.55.55 0 00-.24 0 20.507 20.507 0 01-1.65 3.05c-1.89 2.82-2.78 3.2-3.41 3.2a1.19 1.19 0 01-.56-.14c-1-.57-1-1.84-.94-2.76v-.43c0-.65 0-1.21.05-1.69.08-1.68 0-1.69-.38-1.78a8.561 8.561 0 00-1.86-.16h-.69a13 13 0 00-1.9.1c.096.07.18.155.25.25.413.65.618 1.41.59 2.18.13 1.65.06 3.8-1 4.32a1.38 1.38 0 01-.6.13c-.93 0-1.85-.88-3.42-3.26a23.42 23.42 0 01-1.61-2.85l-.08-.1a1.21 1.21 0 00-.32-.11h-4.07c.59 1.22 3.39 6.62 6.52 9.45a10 10 0 006.42 2.63h1.85a.999.999 0 00.27-.1v-.09c0-.27 0-2.6 1.58-3 .122-.048.25-.081.38-.1z" fill="#192144"/></svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="" aria-label="Instagram">
+            <svg class="social-list__link-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.28 2.4a4.33 4.33 0 014.32 4.32v10.56a4.33 4.33 0 01-4.32 4.32H6.72a4.33 4.33 0 01-4.31-4.32V6.72A4.33 4.33 0 016.72 2.4h10.56zm0-1.44H6.72A5.76 5.76 0 00.96 6.72v10.56a5.76 5.76 0 005.76 5.76h10.56a5.76 5.76 0 005.76-5.76V6.72A5.76 5.76 0 0017.28.96z" fill="#192144"/><path d="M12.01 7.756a4.253 4.253 0 11-4.254 4.253 4.244 4.244 0 014.253-4.253zm0-1.44a5.693 5.693 0 105.682 5.693 5.681 5.681 0 00-5.683-5.693zM17.904 7.413a1.286 1.286 0 100-2.573 1.286 1.286 0 000 2.573z" fill="#192144"/></svg>
+          </a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link-text" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+        <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+          <svg class="copyright__link-icon" width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.643.101L13.5.086 0 1.464v24.102l13.5 7.823L27 25.566V1.464L13.643.101zM25.234 24.59l-11.734 6.8-11.734-6.8v-9.88l11.685 6.774.02 1.228-8.017-4.646-.011 1.2 8.046 4.71.02 1.26-8.045-4.66-.01 1.2 8.046 4.71 8.124-4.734v-5.103l3.62-2.105-.01 10.046zm0-11.327l-3.22 1.842-1.482.857-7.065-4.101-.011 1.2 6.04 3.5-.053.03-.13.074-.86.482-4.986-2.888-.011 1.2 3.936 2.28-.933.598-.021.012-2.971-1.706-.011 1.2 1.947 1.11-1.988 1.163-11.618-6.731 11.638-6.815 11.8 6.693zm0-1.2L13.44 5.288 1.766 12.055v-9.04l11.734-1.2 11.734 1.2v9.047z" fill="#192144"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
