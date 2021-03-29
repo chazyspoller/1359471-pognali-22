@@ -72,13 +72,13 @@
       </ul>
     </div>
   </header>
-  <main>
-    <div class="title-direction">
-      <div class="title-direction__wrapper">
-        <h1 class="title-direction__heading">Направления</h1>
+  <main class="main-content">
+    <div class="main-content__title-inner title-inner">
+      <div class="title-inner__wrapper">
+        <h1 class="title-inner__heading">Направления</h1>
       </div>
     </div>
-    <section class="profile">
+    <section class="main-content__profile profile">
       <div class="profile__wrapper">
         <h2 class="visually-hidden">Профиль</h2>
         <div class="profile__level level level--profile">
@@ -93,20 +93,20 @@
         </form>
         <form class="profile__content-field content-field">
           <h3 class="content-field__title">Транспорт</h3>
-          <ul class="profile__transport-list transport-list">
-            <li class="transport-list__item transport-list__item--profile">
+          <ul class="profile__transport-list transport-list transport-list-profile">
+            <li class="transport-list__item transport-list__item--checkbox">
               <label class="transport-list__item-hint" for="plane"><span class="visually-hidden">Авиаперелет</span></label>
               <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
             </li>
-            <li class="transport-list__item transport-list__item--profile">
+            <li class="transport-list__item transport-list__item--checkbox">
               <label class="transport-list__item-hint" for="bus"><span class="visually-hidden">Автотранспорт</span></label>
               <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
             </li>
-            <li class="transport-list__item transport-list__item--profile">
+            <li class="transport-list__item transport-list__item--checkbox">
               <label class="transport-list__item-hint" for="bycicle"><span class="visually-hidden">Велосипед</span></label>
               <input class="visually-hidden" type="checkbox" name="bycicle" id="bycicle">
             </li>
-            <li class="transport-list__item transport-list__item--profile">
+            <li class="transport-list__item transport-list__item--checkbox">
               <label class="transport-list__item-hint" for="run"><span class="visually-hidden">Пешком</span></label>
               <input class="visually-hidden" type="checkbox" name="run" id="run" checked>
             </li>
@@ -114,7 +114,7 @@
         </form>
       </div>
     </section>
-    <section class="plans">
+    <section class="main-content__plans plans">
       <div class="plans__wrapper">
         <h2 class="plans__title">Мои планы:</h2>
         <div class="plans__card card">
@@ -133,12 +133,12 @@
         </div>
       </div>
     </section>
-    <section class="plan-form">
+    <section class="main-content__plan-form plan-form">
       <div class="plan-form__wrapper">
         <h2 class="visually-hidden">План поездки</h2>
         <p class="plan-form__title">Добавить план:</p>
         <div class="plan-form__flags flags">
-          <p class="flags__marker flags__marker--active"><span class="flags__name">Даты</span></p>
+          <p class="flags__marker flags__marker--current"><span class="flags__name">Даты</span></p>
           <p class="flags__marker"><span class="flags__name">Маршрут</span></p>
           <p class="flags__marker"><span class="flags__name">Развлечения</span></p>
         </div>
@@ -353,82 +353,82 @@
                 <div class="tour-country__item tour-country-field form-field">
                   <p class="tour-country-field__name tour-country-field__name--active">Выберите страну</p>
                   <button class="tour-country-field__button tour-country-field__button--active" aria-label="Выбрать страну" type="button"></button>
-                  <div class="tour-country-field__countries-selection">
+                  <div class="tour-country-field__countries-selection countries-selection">
                     <ol class="countries-selection__alphabet alphabet">
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">A</a>
+                        <a class="alphabet__link alphabet__link--current" href="">A</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Б</a>
+                        <a class="alphabet__link" href="">Б</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">В</a>
+                        <a class="alphabet__link" href="">В</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Г</a>
+                        <a class="alphabet__link" href="">Г</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Д</a>
+                        <a class="alphabet__link" href="">Д</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Е</a>
+                        <a class="alphabet__link" href="">Е</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">З</a>
+                        <a class="alphabet__link" href="">З</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">И</a>
+                        <a class="alphabet__link" href="">И</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">К</a>
+                        <a class="alphabet__link" href="">К</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Л</a>
+                        <a class="alphabet__link" href="">Л</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">М</a>
+                        <a class="alphabet__link" href="">М</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Н</a>
+                        <a class="alphabet__link" href="">Н</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">О</a>
+                        <a class="alphabet__link" href="">О</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">П</a>
+                        <a class="alphabet__link" href="">П</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Р</a>
+                        <a class="alphabet__link" href="">Р</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">С</a>
+                        <a class="alphabet__link" href="">С</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Т</a>
+                        <a class="alphabet__link" href="">Т</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">У</a>
+                        <a class="alphabet__link" href="">У</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Ф</a>
+                        <a class="alphabet__link" href="">Ф</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Х</a>
+                        <a class="alphabet__link" href="">Х</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Ч</a>
+                        <a class="alphabet__link" href="">Ч</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Ш</a>
+                        <a class="alphabet__link" href="">Ш</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Э</a>
+                        <a class="alphabet__link" href="">Э</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Ю</a>
+                        <a class="alphabet__link" href="">Ю</a>
                       </li>
                       <li class="alphabet__item">
-                        <a class="alphabet__link alphabet__link--active" href="">Я</a>
+                        <a class="alphabet__link" href="">Я</a>
                       </li>
                     </ol>
                     <ol class="countries-selection__countries-alphabet countries-alphabet">
