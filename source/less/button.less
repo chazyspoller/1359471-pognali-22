@@ -1,0 +1,18 @@
+.button {
+  .fonts(2; 2; 700);
+  background-color: @basic-yellow;
+  border-radius: 10px;
+  color: @basic-blue-light;
+  border: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50% - 10px;
+    right: 34px;
+    width: 15px;
+    height: 15px;
+    background: url("../img/icons/polygon.svg") no-repeat 0 0;
+  }
+}

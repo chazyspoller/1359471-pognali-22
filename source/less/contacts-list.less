@@ -1,0 +1,27 @@
+.contacts-list {
+  .reset-margins;
+  display: flex;
+  justify-content: center;
+  .list-style-none;
+}
+
+.contacts-list__link {
+  display: block;
+  padding: 11px 12px 11px 12px;
+  color: @basic-blue;
+  .fonts(0; 0);
+
+  &--login {
+    .fonts(1; 4; 700);
+    padding: 10px 40px 10px 40px;
+    border-radius: 25px;
+  }
+
+  &--phone {
+    background-color: @basic-orange;
+  }
+
+  &--mail {
+    background-color: @special-yellow-dark;
+  }
+}
