@@ -1,0 +1,42 @@
+.plan-list {
+  .list-style-none;
+  .fonts(2; 2; 700);
+  color: @basic-blue;
+}
+
+.plan-list__item {
+  margin-top: -10px;
+  padding: 22px 90px 32px 24px;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+
+  &--1 {
+    background-color: @basic-orange;
+  }
+
+  &--2 {
+    background-color: @special-orange-light;
+  }
+
+  &--3 {
+    background-color: @special-yellow-dark;
+  }
+
+  &--4 {
+    background-color: @basic-yellow;
+  }
+}
+
+.plan-list__item:last-of-type {
+  border-radius: 10px;
+  padding-bottom: 22px;
+}
+
+.plan-list__item-icon {
+  position: absolute;
+  top: 22px;
+  right: 21px;
+  width: 10px;
+  height: 18px;
+  color: white;
+}

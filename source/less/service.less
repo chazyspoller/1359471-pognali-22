@@ -1,0 +1,35 @@
+.service {
+  background-color: @basic-blue-text;
+  background-image: url("../img/mobile/about_mobile.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  padding: 233px 50px 82px 50px;
+  border-radius: 0 0 30px 30px;
+}
+
+.service__wrapper {
+  .set-wrapper;
+}
+
+.service__title {
+  .reset-margins;
+  margin-bottom: 19px;
+}
+
+.service__text {
+  .reset-margins;
+  .text;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+
+.service__link {
+  display: block;
+  padding: 30px 32px 30px 32px;
+
+  &--hide {
+    display: none;
+  }
+}

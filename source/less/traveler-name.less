@@ -1,0 +1,20 @@
+.traveler-name__name {
+  .fonts(5; 5; 700);
+  color: @basic-blue-light;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50% - 10px;
+    left: -16px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @special-pink;
+  }
+
+  &--online::before {
+    background-color: @special-green;
+  }
+}
