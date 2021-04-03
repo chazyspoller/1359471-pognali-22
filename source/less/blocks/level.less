@@ -8,11 +8,18 @@
   background-color: rgb(@basic-black, 0.6);
 
   &--99 {
-    background-image: url("../img/mobile/level_99.svg");
+    background-image: url("../../img/mobile/level_99.svg");
   }
 
   &--80 {
-    background-image: url("../img/mobile/level_80.svg");
+    background-image: url("../../img/mobile/level_80.svg");
+  }
+
+  &--profile {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    background-image: url("../../img/mobile/level_profile.svg");
   }
 }
 
@@ -20,10 +27,20 @@
   .reset-margins;
   .fonts(8; 8; 700);
   margin: auto auto 0 auto;
+
+  &--profile {
+    .fonts(22; 22; 700);
+    color: @basic-blue;
+  }
 }
 
 .level__name {
   .reset-margins;
   .fonts(-2; -2; 400);
   margin: 0 auto auto auto;
+
+  &--profile {
+    .fonts(2; 2; 400);
+    color: @special-grey-dark;
+  }
 }

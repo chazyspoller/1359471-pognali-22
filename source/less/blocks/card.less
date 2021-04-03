@@ -1,0 +1,45 @@
+.card {
+  background-color: @basic-white;
+  border-radius: 11px;
+  padding: 23px;
+  .fonts(-2; -2; 500);
+  text-transform: uppercase;
+}
+
+.card__title {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card__number {
+  .reset-margins;
+  .fonts(0; 0; 700);
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+
+.card__countries {
+  .reset-margins;
+  margin-bottom: 20px;
+  .fonts(0; 0; 700);
+  text-transform: initial;
+}
+
+.card__trip-info {
+  .reset-margins;
+  letter-spacing: 0.06em;
+
+  &:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 24px;
+  }
+}
+
+.card__link {
+  .reset-margins;
+  letter-spacing: 0.03em;
+  color: rgb(@basic-black, 0.3);
+}

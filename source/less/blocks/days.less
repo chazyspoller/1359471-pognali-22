@@ -1,0 +1,34 @@
+.days {
+  .list-style-none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  text-align: center;
+}
+
+.days__item {
+  padding: 8px 9px 6px 9px;
+  .fonts(-2; 2; 500);
+  color: @basic-blue-light;
+  background-color: @basic-grey;
+  outline: 1px solid @special-border-grey;
+  box-sizing: border-box;
+
+  &--disabled {
+    background-color: @basic-white;
+    color: rgb(@special-grey-dark, 0.3);
+  }
+
+  &--choosen {
+    background-color: @basic-blue-light;
+    color: @basic-white;
+  }
+}
+
+.days__item-name {
+  .reset-margins;
+
+  &--hide {
+    display: none;
+  }
+}

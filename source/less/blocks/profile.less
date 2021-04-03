@@ -1,0 +1,33 @@
+.profile {
+  padding: 84px 0 94px 0;
+  background-color: @basic-grey;
+}
+
+.profile__wrapper {
+  .set-wrapper;
+}
+
+.profile__avatar {
+  border-radius: 50%;
+}
+
+.profile__button-avatar {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  background-color: @special-grey;
+  border: none;
+  .fonts(4; 2; 500);
+  .set-font;
+  color: @basic-blue;
+  text-transform: uppercase;
+  margin-bottom: 33px;
+}
+
+.profile__content-field {
+  .reset-margins;
+
+  &:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,19 @@
+.days-of-week {
+  .list-style-none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+
+  &--big {
+    display: none;
+  }
+}
+
+.days-of-week__item {
+  .fonts(-2; 2; 400);
+  color: @special-grey-dark;
+
+  &--weekend {
+    color: @special-weekend-color;
+  }
+}

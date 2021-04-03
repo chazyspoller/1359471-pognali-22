@@ -1,0 +1,78 @@
+.tour-list {
+  .list-style-none;
+}
+
+.tour-list__item {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.tour-list__field {
+  .fonts(-2; 2; 500);
+  text-transform: uppercase;
+  padding: 13px 10px;
+  border: 1px solid @special-border-grey;
+  border-radius: 4px;
+  position: relative;
+
+  &--flag {
+    left: -1px;
+  }
+
+  &--empty {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  &--add {
+    background-color: @basic-grey;
+    border: none;
+  }
+}
+
+.tour-list__name {
+  .reset-margins;
+}
+
+.tour-list__button {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 50% - 14px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+
+  &--more {
+    background-image: url("../../img/mobile/arrow_more.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--add::after {
+    content: "";
+    position: absolute;
+    top: 50% - 6px;
+    right: 0;
+    width: 14px;
+    height: 2px;
+    background-color: @add-button;
+  }
+
+  &--add::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 6px;
+    width: 2px;
+    height: 14px;
+    background-color: @add-button;
+  }
+}
+
+.tour-list__delete {
+  position: absolute;
+  right: 0;
+}

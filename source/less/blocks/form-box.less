@@ -1,0 +1,27 @@
+.form-box {
+  .fonts(0; 0; 500);
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: min-content min-content;
+  row-gap: 8px;
+  grid-template-areas:
+    "title unit"
+    "counter counter";
+}
+
+.form-box__title {
+  .reset-margins;
+  letter-spacing: 0.09em;
+}
+
+.form-box__unit {
+  .reset-margins;
+  letter-spacing: 0.07em;
+  opacity: 0.3;
+  text-align: right;
+}
+
+.form-box__counter {
+  grid-area: counter;
+}
