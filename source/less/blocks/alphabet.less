@@ -1,0 +1,30 @@
+.alphabet {
+  .list-style-none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.alphabet__item {
+  text-align: center;
+  box-sizing: content-box;
+  border: 1px solid @special-border-grey;
+  border-top: transparent;
+  border-right: 0;
+  .fonts(-2; 1; 500);
+
+  &:nth-of-type(5n + 1) {
+    border-left: 0;
+  }
+
+  &--current {
+    background-color: @basic-grey;
+    border: none;
+  }
+}
+
+.alphabet__link {
+  display: block;
+  padding: 12px 0;
+  color: @basic-blue-light;
+}

@@ -25,18 +25,17 @@ img {
   padding: 0;
 }
 
-.set-center() {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .set-wrapper(@left: 25px; @right: 25px) {
-  margin-left: @left;
-  margin-right: @right;
+  padding-left: @left;
+  padding-right: @right;
 }
 
 .list-style-none() {
   list-style: none;
+}
+
+.set-font {
+  font-family: "Blogger Sans", "Arial", sans-serif;
 }
 
 .fonts(@size-f: 0; @size-h: 0; @size-w: 400) {
@@ -51,4 +50,10 @@ img {
   &--bold {
     font-weight: 700;
   }
+}
+
+.section-transform(@position) {
+  margin-top: -60px;
+  position: relative;
+  z-index: @position;
 }

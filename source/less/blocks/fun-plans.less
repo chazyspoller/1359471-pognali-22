@@ -1,0 +1,22 @@
+.fun-plans__name {
+  display: block;
+  .fonts(2; 2; 500);
+  color: @basic-blue-light;
+  margin-bottom: 18px;
+}
+
+.fun-plans__plan {
+  border: 1px solid @special-border-grey;
+  border-radius: 4px;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  .set-font;
+  .fonts(0; 8; 400);
+  color: @special-grey-dark;
+
+  &::placeholder {
+    color: rgb(@special-grey-dark, 0.3);
+  }
+}
