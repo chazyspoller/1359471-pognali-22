@@ -1,0 +1,61 @@
+.ideal-traveler-item {
+  background-color: @basic-white;
+  padding: 15px 18px 23px 18px;
+  border-radius: 20px;
+  position: relative;
+  .fonts(-1; 3; 400);
+}
+
+.ideal-traveler-item__avatar-link {
+  width: 70px;
+  height: 70px;
+}
+
+.ideal-traveler-item__avatar {
+  border-radius: 50%;
+}
+
+.ideal-traveler-item__likes {
+  position: absolute;
+  top: 55px;
+  left: 68px;
+}
+
+.ideal-traveler-item__name {
+  .reset-margins;
+}
+
+.ideal-traveler-item__tags {
+  .reset-margins;
+}
+
+.ideal-traveler-item__title {
+  position: relative;
+  z-index: 2;
+  padding-left: 7px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: -18px;
+    right: -18px;
+    height: 1px;
+    background-color: @basic-grey;
+  }
+
+  span {
+    position: relative;
+    padding: 0 10px;
+    background-color: @basic-white;
+  }
+}
+
+.ideal-traveler-item__add-button {
+  display: block;
+  text-align: center;
+  .fonts(1; 1; 700);
+  padding: 13px;
+  text-transform: uppercase;
+}

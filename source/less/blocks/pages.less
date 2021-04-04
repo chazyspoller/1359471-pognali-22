@@ -1,0 +1,33 @@
+.pages {
+  background-color: @basic-white;
+  border-radius: 20px;
+}
+
+.pages__pages-number {
+  .list-style-none;
+  .reset-margins;
+  display: flex;
+
+  &--hide {
+    display: none;
+  }
+}
+
+.pages__pages-controls {
+  display: flex;
+}
+
+.pages__control {
+  display: block;
+  text-align: center;
+  width: 50%;
+  padding: 15px 0 10px 0;
+
+  &--back {
+    border-radius: 20px 0 0 20px;
+  }
+
+  &--next {
+    border-radius: 0 20px 20px 0;
+  }
+}
