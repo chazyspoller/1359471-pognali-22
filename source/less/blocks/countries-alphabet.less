@@ -1,6 +1,23 @@
 .countries-alphabet {
   .list-style-none;
   padding: 20px 19px;
+
+  &--sort {
+    position: absolute;
+    top: 219px;
+    padding: 0;
+    text-align: left;
+  }
+
+  &--hide {
+    display: none;
+  }
+}
+
+.countries-alphabet__item {
+  &:not(:last-of-type) {
+    margin-bottom: 4px;
+  }
 }
 
 .countries-alphabet__link {

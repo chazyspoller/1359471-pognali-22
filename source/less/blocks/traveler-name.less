@@ -1,6 +1,7 @@
 .traveler-name__name {
   .fonts(5; 5; 700);
   color: @basic-blue-light;
+
   position: relative;
 
   &::before {
@@ -16,5 +17,14 @@
 
   &--online::before {
     background-color: @special-green;
+  }
+
+  &--ideal {
+    .fonts(4; 4; 700);
+  }
+
+  &--ideal::before {
+    left: initial;
+    right: -60px;
   }
 }
