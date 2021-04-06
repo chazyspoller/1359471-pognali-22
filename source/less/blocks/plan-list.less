@@ -2,24 +2,75 @@
   .list-style-none;
   .fonts(2; 2; 700);
   color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    .fonts(8; 8; 700);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    .fonts(8; 8; 700);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .plan-list__item {
   margin-top: -10px;
-  padding: 22px 90px 32px 24px;
+  padding: 22px 0 32px 0;
   border-radius: 10px 10px 0 0;
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    padding: 32px 0 61px 0;
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 0 30px 0;
+    margin-top: 0;
+  }
+
   &--1 {
     background-color: @basic-orange;
+
+    @media (min-width: @tablet-width) {
+      border-radius: 20px 0 0 0;
+      margin-right: -20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      border-radius: 20px 0 0 20px;
+    }
   }
 
   &--2 {
     background-color: @special-orange-light;
+
+    @media (min-width: @tablet-width) {
+      border-radius: 20px 20px 0 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      border-radius: 20px 0 0 20px;
+      margin-right: -20px;
+    }
   }
 
   &--3 {
     background-color: @special-yellow-dark;
+
+    @media (min-width: @tablet-width) {
+      border-radius: 0 0 0 20px;
+      margin-right: -20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      border-radius: 20px 0 0 20px;
+    }
   }
 
   &--4 {
@@ -30,13 +81,49 @@
 .plan-list__item:last-of-type {
   border-radius: 10px;
   padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 0 0 20px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 20px;
+  }
+}
+
+.plan-list__item-name {
+  display: block;
+  padding: 0 90px 0 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 90px 0 32px;
+    max-width: 190px;
+  }
 }
 
 .plan-list__item-icon {
   position: absolute;
   top: 22px;
   right: 21px;
-  width: 10px;
-  height: 18px;
   color: white;
+
+  @media (min-width: @tablet-width) {
+    .fonts(14; 14; 700);
+    top: auto;
+    bottom: 21px;
+    left: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .fonts(14; 14; 700);
+    top: 28px;
+    left: auto;
+    right: 54px;
+  }
+
+  &--last {
+    @media (min-width: @desktop-width) {
+      right: 34px;
+    }
+  }
 }
