@@ -1,24 +1,43 @@
-.intro {
-  background-image: url("../img/mobile/traveller_illustration_mobile.png");
-  background-repeat: no-repeat;
-  background-position: 80px top;
-}
-
 .intro__wrapper {
   .set-wrapper;
 }
 
 .intro__title {
   .reset-margins;
-  padding: 0 16px;
+  padding: 0 16px 267px 16px;
+  background-image: url("../img/mobile/traveller_illustration_mobile.png");
+  background-repeat: no-repeat;
+  background-position: 55px bottom;
   .fonts(20; 24; 700);
+  text-align: center;
 }
 
 .intro__quote {
   .reset-margins;
-  margin-bottom: 29px;
+  .set-wrapper;
+  padding: 48px 25px 29px 25px;
+  background-color: @basic-blue;
+
+  cite {
+    display: block;
+  }
+}
+
+.intro__text {
+  .reset-margins;
+  .text;
+  padding: 0 84px 0 25px;
+
+  &--bold {
+    font-style: normal;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 18px;
+  }
 }
 
 .intro__plan {
   .reset-margins;
+  .set-wrapper;
 }

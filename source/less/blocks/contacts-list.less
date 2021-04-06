@@ -1,5 +1,7 @@
 .contacts-list {
-  .reset-margins;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   .list-style-none;
@@ -7,20 +9,43 @@
 
 .contacts-list__link {
   display: block;
-  padding: 11px 12px 11px 12px;
+  padding: 10px 11px;
   color: @basic-blue;
   .fonts(0; 0);
 
   &--login {
     .fonts(1; 4; 700);
     padding: 10px 40px 10px 40px;
+
+    @media (min-width: @tablet-width) {
+      .fonts(4; 4; 700);
+      padding: 15px 29px;
+    }
   }
 
   &--phone {
     background-color: @basic-orange;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+      padding: 16px 17px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 
   &--mail {
     background-color: @special-yellow-dark;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+      padding: 16px 17px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 }

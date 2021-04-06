@@ -2,6 +2,7 @@
 <html lang="ru" class="page">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -12,32 +13,30 @@
 <body class="page__body page__body--main-page">
   <header class="page-header page-header--scroll">
     <div class="page-header__wrapper">
-      <div class="page-header__header-box header-box">
-        <a class="header-box__logo">
-          <img src="img/mobile/logo_mobile.png" alt="Логотип Погнали" width="96" height="15">
-        </a>
-        <button class="header-box__toggle" aria-label="Открыть меню" type="button">-</button>
-      </div>
-      <nav class="page-header__menu main-nav">
-        <ul class="main-nav__list menu-list">
-          <li class="menu-list__item">
+      <a class="page-header__logo">
+        <img src="img/mobile/logo_mobile.png" alt="Логотип Погнали" width="96" height="15">
+      </a>
+      <button class="page-header__toggle" aria-label="Открыть меню" type="button">-</button>
+      <nav class="page-header__menu main-nav main-nav--hide">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
             <a href="">О сервисе</a>
           </li>
-          <li class="menu-list__item">
+          <li class="main-nav__item">
             <a href="form.html">Направления</a>
           </li>
-          <li class="menu-list__item">
+          <li class="main-nav__item">
             <a href="catalog.html">Попутчики</a>
           </li>
         </ul>
-        <div class="main-nav__login user-list">
-          <a class="button button--round user-list__login" href="">Aвторизация</a>
+        <div class="main-nav__login">
+          <a class="button button--round main-nav__user-list" href="">Aвторизация</a>
         </div>
-        <div class="main-nav__contacts extra-contacts">
+        <div class="main-nav__contacts extra-contacts extra-contacts--header">
           <a class="extra-contacts__item extra-contacts__item--phone" href="tel:88005558628">8 800 555-86-28</a>
           <a class="extra-contacts__item extra-contacts__item--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
-        <ul class="main-nav__social social-list">
+        <ul class="main-nav__social social-list social-list--header">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--header" href="" aria-label="Facebook">
               <svg class="social-list__link-icon" width="11" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.488 20.813H2.129v-9.675H0V6.352h2.066c-.157-2.168.236-3.75 1.195-4.83A4.879 4.879 0 014.896.397 5.078 5.078 0 016.867 0h3.756v4.612H7.669a4.7 4.7 0 00-.197 1.74h3.143v4.785H7.472l.016 9.675zm-4.172-1.125h2.97v-9.675h3.143V7.5H6.286v-.57c0-1.5 0-2.842.785-3.345l.15-.098h2.208V1.125h-2.53a3.821 3.821 0 00-1.497.284c-.472.194-.897.48-1.246.841-.785.922-1.107 2.468-.864 4.605l.079.622H1.179v2.535h2.137v9.675z" fill="#192144"/></svg>
@@ -77,18 +76,18 @@
     <section class="main-content__intro intro">
       <h2 class="visually-hidden">Знакомство с сервисом</h2>
       <div class="intro__wrapper">
-        <p class="intro__title">В путешествие с крутыми попутчиками!</p>
-        <blockquote class="intro__quote quote">
-          <p class="quote__text">«Лучшее приложение, что я видел в жизни!»</p>
-          <cite class="quote__text quote__text--bold">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
-        </blockquote>
-        <ol class="intro__plan plan-list">
-          <li class="plan-list__item plan-list__item--1">Выберите направление<span class="plan-list__item-icon">1</span></li>
-          <li class="plan-list__item plan-list__item--2">Изучите идеи путешественников<span class="plan-list__item-icon">2</span></li>
-          <li class="plan-list__item plan-list__item--3">Находите тех, кто похож на вас<span class="plan-list__item-icon">3</span></li>
-          <li class="plan-list__item plan-list__item--4">Путешествуйте вместе!<span class="plan-list__item-icon">4</span></li>
-        </ol>
+        <p class="intro__title">В&nbsp;путешествие<br> с&nbsp;крутыми<br> попутчиками!</p>
       </div>
+      <blockquote class="intro__quote">
+        <p class="intro__text">«Лучшее приложение, что я видел в жизни!»</p>
+        <cite class="intro__text intro__text--bold">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+      </blockquote>
+      <ol class="intro__plan plan-list">
+        <li class="plan-list__item plan-list__item--1">Выберите направление<span class="plan-list__item-icon">1</span></li>
+        <li class="plan-list__item plan-list__item--2">Изучите идеи путешественников<span class="plan-list__item-icon">2</span></li>
+        <li class="plan-list__item plan-list__item--3">Находите тех, кто похож на вас<span class="plan-list__item-icon">3</span></li>
+        <li class="plan-list__item plan-list__item--4">Путешествуйте вместе!<span class="plan-list__item-icon">4</span></li>
+      </ol>
     </section>
     <section class="main-content__service service">
       <div class="service__wrapper">

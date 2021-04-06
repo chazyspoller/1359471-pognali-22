@@ -3,6 +3,12 @@
   flex-direction: column;
   text-align: left;
   .fonts(0; 2; 700);
+
+  &--header {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
 }
 
 .extra-contacts__item:not(:last-of-type) {
