@@ -18,5 +18,13 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     //background-size: 100% 50%;
+
+    @media (min-width: @tablet-width) {
+      background-color: @special-inner-bg;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: @basic-blue;
+    }
   }
 }
