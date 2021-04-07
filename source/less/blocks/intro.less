@@ -1,4 +1,6 @@
 .intro {
+  .set-wrapper;
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 346px;
@@ -6,10 +8,6 @@
     border-radius: 0 0 60px 60px;
     padding-bottom: 123px;
   }
-}
-
-.intro__wrapper {
-  .set-wrapper;
 }
 
 .intro__title {
@@ -35,7 +33,10 @@
 .intro__quote {
   .reset-margins;
   .set-wrapper;
-  padding: 48px 25px 39px 25px;
+  padding-top: 48px;
+  padding-bottom: 39px;
+  margin-left: -25px;
+  margin-right: -25px;
   background-color: @basic-blue;
 
   cite {
@@ -87,5 +88,4 @@
 
 .intro__plan {
   .reset-margins;
-  .set-wrapper;
 }

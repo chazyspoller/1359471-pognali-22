@@ -57,8 +57,16 @@ img {
 .text() {
   font-weight: 300;
 
+  @media (min-width: @tablet-width) {
+    .fonts(12; 17; 300);
+  }
+
   &--bold {
     font-weight: 700;
+
+    @media (min-width: @tablet-width) {
+      .fonts(5; 9; 700);
+    }
   }
 }
 
