@@ -1,24 +1,61 @@
 .registration {
+  .set-wrapper;
   background-color: @basic-blue-text;
   border-radius: 0 0 30px 30px;
-  padding: 113px 0 44px 0;
+  padding-top: 60px;
   text-align: center;
   .fonts(0; 6; 300);
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 0 0 60px 60px;
+  }
 }
 
 .registration__wrapper {
-  .set-wrapper;
+  padding-top: 72px;
+  padding-bottom: 44px;
+
+  @media (min-width: @tablet-width) {
+    padding: 76px 36px 77px 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 109px 73px 132px 73px;
+  }
 }
 
 .registration__title {
   .reset-margins;
   margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .registration__text {
   .reset-margins;
+  .text;
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
+  }
+
+  &--question {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 77px;
+    }
+  }
 }
 
 .registration__link {
@@ -29,4 +66,68 @@
 .registration__mail {
   .reset-margins;
   margin-bottom: 29px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.registration__mail-field {
+  .set-font;
+  .fonts(2; 2; 700);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 70px 20px 25px;
+  background-color: @basic-white;
+  border: none;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 80px 26px 36px;
+    border-radius: 20px;
+    .fonts(8; 8; 700);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 27px 340px 26px 36px;
+  }
+}
+
+.registration__button {
+  padding: 30px 31px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 0 20px 20px 0;
+    padding: 40px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 29px 158px 28px 36px;
+  }
+
+  &::after {
+    right: 20px;
+
+    @media (min-width: @tablet-width) {
+      right: 30px;
+    }
+  }
+}
+
+.registration__button-name {
+  .set-font;
+  .fonts(8; 8; 700);
+
+  &--hide {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
