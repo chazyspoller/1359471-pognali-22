@@ -1,4 +1,13 @@
 .map {
-  height: 320px;
+  padding: 60px 0;
+  height: 262px;
   background-image: url("../img/mobile/background_map.png");
+
+  @media (min-width: @tablet-width) {
+    height: 464px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 396px;
+  }
 }
