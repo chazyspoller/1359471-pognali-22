@@ -16,6 +16,10 @@
     display: none;
   }
 
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+
   @media (min-width: @desktop-width) {
     position: static;
     display: block;
@@ -53,7 +57,7 @@
 }
 
 .main-nav__item {
-  &+.main-nav__item {
+  & + .main-nav__item {
     @media (min-width: @desktop-width) {
       margin-left: 34px;
     }
