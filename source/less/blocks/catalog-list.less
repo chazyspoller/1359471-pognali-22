@@ -1,5 +1,10 @@
 .catalog-list {
   .list-style-none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .catalog-list__item {
@@ -13,11 +18,21 @@
 
   &:not(:last-of-type) {
     margin-bottom: 9px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+      margin-right: 50px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 60px;
+    }
   }
 }
 
 .catalog-list__avatar {
   border-radius: 10px 10px 0 0;
+  width: 100%;
   object-fit: fill;
 }
 

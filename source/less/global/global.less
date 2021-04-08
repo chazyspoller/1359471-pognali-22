@@ -25,9 +25,19 @@ img {
   padding: 0;
 }
 
-.set-wrapper(@left: 25px; @right: 25px) {
-  padding-left: @left;
-  padding-right: @right;
+.set-wrapper() {
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .list-style-none() {
@@ -47,8 +57,16 @@ img {
 .text() {
   font-weight: 300;
 
+  @media (min-width: @tablet-width) {
+    .fonts(12; 17; 300);
+  }
+
   &--bold {
     font-weight: 700;
+
+    @media (min-width: @tablet-width) {
+      .fonts(5; 9; 700);
+    }
   }
 }
 

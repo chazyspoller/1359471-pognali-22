@@ -2,6 +2,7 @@
 <html lang="ru" class="page">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -12,32 +13,30 @@
 <body class="page__body page__body--main-page">
   <header class="page-header page-header--scroll">
     <div class="page-header__wrapper">
-      <div class="page-header__header-box header-box">
-        <a class="header-box__logo">
-          <img src="img/mobile/logo_mobile.png" alt="Логотип Погнали" width="96" height="15">
-        </a>
-        <button class="header-box__toggle" aria-label="Открыть меню" type="button">-</button>
-      </div>
-      <nav class="page-header__menu main-nav">
-        <ul class="main-nav__list menu-list">
-          <li class="menu-list__item">
+      <a class="page-header__logo">
+        <img src="img/mobile/logo_mobile.png" alt="Логотип Погнали" width="96" height="15">
+      </a>
+      <button class="page-header__toggle" aria-label="Открыть меню" type="button">-</button>
+      <nav class="page-header__menu main-nav main-nav--hide">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
             <a href="">О сервисе</a>
           </li>
-          <li class="menu-list__item">
+          <li class="main-nav__item">
             <a href="form.html">Направления</a>
           </li>
-          <li class="menu-list__item">
+          <li class="main-nav__item">
             <a href="catalog.html">Попутчики</a>
           </li>
         </ul>
-        <div class="main-nav__login user-list">
-          <a class="button button--round user-list__login" href="">Aвторизация</a>
+        <div class="main-nav__login">
+          <a class="button button--round main-nav__user-list" href="">Aвторизация</a>
         </div>
-        <div class="main-nav__contacts extra-contacts">
+        <div class="main-nav__contacts extra-contacts extra-contacts--header">
           <a class="extra-contacts__item extra-contacts__item--phone" href="tel:88005558628">8 800 555-86-28</a>
           <a class="extra-contacts__item extra-contacts__item--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
-        <ul class="main-nav__social social-list">
+        <ul class="main-nav__social social-list social-list--header">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--header" href="" aria-label="Facebook">
               <svg class="social-list__link-icon" width="11" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.488 20.813H2.129v-9.675H0V6.352h2.066c-.157-2.168.236-3.75 1.195-4.83A4.879 4.879 0 014.896.397 5.078 5.078 0 016.867 0h3.756v4.612H7.669a4.7 4.7 0 00-.197 1.74h3.143v4.785H7.472l.016 9.675zm-4.172-1.125h2.97v-9.675h3.143V7.5H6.286v-.57c0-1.5 0-2.842.785-3.345l.15-.098h2.208V1.125h-2.53a3.821 3.821 0 00-1.497.284c-.472.194-.897.48-1.246.841-.785.922-1.107 2.468-.864 4.605l.079.622H1.179v2.535h2.137v9.675z" fill="#192144"/></svg>
@@ -77,18 +76,30 @@
     <section class="main-content__intro intro">
       <h2 class="visually-hidden">Знакомство с сервисом</h2>
       <div class="intro__wrapper">
-        <p class="intro__title">В путешествие с крутыми попутчиками!</p>
-        <blockquote class="intro__quote quote">
-          <p class="quote__text">«Лучшее приложение, что я видел в жизни!»</p>
-          <cite class="quote__text quote__text--bold">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
-        </blockquote>
-        <ol class="intro__plan plan-list">
-          <li class="plan-list__item plan-list__item--1">Выберите направление<span class="plan-list__item-icon">1</span></li>
-          <li class="plan-list__item plan-list__item--2">Изучите идеи путешественников<span class="plan-list__item-icon">2</span></li>
-          <li class="plan-list__item plan-list__item--3">Находите тех, кто похож на вас<span class="plan-list__item-icon">3</span></li>
-          <li class="plan-list__item plan-list__item--4">Путешествуйте вместе!<span class="plan-list__item-icon">4</span></li>
-        </ol>
+        <p class="intro__title">В&nbsp;путешествие<br> с&nbsp;крутыми<br> попутчиками!</p>
       </div>
+      <blockquote class="intro__quote">
+        <p class="intro__text">«Лучшее приложение, что я видел в жизни!»</p>
+        <cite class="intro__text intro__text--bold">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+      </blockquote>
+      <ol class="intro__plan plan-list">
+        <li class="plan-list__item plan-list__item--1">
+          <span class="plan-list__item-name">Выберите направление</span>
+          <span class="plan-list__item-icon">1</span>
+        </li>
+        <li class="plan-list__item plan-list__item--2">
+          <span class="plan-list__item-name">Изучите идеи путешественников</span>
+          <span class="plan-list__item-icon">2</span>
+        </li>
+        <li class="plan-list__item plan-list__item--3">
+          <span class="plan-list__item-name">Находите тех, кто похож на вас</span>
+          <span class="plan-list__item-icon">3</span>
+        </li>
+        <li class="plan-list__item plan-list__item--4">
+          <span class="plan-list__item-name">Путешествуйте вместе!</span>
+          <span class="plan-list__item-icon plan-list__item-icon--last">4</span>
+        </li>
+      </ol>
     </section>
     <section class="main-content__service service">
       <div class="service__wrapper">
@@ -100,31 +111,33 @@
     </section>
     <section class="main-content__direction direction">
       <div class="direction__wrapper">
-        <h2 class="direction__title title-sections">Направления</h2>
-        <p class="direction__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        <div class="direction__intro">
+          <h2 class="direction__title title-sections">Направления</h2>
+          <p class="direction__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        </div>
         <ul class="direction__countries countries-list">
           <li class="countries-list__item countries-list__item--thailand">
             <img class="countries-list__image" src="img/mobile/thailand_mobile.jpg" alt="Остров Таиланда" width="270" height="110">
-            <div class="countries-list__info-country info-country">
-              <h3 class="info-country__title">Таиланд</h3>
-              <p class="info-country__text">Джунгли зовут!</p>
-              <p class="info-country__users">18321</p>
+            <div class="countries-list__info-country">
+              <h3 class="countries-list__title">Таиланд</h3>
+              <p class="countries-list__text">Джунгли зовут!</p>
+              <p class="countries-list__users">18321</p>
             </div>
           </li>
           <li class="countries-list__item countries-list__item--france">
             <img class="countries-list__image" src="img/mobile/france_mobile.jpg" alt="Улица в городе Франции" width="270" height="110">
-            <div class="countries-list__info-country info-country">
-              <h3 class="info-country__title">Франция</h3>
-              <p class="info-country__text">Трэ бьен, манифик!</p>
-              <p class="info-country__users">12518</p>
+            <div class="countries-list__info-country">
+              <h3 class="countries-list__title">Франция</h3>
+              <p class="countries-list__text">Трэ бьен, манифик!</p>
+              <p class="countries-list__users">12518</p>
             </div>
           </li>
           <li class="countries-list__item countries-list__item--czech">
             <img class="countries-list__image" src="img/mobile/czech_mobile.jpg" alt="Берег реки в городе Чехии" width="270" height="110">
-            <div class="countries-list__info-country info-country">
-              <h3 class="info-country__title">Чехия</h3>
-              <p class="info-country__text">Закоулки старой Европы</p>
-              <p class="info-country__users">5326</p>
+            <div class="countries-list__info-country">
+              <h3 class="countries-list__title">Чехия</h3>
+              <p class="countries-list__text">Закоулки старой Европы</p>
+              <p class="countries-list__users">5326</p>
             </div>
           </li>
         </ul>
@@ -133,9 +146,11 @@
     </section>
     <section class="main-content__travelers travelers">
       <div class="travelers__wrapper">
-        <h2 class="travelers__title title-sections">Попутчики</h2>
-        <p class="travelers__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="travelers__text travelers__text--bold">Теперь можно легко найти единомышленников!</p>
+        <div class="travelers__intro">
+          <h2 class="travelers__title title-sections">Попутчики</h2>
+          <p class="travelers__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <p class="travelers__text travelers__text--bold">Теперь можно легко найти единомышленников!</p>
+        </div>
         <ul class="travelers__catalog catalog-list">
           <li class="catalog-list__item">
             <img class="catalog-list__avatar" src="img/mobile/avatar_tanya_firsova.jpg" alt="Аватар Татьяны Фирсовой" width="270" height="270">
@@ -191,20 +206,29 @@
       <div class="prices__wrapper">
         <h2 class="visually-hidden">Тарифы</h2>
         <p class="prices__title title-sections">Добавьте свой профиль</p>
-        <dl class="prices__catalog prices-list">
-          <div class="prices-list__item">
-            <dt class="prices-list__name">Базовое размещение</dt>
-            <dd class="prices-list__cost">Бесплатно</dd>
-          </div>
-          <div class="prices-list__item">
-            <dt class="prices-list__name">Вывод на первых позициях</dt>
-            <dd class="prices-list__cost">99 руб./мес</dd>
-          </div>
-          <div class="prices-list__item">
-            <dt class="prices-list__name">Кастомный цвет карточки</dt>
-            <dd class="prices-list__cost">59 руб./мес</dd>
-          </div>
-        </dl>
+        <ul class="prices__catalog prices-list">
+          <li class="prices-list__item">
+            <div class="prices-list__box">
+              <p class="prices-list__name">Базовое размещение</p>
+              <p class="prices-list__cost">Бесплатно</p>
+            </div>
+            <span class="prices-list__number prices-list__number--1">1</span>
+          </li>
+          <li class="prices-list__item">
+            <div class="prices-list__box">
+              <p class="prices-list__name">Вывод на первых позициях</p>
+              <p class="prices-list__cost">99 руб./мес</p>
+            </div>
+            <span class="prices-list__number prices-list__number--2">2</span>
+          </li>
+          <li class="prices-list__item">
+            <div class="prices-list__box">
+              <p class="prices-list__name">Кастомный цвет карточки</p>
+              <p class="prices-list__cost">59 руб./мес</p>
+            </div>
+            <span class="prices-list__number prices-list__number--3">3</span>
+          </li>
+        </ul>
         <a class="prices__link" href="">Показать тарифы для бизнеса</a>
       </div>
       <div class="popup-business popup-business--hide">
@@ -237,13 +261,13 @@
         <h2 class="visually-hidden">Регистрация</h2>
         <p class="registration__title title-sections">Заинтересовались?</p>
         <p class="registration__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="registration__link" href="">авторизуйтесь</a>.</p>
-        <form class="registration__mail mail" action="#" method="POST">
+        <form class="registration__mail" action="#" method="POST">
           <label class="visually-hidden" for="submit-mail">E-mail</label>
-          <input class="mail__text" type="email" name="mail" id="submit-mail" placeholder="E-mail">
-          <button class="button mail__button" aria-label="Отправить" type="submit"><span class="mail__button-name mail__button-name--hide">Регистрация</span></button>
+          <input class="registration__mail-field" type="email" name="mail" id="submit-mail" placeholder="E-mail">
+          <button class="button registration__button" aria-label="Отправить" type="submit"><span class="registration__button-name registration__button-name--hide">Регистрация</span></button>
         </form>
-        <p class="registration__text">Остались вопросы? Мы с радостью на них ответим!</p>
-        <div class="registration__contacts extra-contacts">
+        <p class="registration__text registration__text--question">Остались вопросы? Мы с радостью на них ответим!</p>
+        <div class="registration__contacts extra-contacts extra-contacts--registration">
           <a class="extra-contacts__item extra-contacts__item--phone extra-contacts__item--registration" href="tel:88005558628">8 800 555-86-28</a>
           <a class="extra-contacts__item extra-contacts__item--mail extra-contacts__item--registration" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>

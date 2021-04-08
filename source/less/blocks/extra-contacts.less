@@ -3,15 +3,46 @@
   flex-direction: column;
   text-align: left;
   .fonts(0; 2; 700);
+
+  @media (min-width: @tablet-width) {
+    .fonts(12; 12; 700);
+  }
+
+  &--header {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--registration {
+    @media (min-width: @desktop-width) {
+      flex-direction: row;
+      padding-left: 228px;
+      padding-right: 228px;
+      justify-content: space-between;
+    }
+  }
 }
 
 .extra-contacts__item:not(:last-of-type) {
   margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .extra-contacts__item {
   padding-left: 61px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 90px;
+  }
 
   &::before {
     content: "";
@@ -22,6 +53,12 @@
     height: 45px;
     background-color: @special-contacts-bg;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      top: -20px;
+      width: 68px;
+      height: 68px;
+    }
   }
 
   &--phone::after {

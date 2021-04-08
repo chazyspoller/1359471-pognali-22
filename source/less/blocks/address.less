@@ -1,17 +1,65 @@
 .address {
+  .set-wrapper;
   background-color: @basic-yellow;
   border-radius: 0 0 30px 30px;
-  padding: 91px 0 35px 0;
+  padding-top: 60px;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 0 0 60px 60px;
+  }
 }
 
 .address__wrapper {
-  .set-wrapper;
+  padding: 33px 0 35px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 70px 35px 84px 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 87px 75px 87px 225px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .address__text {
+  .reset-margins;
+  margin-bottom: 32px;
   .fonts(0; 6; 700);
   color: @basic-blue-light;
   text-transform: uppercase;
+  padding-left: 61px;
+  padding-right: 66px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    .fonts(12; 12; 700);
+    padding-left: 94px;
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 121px;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url("../../img/icons/map_mark.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: 423px) {
+      top: 50%;
+      margin-top: -22px;
+    }
+  }
 }
 
 .address__button {
@@ -21,4 +69,12 @@
   text-align: left;
   border: 3px solid @basic-blue-text;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 324px;
+  }
 }

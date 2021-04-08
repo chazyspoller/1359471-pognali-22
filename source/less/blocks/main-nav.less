@@ -1,22 +1,86 @@
 .main-nav {
   background-color: @basic-white;
+  text-align: center;
+  position: absolute;
+  top: 53px;
   left: 0;
   right: 0;
-  text-align: center;
+  z-index: 11;
+  padding: 118px 25px 41px 25px;
 
   a {
     color: @basic-blue-text;
   }
-  padding: 118px 25px 41px 25px;
+
+  &--hide {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    display: block;
+    padding: 0;
+    background-color: transparent;
+  }
 }
 
 .main-nav__list {
   .reset-margins();
+  .fonts(14; 19; 500);
+  .list-style-none;
   margin-bottom: 51px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin-bottom: 0;
+    .fonts(4; 4; 500);
+    padding-left: 105px;
+    position: relative;
+  }
+
+  &::before {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+      width: 60px;
+      height: 2px;
+      background-color: @basic-white;
+    }
+  }
+}
+
+.main-nav__item {
+  & + .main-nav__item {
+    @media (min-width: @desktop-width) {
+      margin-left: 34px;
+    }
+  }
+
+  a {
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
+  }
 }
 
 .main-nav__login {
   margin-bottom: 66px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav__user-list {
+  .fonts(1; 14; 700);
+  padding: 15px 80px 15px 80px;
 }
 
 .main-nav__contacts {
