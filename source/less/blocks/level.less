@@ -31,6 +31,10 @@
   &--profile {
     .fonts(22; 22; 700);
     color: @basic-blue;
+
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
   }
 }
 
@@ -42,5 +46,9 @@
   &--profile {
     .fonts(2; 2; 400);
     color: @special-grey-dark;
+
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
   }
 }
