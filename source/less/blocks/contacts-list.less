@@ -5,6 +5,14 @@
   display: flex;
   justify-content: center;
   .list-style-none;
+
+  &--inner {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .contacts-list__link {
