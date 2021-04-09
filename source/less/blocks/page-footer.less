@@ -19,8 +19,11 @@
 
   @media (min-width: @tablet-width) {
     padding: 46px 0 32px 0;
-    display: flex;
-    justify-content: space-between;
+    //display: flex;
+    //justify-content: space-between;
+    //align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
   }
 
@@ -35,6 +38,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    margin-right: auto;
   }
 }
 
@@ -49,4 +53,8 @@
 
 .page-footer__copyright {
   .reset-margins;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
 }
