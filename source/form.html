@@ -150,34 +150,38 @@
           <p class="flags__marker"><span class="flags__name">Маршрут</span></p>
           <p class="flags__marker"><span class="flags__name">Развлечения</span></p>
         </div>
-        <form class="plan-form__steps-form steps-form" action="https://echo.htmlacademy.ru/" method="GET">
-          <div class="steps-form__step step">
-            <h3 class="step__title">Шаг 1. Даты пребывания</h3>
+        <form class="plan-form__steps-form" action="https://echo.htmlacademy.ru/" method="GET">
+          <div class="plan-form__step step">
+            <h3 class="step__title"><span class="step__title-number-step">Шаг 1.</span> Даты пребывания</h3>
             <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-            <div class="step__form-box form-box">
-              <label class="form-box__title" for="travelers">Ищу попутчиков:</label>
-              <p class="form-box__unit">чел.</p>
-              <div class="form-box__counter counter">
-                <button class="counter__minus" aria-label="Минус 1" type="button">-</button>
-                <input class="counter__item form-field" type="text" name="travelers" id="travelers" value="2">
-                <button class="counter__plus" aria-label="Плюс 1" type="button">+</button>
+            <div class="step__counter-info">
+              <div class="step__form-box form-box">
+                <label class="form-box__title" for="travelers">Ищу попутчиков:</label>
+                <p class="form-box__unit">чел.</p>
+                <div class="form-box__counter">
+                  <button class="form-box__button form-box__button--minus" aria-label="Минус 1" type="button"></button>
+                  <input class="form-box__item" type="text" name="travelers" id="travelers" value="2">
+                  <button class="form-box__button form-box__button--plus" aria-label="Плюс 1" type="button"></button>
+                </div>
+              </div>
+              <div class="step__form-box form-box">
+                <label class="form-box__title" for="days">Длительность:</label>
+                <p class="form-box__unit">дн.</p>
+                <div class="form-box__counter">
+                  <button class="form-box__button form-box__button--minus" aria-label="Минус 1" type="button"></button>
+                  <input class="form-box__item" type="text" name="days" id="days" value="3">
+                  <button class="form-box__button form-box__button--plus" aria-label="Плюс 1" type="button"></button>
+                </div>
+              </div>
+              <div class="step__question">
+                <input class="visually-hidden" type="checkbox" name="children" id="children" checked>
+                <label class="step__question-name" for="children">Можно с детьми</label>
               </div>
             </div>
-            <div class="step__form-box form-box">
-              <label class="form-box__title" for="days">Длительность:</label>
-              <p class="form-box__unit">дн.</p>
-              <div class="form-box__counter counter">
-                <button class="counter__minus" aria-label="Минус 1" type="button">-</button>
-                <input class="counter__item form-field" type="text" name="days" id="days" value="3">
-                <button class="counter__plus" aria-label="Плюс 1" type="button">+</button>
-              </div>
-            </div>
-            <input class="visually-hidden" type="checkbox" name="children" id="children" checked>
-            <label class="step__question" for="children">Можно с детьми</label>
-            <div class="step__scroll scroll">
-              <button class="scroll__back" aria-label="Назад" type="button"></button>
-              <p class="scroll__title">Март 2019</p>
-              <button class="scroll__next" aria-label="Вперед" type="button"></button>
+            <div class="step__scroll">
+              <button class="step__scroll-button step__scroll-button--back" aria-label="Назад" type="button"></button>
+              <p class="step__scroll-title">Март 2019</p>
+              <button class="step__scroll-button step__scroll-button--next" aria-label="Вперед" type="button"></button>
             </div>
             <div class="step__month month">
               <ul class="month__days-of-week days-of-week">
@@ -189,7 +193,7 @@
                 <li class="days-of-week__item days-of-week__item--weekend">С</li>
                 <li class="days-of-week__item days-of-week__item--weekend">В</li>
               </ul>
-              <ul class="month__days-of-week days-of-week--big">
+              <ul class="month__days-of-week days-of-week days-of-week--big">
                 <li class="days-of-week__item">Пн</li>
                 <li class="days-of-week__item">Вт</li>
                 <li class="days-of-week__item">Ср</li>
@@ -238,17 +242,17 @@
                 <li class="days__item">29</li>
                 <li class="days__item">30</li>
                 <li class="days__item">31</li>
-                <li class="days__item">1</li>
+                <li class="days__item">1 <span class="days__item-name days__item-name--hide days__item-name--month">апр</span></li>
                 <li class="days__item">2</li>
                 <li class="days__item">3</li>
                 <li class="days__item">4</li>
                 <li class="days__item">5</li>
               </ol>
             </div>
-            <a class="button button--round step__next" href="">Следующий шаг</a>
+            <a class="button button--round button--steps step__next step__next--first" href="">Следующий шаг</a>
           </div>
-          <div class="steps-form__step step">
-            <h3 class="step__title">Шаг 2. Маршрут</h3>
+          <div class="plan-form__step step">
+            <h3 class="step__title"><span class="step__title-number-step">Шаг 2.</span> Маршрут</h3>
             <p class="step__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
             <ul class="step__tour-list tour-list">
               <li class="tour-list__item">
@@ -397,11 +401,13 @@
                 </div>
               </li>
             </ul>
-            <a class="button button--round step__next" href="">Следующий шаг</a>
-            <a class="step__back" href="">На шаг назад</a>
+            <div class="step__buttons">
+              <a class="button button--round button--steps step__next" href="">Следующий шаг</a>
+              <a class="step__back" href="">На шаг назад</a>
+            </div>
           </div>
-          <div class="step-form_step step">
-            <h3 class="step__title">Шаг 3. Развлечения</h3>
+          <div class="plan-form_step step">
+            <h3 class="step__title"><span class="step__title-number-step">Шаг 3.</span> Развлечения</h3>
             <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
             <div class="step__fun-plans fun-plans">
               <label class="fun-plans__name" for="country-0">Босния и Герцеговина</label>
@@ -411,8 +417,10 @@
               <label class="fun-plans__name" for="country-1">Чехия</label>
               <textarea class="fun-plans__plan" name="plans" id="country-1" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
             </div>
-            <button class="button button--round step__button-submit" type="submit">Отправить</button>
-            <a class="step__back" href="">На шаг назад</a>
+            <div class="step__buttons">
+              <button class="button button--round button--steps step__button-submit" type="submit">Отправить</button>
+              <a class="step__back" href="">На шаг назад</a>
+            </div>
           </div>
         </form>
       </div>
