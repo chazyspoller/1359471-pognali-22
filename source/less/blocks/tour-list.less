@@ -4,36 +4,87 @@
 
 .tour-list__item {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 76% 24%;
   position: relative;
-  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 22px;
+  }
 }
 
 .tour-list__field {
   .fonts(-2; 2; 500);
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   padding: 13px 10px;
   border: 1px solid @special-border-grey;
+  box-sizing: border-box;
   border-radius: 4px;
   position: relative;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 33px;
+    padding: 25px 25px 23px 25px;
+    .fonts(4; 4; 500);
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
+  }
+
+  &:active ~ .countries-selection--hide {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(to right, rgba(@basic-white, 0) 0%, rgba(@basic-white, 0) 20%, @basic-white 50%, @basic-white 100%);
+  }
 
   &--flag {
     left: -1px;
+
+    @media (min-width: @tablet-width) {
+      border: none;
+      padding: 0;
+    }
   }
 
   &--empty {
     grid-column-start: 1;
     grid-column-end: -1;
+
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      }
   }
 
   &--add {
     background-color: @basic-grey;
     border: none;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
 .tour-list__name {
   .reset-margins;
+  margin-right: -50px;
 }
 
 .tour-list__button {
@@ -44,6 +95,7 @@
   right: 15px;
   background-color: transparent;
   border: none;
+  z-index: 3;
 
   &--more {
     background-image: url("../../img/mobile/arrow_more.svg");
@@ -74,5 +126,38 @@
 
 .tour-list__delete {
   position: absolute;
-  right: 0;
+  top: -10px;
+  right: -9px;
+  width: 21px;
+  height: 21px;
+  background-color: @basic-grey;
+  border: none;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 50%;
+    right: 0;
+    margin-top: -11px;
+    background-color: transparent;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    margin-left: -5.5px;
+    width: 11px;
+    height: 1px;
+    background-color: @delete-button;
+    border-radius: 25px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }

@@ -1,26 +1,28 @@
 .countries-alphabet {
   .list-style-none;
   padding: 20px 19px;
+  text-align: left;
 
-  &--sort {
-    position: absolute;
-    top: 219px;
-    padding: 0;
-    text-align: left;
-  }
-
-  &--hide {
-    display: none;
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 25px;
   }
 }
 
 .countries-alphabet__item {
   &:not(:last-of-type) {
     margin-bottom: 4px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 10px;
+    }
   }
 }
 
 .countries-alphabet__link {
   .fonts(0; 6; 400);
   color: @special-grey-dark;
+
+  @media (min-width: @tablet-width) {
+    .fonts(4; 4; 400);
+  }
 }
