@@ -199,6 +199,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 5px;
   }
 }
 
@@ -257,16 +262,6 @@
   }
 }
 
-.step__button-submit {
-  width: 100%;
-  .set-font;
-  .fonts(1; 14; 700);
-  text-transform: uppercase;
-  text-align: center;
-  padding: 8px;
-  margin-bottom: 13px;
-}
-
 .step__tour-list {
   .reset-margins;
   margin-bottom: 25px;
@@ -281,5 +276,38 @@
 }
 
 .step__fun-plans {
-  margin-bottom: 22px;
+  margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
+  }
+}
+
+.step__button-submit {
+  width: 100%;
+  .set-font;
+  .fonts(1; 14; 700);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 8px;
+  margin-top: -5px;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    .fonts(8; 8; 700);
+    text-transform: initial;
+    padding: 28px 0 28px 34px;
+    width: 47%;
+    text-align: left;
+    border-radius: 20px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 28.5%;
+  }
 }
