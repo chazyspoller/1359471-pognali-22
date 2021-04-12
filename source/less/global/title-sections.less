@@ -2,11 +2,15 @@
   .fonts(8; 8; 700);
   color: @basic-orange;
 
-  &--form {
-    color: @basic-blue-light;
-  }
-
   @media (min-width: @tablet-width) {
     .fonts(29; 29; 700);
+  }
+
+  &--form {
+    color: @basic-blue-light;
+
+    @media (min-width: @tablet-width) {
+      .fonts(20; 20; 700);
+    }
   }
 }

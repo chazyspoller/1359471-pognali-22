@@ -7,12 +7,28 @@
 }
 
 .days__item {
-  padding: 8px 9px 6px 9px;
+  padding: 6px 7px;
   .fonts(-2; 2; 500);
   color: @basic-blue-light;
   background-color: @basic-grey;
-  outline: 1px solid @special-border-grey;
+  border: 1px solid @special-border-grey;
+  border-left: 0;
+  margin-bottom: -1px;
   box-sizing: border-box;
+
+  &:nth-of-type(7n + 1) {
+    border-left: 1px solid @special-border-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 25px;
+    .fonts(2; 2; 400);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 13px 16px;
+    text-align: left;
+  }
 
   &--disabled {
     background-color: @basic-white;
@@ -27,8 +43,21 @@
 
 .days__item-name {
   .reset-margins;
+  margin-top: 9px;
 
   &--hide {
     display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &--month {
+    margin: 0;
+
+    @media (min-width: @desktop-width) {
+      display: inline-block;
+    }
   }
 }

@@ -1,7 +1,13 @@
 .intro {
   .set-wrapper;
+  padding-top: 41px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 29px;
+  }
 
   @media (min-width: @desktop-width) {
+    padding-top: 0;
     display: grid;
     grid-template-columns: 1fr 346px;
     background-color: @basic-blue;
@@ -45,7 +51,7 @@
 
   @media (min-width: @tablet-width) {
     background-color: transparent;
-    padding: 0 350px 0 32px;
+    padding: 0 45% 0 32px;
     margin-bottom: 211px;
   }
 

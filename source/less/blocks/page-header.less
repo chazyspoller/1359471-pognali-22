@@ -1,10 +1,5 @@
 .page-header {
   padding: 19px 0;
-  margin-bottom: 35px;
-
-  &--inner {
-    background-color: @special-inner-bg;
-  }
 
   a {
     text-transform: uppercase;
@@ -12,14 +7,20 @@
 
   @media (min-width: @tablet-width) {
     padding: 40px 0;
-    margin-bottom: 32px;
     background-color: @special-inner-bg;
   }
 
   @media (min-width: @desktop-width) {
     padding: 46px 0 0 0;
-    margin-bottom: 0;
     background-color: @basic-blue;
+  }
+
+  &--inner {
+    background-color: @special-inner-bg;
+
+    @media (min-width: @desktop-width) {
+      background-color: @special-inner-bg;
+    }
   }
 }
 

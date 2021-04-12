@@ -16,7 +16,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 50% - 10px;
+    top: 50%;
+    margin-top: -7px;
     right: 22px;
     width: 15px;
     height: 15px;
@@ -29,5 +30,11 @@
 
   &--round::after {
     display: none;
+  }
+
+  &--steps::after {
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
   }
 }

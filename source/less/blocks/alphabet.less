@@ -1,27 +1,54 @@
 .alphabet {
-  .reset-margins;
   .list-style-none;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
+  position: relative;
 
-  &--sort {
-    padding-bottom: 284px;
-    position: relative;
+  @media (min-width: @tablet-width) {
+    width: 49%;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 16px;
+    row-gap: 14px;
   }
 }
 
 .alphabet__item {
   text-align: center;
-  box-sizing: border-box;
+  box-sizing: content-box;
   background-color: @basic-white;
   border: 1px solid @special-border-grey;
+  border-right-color: transparent;
   .fonts(-2; 1; 500);
-  margin-left: -1px;
   margin-top: -1px;
+  margin-left: -1px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    .fonts(4; 4; 500);
+  }
+
+  @media (min-width: @desktop-width) {
+    border: 1px solid @special-border-grey;
+    border-radius: 4px;
+  }
+
+  //&:hover {
+  //  position: relative;
+  //  border: 1px solid red;
+  //  z-index: 2;
+  //}
 
   &--current {
     background-color: @basic-grey;
+    border-bottom: 0;
+
+    @media (min-width: @desktop-width) {
+      border-bottom: 1px solid @special-border-grey;
+    }
   }
 
   &--current-sort {
@@ -30,12 +57,25 @@
     background-color: @basic-blue-light;
     border: 1px solid @basic-blue-light;
   }
+
+  &:nth-child(5n) {
+    margin-right: -1px;
+    border-right: 1px solid @special-border-grey;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
+  }
 }
 
 .alphabet__link {
   display: block;
   padding: 12px 0;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 0;
+  }
 
   &--current-sort {
     color: @basic-white;

@@ -4,14 +4,34 @@
   grid-template-columns: repeat(7, 1fr);
   text-align: center;
 
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
   &--big {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+    }
+
+    @media (min-width: @desktop-width) {
+      text-align: left;
+    }
   }
 }
 
 .days-of-week__item {
   .fonts(-2; 2; 400);
   color: @special-grey-dark;
+
+  @media (min-width: @tablet-width) {
+    .fonts(2; 2; 400);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 16px;
+  }
 
   &--weekend {
     color: @special-weekend-color;
