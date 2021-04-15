@@ -7,10 +7,10 @@
 }
 
 .days__item {
-  padding: 6px 7px;
-  .fonts(-2; 2; 500);
-  color: @basic-blue-light;
-  background-color: @basic-grey;
+  //padding: 6px 7px;
+  //.fonts(-2; 2; 500);
+  //color: @basic-blue-light;
+  //background-color: @basic-grey;
   border: 1px solid @special-border-grey;
   border-left: 0;
   margin-bottom: -1px;
@@ -19,6 +19,17 @@
   &:nth-of-type(7n + 1) {
     border-left: 1px solid @special-border-grey;
   }
+}
+
+.days__item-button {
+  padding: 6px 7px;
+  width: 100%;
+  height: 100%;
+  .set-font;
+  .fonts(-2; 2; 500);
+  color: @basic-blue-light;
+  background-color: @basic-grey;
+  border: none;
 
   @media (min-width: @tablet-width) {
     padding: 25px;
@@ -28,9 +39,12 @@
   @media (min-width: @desktop-width) {
     padding: 13px 16px;
     text-align: left;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
-  &--disabled {
+  &:disabled {
     background-color: @basic-white;
     color: rgb(@special-grey-dark, 0.3);
   }
@@ -38,6 +52,12 @@
   &--choosen {
     background-color: @basic-blue-light;
     color: @basic-white;
+  }
+
+  &--new-month {
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 }
 
