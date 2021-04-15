@@ -6,6 +6,24 @@
   @media (min-width: @tablet-width) {
     padding: 0 0 0 25px;
   }
+
+  &--hide {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &--sort {
+    padding: 20px 0 0 0;
+    width: max-content;
+    height: max-content;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
+  }
 }
 
 .countries-alphabet__item {
