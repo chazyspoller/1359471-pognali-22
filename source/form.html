@@ -151,7 +151,7 @@
           <p class="flags__marker"><span class="flags__name">Развлечения</span></p>
         </div>
         <form class="plan-form__steps-form" action="https://echo.htmlacademy.ru/" method="GET">
-          <div class="plan-form__step step">
+          <div class="plan-form__step step"  id="first-step">
             <h3 class="step__title"><span class="step__title-number-step">Шаг 1.</span> Даты пребывания</h3>
             <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
             <div class="step__counter-info">
@@ -249,9 +249,9 @@
                 <li class="days__item">5</li>
               </ol>
             </div>
-            <a class="button button--round button--steps step__next step__next--first" href="">Следующий шаг</a>
+            <a class="button button--round button--steps step__next step__next--first" href="#second-step">Следующий шаг</a>
           </div>
-          <div class="plan-form__step step">
+          <div class="plan-form__step step" id="second-step">
             <h3 class="step__title"><span class="step__title-number-step">Шаг 2.</span> Маршрут</h3>
             <p class="step__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
             <ul class="step__tour-list tour-list">
@@ -404,11 +404,11 @@
               </li>
             </ul>
             <div class="step__buttons">
-              <a class="button button--round button--steps step__next" href="">Следующий шаг</a>
-              <a class="step__back" href="">На шаг назад</a>
+              <a class="button button--round button--steps step__next" href="#third-step">Следующий шаг</a>
+              <a class="step__back" href="#first-step">На шаг назад</a>
             </div>
           </div>
-          <div class="plan-form_step step">
+          <div class="plan-form_step step" id="third-step">
             <h3 class="step__title"><span class="step__title-number-step">Шаг 3.</span> Развлечения</h3>
             <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
             <div class="step__fun-plans fun-plans">
@@ -421,7 +421,7 @@
             </div>
             <div class="step__buttons">
               <button class="button button--round button--steps step__button-submit" type="submit">Отправить</button>
-              <a class="step__back" href="">На шаг назад</a>
+              <a class="step__back" href="#second-step">На шаг назад</a>
             </div>
           </div>
         </form>
