@@ -33,6 +33,9 @@
 
 .title-inner__wrapper {
   padding: 37px 0 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     padding: 89px 35px 70px 35px;
@@ -49,5 +52,21 @@
 
   @media (min-width: @tablet-width) {
     .fonts(44; 44; 700);
+  }
+}
+
+.title-inner__link-home {
+  .fonts(4; 4; 700);
+  color: @basic-white;
+  text-transform: uppercase;
+  padding-right: 60px;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: -3px;
   }
 }
