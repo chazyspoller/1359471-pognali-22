@@ -7,7 +7,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50% - 10px;
+    top: 50%;
+    margin-top: -2px;
     left: -16px;
     width: 6px;
     height: 6px;
@@ -26,5 +27,10 @@
   &--ideal::before {
     left: initial;
     right: -60px;
+    margin-top: -8px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: -2px;
+    }
   }
 }
