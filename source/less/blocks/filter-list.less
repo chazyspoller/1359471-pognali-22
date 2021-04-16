@@ -1,3 +1,130 @@
 .filter-list {
   .list-style-none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.filter-list__item {
+  &:not(:last-of-type) {
+    margin-bottom: 12px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 19px;
+    }
+  }
+}
+
+.filter-list__item-name {
+  .fonts(-1; 4; 400);
+  color: @basic-black;
+  padding-left: 27px;
+
+  @media (min-width: @tablet-width) {
+    .fonts(4; 4; 400);
+    padding-left: 36px;
+  }
+}
+
+.filter-list__filter-level {
+  margin-bottom: 24px;
+  background-color: @basic-white;
+  border-radius: 4px;
+  border: 1px solid @special-border-grey;
+  padding: 8px 40px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding: 12px 22px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 36px;
+  }
+}
+
+.filter-list__filter-level-item {
+  width: 20%;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  .set-font;
+  .fonts(-2; -2; 500);
+  letter-spacing: 0.06em;
+  color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    width: 40%;
+    .fonts(4; 4; 500);
+    letter-spacing: 0.04em;
+  }
+
+  &::placeholder {
+    color: @basic-blue-light;
+  }
+}
+
+.filter-list__range {
+  margin-bottom: 13px;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(@basic-blue-light, 0.2);
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0;
+    width: 90%;
+    height: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 43px;
+    width: 100%;
+  }
+}
+
+.filter-list__range-line {
+  width: 60%;
+  height: 100%;
+  background-color: @basic-blue-light;
+  opacity: 1;
+  margin-left: auto;
+}
+
+.filter-list__range-control {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: @basic-blue-light;
+  position: absolute;
+  top: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 13px;
+    height: 13px;
+    top: -5px;
+    }
+
+  &--min {
+    left: 40%;
+    margin-left: -5px;
+  }
+
+  &--max {
+    right: -1px;
+  }
 }

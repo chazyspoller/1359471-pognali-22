@@ -720,14 +720,16 @@
         <button class="button button--round sort__close sort__close--hide" type="button">Cвернуть</button>
       </div>
     </section>
-    <div class="main-content__box-form">
+    <div class="main-content__box-catalog">
       <section class="main-content__filters filters">
         <div class="filters__wrapper">
           <h2 class="visually-hidden">Фильтры для подброра попутчиков</h2>
           <form class="filters__ideal-traveler-list ideal-travelers-list" action="https://echo.htmlacademy.ru/" method="GET">
             <p class="ideal-travelers-list__title">Подберите идеального попутчика</p>
             <fieldset class="ideal-travelers-list__item">
-              <p class="ideal-travelers-list__filter-title">Хобби<span>:</span></p>
+              <p class="ideal-travelers-list__filter-title">Хобби<span class="ideal-travelers-list__filter-title-mark">:</span>
+                <button class="ideal-travelers-list__filter-title-button">+</button>
+              </p>
               <ul class="ideal-travelers-list__filter-list filter-list">
                 <li class="filter-list__item">
                   <input class="visually-hidden" type="checkbox" name="sport" id="sport" checked>
@@ -744,7 +746,9 @@
               </ul>
             </fieldset>
             <fieldset class="ideal-travelers-list__item">
-              <p class="ideal-travelers-list__filter-title">Музыка<span>:</span></p>
+              <p class="ideal-travelers-list__filter-title">Музыка<span class="ideal-travelers-list__filter-title-mark">:</span>
+                <button class="ideal-travelers-list__filter-title-button">+</button>
+              </p>
               <ul class="ideal-travelers-list__filter-list filter-list">
                 <li class="filter-list__item">
                   <input class="visually-hidden" type="checkbox" name="rock" id="rock" checked>
@@ -761,7 +765,9 @@
               </ul>
             </fieldset>
             <fieldset class="ideal-travelers-list__item">
-              <p class="ideal-travelers-list__filter-title">Еда<span>:</span></p>
+              <p class="ideal-travelers-list__filter-title">Еда<span class="ideal-travelers-list__filter-title-mark">:</span>
+                <button class="ideal-travelers-list__filter-title-button">+</button>
+              </p>
               <ul class="ideal-travelers-list__filter-list filter-list">
                 <li class="filter-list__item">
                   <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
@@ -778,7 +784,9 @@
               </ul>
             </fieldset>
             <fieldset class="ideal-travelers-list__item">
-              <p class="ideal-travelers-list__title">Транспорт<span>:</span></p>
+              <p class="ideal-travelers-list__filter-title">Транспорт<span class="ideal-travelers-list__filter-title-mark">:</span>
+                <button class="ideal-travelers-list__filter-title-button">+</button>
+              </p>
               <ul class="ideal-travelers-list__filter-list filter-list transport-list">
                 <li class="transport-list__item transport-list__item--checkbox">
                   <label class="transport-list__item-hint" for="plane"><span class="visually-hidden">Авиаперелет</span></label>
@@ -799,18 +807,20 @@
               </ul>
             </fieldset>
             <fieldset class="ideal-travelers-list__item">
-              <p class="ideal-travelers-list__title">Левел<span>:</span></p>
+              <p class="ideal-travelers-list__filter-title">Левел<span class="ideal-travelers-list__filter-title-mark">:</span>
+                <button class="ideal-travelers-list__filter-title-button">+</button>
+              </p>
               <ul class="ideal-travelers-list__filter-list filter-list">
-                <li class="filter-list__item filter-level">
-                  <input class="filter-level__item" type="text" name="min_level" id="min_level" placeholder="30">
+                <li class="filter-list__filter-level">
+                  <input class="filter-list__filter-level-item" type="text" name="min_level" id="min_level" placeholder="30">
                   <label class="visually-hidden" for="min_level">Минимальный уровень</label>
-                  <input class="filter-level__item" type="text" name="max_level" id="max_level" placeholder="100">
+                  <input class="filter-list__filter-level-item" type="text" name="max_level" id="max_level" placeholder="100">
                   <label class="visually-hidden" for="max_level">Максимальный уровень</label>
                 </li>
-                <li class="filter-list__item range">
-                  <div class="range__line"></div>
-                  <div class="range__control" aria-label="Ползунок минимального значения" tabindex="0"></div>
-                  <div class="range__control" aria-label="Ползунок максимального значения" tabindex="0"></div>
+                <li class="filter-list__range">
+                  <div class="filter-list__range-line"></div>
+                  <div class="filter-list__range-control filter-list__range-control--min" aria-label="Ползунок минимального значения" tabindex="0"></div>
+                  <div class="filter-list__range-control filter-list__range-control--max" aria-label="Ползунок максимального значения" tabindex="0"></div>
                 </li>
               </ul>
             </fieldset>
