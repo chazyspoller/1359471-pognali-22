@@ -1,10 +1,15 @@
 .social-list {
   .reset-margins;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   .list-style-none;
 
   &--header {
+    @media (min-width: @tablet-width) {
+      justify-content: flex-start;
+    }
+
     @media (min-width: @desktop-width) {
       display: none;
     }
@@ -23,5 +28,14 @@
 
   &--header {
     background-color: transparent;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill-opacity: 0.6;
+  }
+
+  &:active path {
+    fill-opacity: 0.3;
   }
 }

@@ -3,11 +3,20 @@
   margin-bottom: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   .list-style-none;
 
   &--inner {
     display: none;
+  }
+
+  &--main {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -19,11 +28,21 @@
   display: block;
   padding: 10px 11px;
   color: @basic-blue;
+  text-transform: uppercase;
   .fonts(0; 0);
 
   &--login {
     .fonts(1; 4; 700);
-    padding: 10px 40px 10px 40px;
+    padding: 10px 38px;
+
+    &:hover,
+    &:focus {
+      background-color: @special-yellow-dark;
+    }
+
+    &:active {
+      color: rgb(@basic-blue, 0.3);
+    }
 
     @media (min-width: @tablet-width) {
       .fonts(4; 4; 700);
@@ -33,6 +52,11 @@
 
   &--phone {
     background-color: @basic-orange;
+
+    &:hover,
+    &:focus {
+      background-color: @hover-orange;
+    }
 
     @media (min-width: @tablet-width) {
       display: none;
@@ -46,6 +70,11 @@
 
   &--mail {
     background-color: @special-yellow-dark;
+
+    &:hover,
+    &:focus {
+      background-color: @basic-orange;
+    }
 
     @media (min-width: @tablet-width) {
       display: none;

@@ -1,4 +1,14 @@
 .main-nav {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+  }
+}
+
+.main-nav__menu {
   background-color: @basic-white;
   text-align: center;
   position: absolute;
@@ -6,25 +16,150 @@
   left: 0;
   right: 0;
   z-index: 11;
+  margin: 0 -25px;
   padding: 118px 25px 41px 25px;
 
   a {
     color: @basic-blue-text;
   }
 
-  &--hide {
+  &--closed {
     display: none;
+  }
+
+  &--opened {
+    display: block;
+    position: absolute;
+    z-index: 21;
+    top: 0;
+  }
+
+  &--nojs {
+    position: static;
+    display: block;
   }
 
   @media (min-width: @tablet-width) {
     text-align: left;
+    margin: 0 -40px;
+    padding: 185px 97px 92px 97px;
   }
 
   @media (min-width: @desktop-width) {
     position: static;
     display: block;
-    padding: 0;
+    .reset-margins;
     background-color: transparent;
+  }
+}
+
+.main-nav__menu--nojs ~ .main-nav__contacts {
+  top: 1050px;
+}
+
+.main-nav__menu--opened ~ .main-nav__contacts .contacts-list__link {
+  @media (min-width: @tablet-width) {
+    .fonts(4; 4; 400);
+    letter-spacing: 0.03em;
+    padding: 15px 31px;
+  }
+}
+
+.main-nav__box-top {
+  position: relative;
+  padding: 19px 0;
+  z-index: 25;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-right: 40px;
+  }
+}
+
+.main-nav__logo {
+  .fonts(0; 0);
+}
+
+.main-nav__toggle {
+  display: block;
+  top: 50%;
+  margin-top: -10px;
+  right: 0;
+  width: 25px;
+  height: 15px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    left: 0;
+    background-color: @basic-white;
+    border-radius: 1.5px;
+  }
+
+  &::after {
+    top: 4px;
+  }
+
+  &::before {
+    bottom: 0;
+  }
+
+  &--close {
+    width: 19px;
+    height: 19px;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 2px;
+      top: 50%;
+      background-color: @icons-grey;
+      border-radius: 1.5px;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 25px;
+    top: 50%;
+    right: 50%;
+    margin-right: -13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav__contacts {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 25;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
   }
 }
 
@@ -34,8 +169,14 @@
   .list-style-none;
   margin-bottom: 51px;
 
+  @media (min-width: @tablet-width) {
+    .fonts(44; 55; 500);
+    margin-bottom: 169px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 0;
     .fonts(4; 4; 500);
     padding-left: 105px;
@@ -57,15 +198,36 @@
 }
 
 .main-nav__item {
-  & + .main-nav__item {
+  position: relative;
+  overflow: hidden;
+
+  &:not(:last-of-type) {
     @media (min-width: @desktop-width) {
-      margin-left: 34px;
+      margin-right: 34px;
     }
   }
 
   a {
     @media (min-width: @desktop-width) {
+      display: block;
       color: @basic-white;
+      transition: transform 0.3s;
+
+      &:hover,
+      &:focus {
+        transform: translateY(-100%);
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+
+      &::before {
+        position: absolute;
+        top: 100%;
+        content: attr(header-link);
+        color: @basic-yellow;
+      }
     }
   }
 }
@@ -73,16 +235,21 @@
 .main-nav__login {
   margin-bottom: 66px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
 .main-nav__user-list {
+  display: block;
   .fonts(1; 14; 700);
-  padding: 15px 80px 15px 80px;
+  padding: 8px;
 }
 
-.main-nav__contacts {
+.main-nav__extra-contacts {
   margin-bottom: 53px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 140px;
+  }
 }
