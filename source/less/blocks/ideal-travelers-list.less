@@ -3,6 +3,12 @@
   .fonts(6; 6; 700);
   letter-spacing: 0.02em;
   margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    .fonts(14; 14; 700);
+    letter-spacing: 0;
+    margin-bottom: 38px;
+  }
 }
 
 .ideal-travelers-list__item {
@@ -10,17 +16,90 @@
   padding: 12px 0;
   border: none;
   border-top: 1px solid @special-border-filter;
+
+  &:first-of-type {
+    @media (min-width: @tablet-width) {
+      border-top: 1px solid @special-border-filter;
+      padding-top: 38px;
+    }
+  }
+
+  &:last-of-type {
+    @media (min-width: @tablet-width) {
+      border-bottom: 1px solid @special-border-filter;
+      padding-bottom: 37px;
+    }
+  }
+
+  &:first-of-type,
+  &:last-of-type {
+    @media (min-width: @desktop-width) {
+      border: none;
+      padding: 12px 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
 
 .ideal-travelers-list__filter-title {
   .reset-margins;
   .fonts(0; 2; 700);
   text-transform: uppercase;
+  position: relative;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    .fonts(4; 4; 500);
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.ideal-travelers-list__filter-title-mark {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: initial;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.ideal-travelers-list__filter-title-button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: initial;
+  }
 }
 
 .ideal-travelers-list__filter-list {
   .reset-margins;
-  margin-top: 17px;
 }
 
 .ideal-travelers-list__button {
@@ -29,5 +108,16 @@
   background-color: @basic-white;
   text-transform: uppercase;
   .fonts(1; 1; 700);
-  padding: 14px;
+  padding: 12px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    .fonts(4; 4; 700);
+    padding: 15px;
+    margin-top: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }

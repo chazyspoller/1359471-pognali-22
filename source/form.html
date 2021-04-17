@@ -151,7 +151,7 @@
           <p class="flags__marker"><span class="flags__name">Развлечения</span></p>
         </div>
         <form class="plan-form__steps-form" action="https://echo.htmlacademy.ru/" method="GET">
-          <div class="plan-form__step step">
+          <div class="plan-form__step step"  id="first-step">
             <h3 class="step__title"><span class="step__title-number-step">Шаг 1.</span> Даты пребывания</h3>
             <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
             <div class="step__counter-info">
@@ -203,55 +203,140 @@
                 <li class="days-of-week__item days-of-week__item--weekend">Вс</li>
               </ul>
               <ol class="month__days days">
-                <li class="days__item days__item--disabled">23</li>
-                <li class="days__item days__item--disabled">24</li>
-                <li class="days__item days__item--disabled">25</li>
-                <li class="days__item days__item--disabled">26</li>
-                <li class="days__item days__item--disabled">27</li>
-                <li class="days__item days__item--disabled">28</li>
-                <li class="days__item days__item--disabled">1</li>
-                <li class="days__item days__item--disabled">2</li>
-                <li class="days__item days__item--disabled">3</li>
-                <li class="days__item days__item--disabled">4</li>
-                <li class="days__item days__item--disabled">5</li>
-                <li class="days__item days__item--disabled">6</li>
-                <li class="days__item days__item--disabled">7</li>
-                <li class="days__item days__item--disabled">8</li>
-                <li class="days__item days__item--disabled">9</li>
-                <li class="days__item days__item--disabled">10</li>
-                <li class="days__item days__item--disabled">11</li>
-                <li class="days__item days__item--disabled">12</li>
-                <li class="days__item days__item--disabled">13</li>
-                <li class="days__item days__item--disabled">14</li>
-                <li class="days__item days__item--disabled">15</li>
-                <li class="days__item days__item--disabled">16</li>
-                <li class="days__item days__item--disabled">17</li>
-                <li class="days__item days__item--disabled">18</li>
-                <li class="days__item days__item--disabled">19</li>
-                <li class="days__item days__item--disabled">20</li>
-                <li class="days__item days__item--disabled">21</li>
-                <li class="days__item days__item--disabled">22</li>
-                <li class="days__item days__item--disabled">23</li>
-                <li class="days__item days__item--disabled">24</li>
-                <li class="days__item days__item--disabled">25</li>
-                <li class="days__item days__item--choosen">26
-                  <p class="days__item-name days__item-name--hide">Заезд</p></li>
-                <li class="days__item days__item--choosen">27</li>
-                <li class="days__item days__item--choosen">28
-                  <p class="days__item-name days__item-name--hide">Выезд</p></li>
-                <li class="days__item">29</li>
-                <li class="days__item">30</li>
-                <li class="days__item">31</li>
-                <li class="days__item">1 <span class="days__item-name days__item-name--hide days__item-name--month">апр</span></li>
-                <li class="days__item">2</li>
-                <li class="days__item">3</li>
-                <li class="days__item">4</li>
-                <li class="days__item">5</li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>23</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>24</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>25</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>26</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>27</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>28</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>1</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>2</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>3</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>4</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>5</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>6</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>7</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>8</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>9</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>10</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>11</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>12</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>13</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>14</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>15</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>16</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>17</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>18</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>19</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>20</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>21</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>22</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>23</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>24</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button" disabled>25</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button days__item-button--choosen" type="button">26
+                    <span class="days__item-name days__item-name--hide">Заезд</span></li>
+                  </button>
+                <li class="days__item days__item--choosen">
+                  <button class="days__item-button days__item-button--choosen" type="button">27</button>
+                </li>
+                <li class="days__item days__item--choosen">
+                  <button class="days__item-button days__item-button--choosen" type="button">28
+                    <span class="days__item-name days__item-name--hide">Выезд</span></li>
+                  </button>
+                <li class="days__item">
+                  <button class="days__item-button" type="button">29</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button">30</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button">31</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button days__item-button--new-month" type="button">1
+                    <span class="days__item-name days__item-name--hide days__item-name--month"> апр</span></li>
+                  </button>
+                <li class="days__item">
+                  <button class="days__item-button" type="button">2</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button">3</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button">4</button>
+                </li>
+                <li class="days__item">
+                  <button class="days__item-button" type="button">5</button>
+                </li>
               </ol>
             </div>
-            <a class="button button--round button--steps step__next step__next--first" href="">Следующий шаг</a>
+            <a class="button button--round button--steps step__next step__next--first" href="#second-step">Следующий шаг</a>
           </div>
-          <div class="plan-form__step step">
+          <div class="plan-form__step step" id="second-step">
             <h3 class="step__title"><span class="step__title-number-step">Шаг 2.</span> Маршрут</h3>
             <p class="step__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
             <ul class="step__tour-list tour-list">
@@ -404,11 +489,11 @@
               </li>
             </ul>
             <div class="step__buttons">
-              <a class="button button--round button--steps step__next" href="">Следующий шаг</a>
-              <a class="step__back" href="">На шаг назад</a>
+              <a class="button button--round button--steps step__next" href="#third-step">Следующий шаг</a>
+              <a class="step__back" href="#first-step">На шаг назад</a>
             </div>
           </div>
-          <div class="plan-form_step step">
+          <div class="plan-form_step step" id="third-step">
             <h3 class="step__title"><span class="step__title-number-step">Шаг 3.</span> Развлечения</h3>
             <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
             <div class="step__fun-plans fun-plans">
@@ -421,7 +506,7 @@
             </div>
             <div class="step__buttons">
               <button class="button button--round button--steps step__button-submit" type="submit">Отправить</button>
-              <a class="step__back" href="">На шаг назад</a>
+              <a class="step__back" href="#second-step">На шаг назад</a>
             </div>
           </div>
         </form>

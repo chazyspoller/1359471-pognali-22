@@ -1,8 +1,30 @@
 .sort {
-  padding: 82px 0 15px 0;
+  .set-wrapper;
+  padding-top: 60px;
   background-color: @special-likes-color;
   color: @basic-blue-text;
   border-radius: 0 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
+}
+
+.sort__wrapper {
+  padding: 22px 0 28px 0;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 0;
+  }
 }
 
 .sort__sort-box {
@@ -11,28 +33,79 @@
   text-transform: uppercase;
 }
 
-.sort__wrapper {
-  .set-wrapper;
-}
-
 .sort__title {
   .reset-margins;
   .fonts(0; 2; 700);
+  padding-left: 27px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    .fonts(4; 4; 700);
+  }
 }
 
-.sort__countries-sort {
-  .reset-margins;
-  padding-top: 40px;
+.sort__toggle {
+  background-color: transparent;
+  border: none;
+  .set-font;
+  .fonts(4; 4; 700);
+  color: @basic-blue-text;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.sort__toggle-name {
+  &--hide {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
 }
 
 .sort__world-list {
   .reset-margins;
   .list-style-none;
   margin-bottom: 21px;
+  margin-top: 32px;
+  padding: 0 25px;
 
   li:not(:last-of-type) {
-    margin-bottom: 9px;
+    margin-bottom: 5px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    top: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 60px;
+    left: 343px;
+  }
+
+  //&--hide {
+  //  display: none;
+
+  //  @media (min-width: @tablet-width) {
+  //    display: flex;
+  //  }
+  //}
 }
 
 .sort__world-list-item {
@@ -44,10 +117,24 @@
   &--current {
     opacity: 1;
   }
+
+  @media (min-width: @tablet-width) {
+    .fonts(4; 4; 700);
+    margin-right: 28px;
+  }
 }
 
 .sort__alphabet {
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  //&--hide {
+  //  display: none;
+  //}
 }
 
 .sort__close {
@@ -59,4 +146,15 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: inherit;
+
+  @media (min-width: @tablet-width) {
+    .fonts(4; 4; 700);
+    letter-spacing: 0;
+    padding: 42px;
+    border-radius: 20px;
+  }
+
+  //&--hide {
+  //  display: none;
+  //}
 }

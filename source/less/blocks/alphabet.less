@@ -1,9 +1,10 @@
 .alphabet {
+  .reset-margins;
   .list-style-none;
+  box-sizing: border-box;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -14,6 +15,23 @@
     column-gap: 16px;
     row-gap: 14px;
   }
+
+  &--sort {
+    padding: 0 25px 300px 25px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+      width: 56%;
+      column-gap: 31px;
+      row-gap: 24px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+      padding-left: 38px;
+      gap: 0;
+    }
+  }
 }
 
 .alphabet__item {
@@ -22,7 +40,7 @@
   background-color: @basic-white;
   border: 1px solid @special-border-grey;
   border-right-color: transparent;
-  .fonts(-2; 1; 500);
+  .fonts(-2; 2; 500);
   margin-top: -1px;
   margin-left: -1px;
 
@@ -42,6 +60,15 @@
   //  z-index: 2;
   //}
 
+  &:nth-child(5n) {
+    margin-right: -1px;
+    border-right: 1px solid @special-border-grey;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
+  }
+
   &--current {
     background-color: @basic-grey;
     border-bottom: 0;
@@ -51,19 +78,33 @@
     }
   }
 
+  &--sort {
+    @media (min-width: @tablet-width) {
+      border: none;
+      background-color: transparent;
+    }
+
+    @media (min-width: @desktop-width) {
+      text-align: left;
+      margin-bottom: 50px;
+    }
+  }
+
+  &--sort:nth-child(5n) {
+    @media (min-width: @tablet-width) {
+      border: none;
+    }
+  }
+
   &--current-sort {
     position: relative;
     z-index: 2;
     background-color: @basic-blue-light;
     border: 1px solid @basic-blue-light;
-  }
-
-  &:nth-child(5n) {
-    margin-right: -1px;
-    border-right: 1px solid @special-border-grey;
 
     @media (min-width: @tablet-width) {
-      margin-right: 0;
+      border: none;
+      background-color: transparent;
     }
   }
 }
@@ -77,7 +118,41 @@
     padding: 24px 0;
   }
 
+  &--sort {
+    @media (min-width: @tablet-width) {
+      opacity: 0.3;
+      padding: 0;
+      .fonts(44; 44; 700);
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 30px;
+      opacity: 1;
+    }
+  }
+
   &--current-sort {
     color: @basic-white;
+
+    @media (min-width: @tablet-width) {
+      color: @basic-blue-light;
+      opacity: 1;
+    }
+  }
+}
+
+.alphabet__countries-alphabet {
+  position: absolute;
+  top: 200px;
+
+  @media (min-width: @tablet-width) {
+    top: 5px;
+    left: 100% * 8;
+    margin-left: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: initial;
+    margin: 0;
   }
 }

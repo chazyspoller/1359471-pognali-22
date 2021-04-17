@@ -21,6 +21,18 @@
     background-color: transparent;
     background-image: url("../../img/mobile/level_profile.svg");
   }
+
+  &--card {
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    color: @basic-blue-light;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
 
 .level__number {
@@ -36,6 +48,14 @@
       color: @basic-white;
     }
   }
+
+  &--card {
+    margin: auto;
+
+    @media (min-width: @tablet-width) {
+      margin: auto auto 0 auto;
+    }
+  }
 }
 
 .level__name {
@@ -49,6 +69,16 @@
 
     @media (min-width: @desktop-width) {
       color: @basic-white;
+    }
+  }
+
+  &--card {
+    color: @basic-black;
+    opacity: 0.4;
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: initial;
     }
   }
 }

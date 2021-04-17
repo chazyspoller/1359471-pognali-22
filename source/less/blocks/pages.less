@@ -1,20 +1,42 @@
 .pages {
   background-color: @basic-white;
   border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .pages__pages-number {
   .list-style-none;
   .reset-margins;
-  display: flex;
+  display: none;
 
-  &--hide {
-    display: none;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding: 0 28px;
+  }
+}
+
+.pages__item {
+  padding: 14px 21px;
+  border-radius: 50%;
+
+  &--current {
+    background-color: @basic-yellow;
   }
 }
 
 .pages__pages-controls {
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 35px;
+    justify-content: space-between;
+    width: 53px;
+  }
 }
 
 .pages__control {
@@ -22,6 +44,7 @@
   text-align: center;
   width: 50%;
   padding: 15px 0 10px 0;
+  box-sizing: border-box;
 
   &--back {
     border-radius: 20px 0 0 20px;

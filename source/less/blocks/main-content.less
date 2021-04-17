@@ -67,7 +67,25 @@
   .section-transform(3);
 }
 
-.main-content__filters {
+.main-content__box-catalog {
   margin-top: -60px;
+  padding-top: 60px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.main-content__filters {
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
