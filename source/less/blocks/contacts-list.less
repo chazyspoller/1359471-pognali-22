@@ -57,15 +57,6 @@
     &:focus {
       background-color: @hover-orange;
     }
-
-    @media (min-width: @tablet-width) {
-      display: none;
-      padding: 16px 17px;
-    }
-
-    @media (min-width: @desktop-width) {
-      display: block;
-    }
   }
 
   &--mail {
@@ -74,6 +65,13 @@
     &:hover,
     &:focus {
       background-color: @basic-orange;
+    }
+  }
+
+  &--phone,
+  &--mail {
+    &:active path {
+      fill-opacity: 0.3;
     }
 
     @media (min-width: @tablet-width) {
