@@ -1,0 +1,47 @@
+.marks {
+  display: flex;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.marks__marker {
+  width: 5px;
+  height: 5px;
+  margin: 8px;
+  background-color: rgb(@basic-blue-light, 0.3);
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 6px;
+    height: 6px;
+    margin: 14.5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 19px;
+  }
+
+  &--current {
+    background-color: @basic-blue-light;
+  }
+}
+
+.marks__name {
+  display: none;
+  .fonts(4; 8; 400);
+  color: rgb(@basic-black, 0.6);
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-top: -7px;
+    padding-left: 36px;
+  }
+
+  &--current {
+    color: @basic-black;
+  }
+}
