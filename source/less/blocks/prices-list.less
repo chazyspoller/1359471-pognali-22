@@ -11,7 +11,7 @@
   }
 
 
-  &::before {
+  &:not(&--business):before {
     @media (min-width: @tablet-width) {
       content: "";
       position: absolute;
