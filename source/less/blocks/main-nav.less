@@ -53,10 +53,6 @@
   }
 }
 
-.main-nav__menu--nojs ~ .main-nav__contacts {
-  top: 1050px;
-}
-
 .main-nav__menu--opened ~ .main-nav__contacts .contacts-list__link {
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 400);
@@ -87,7 +83,7 @@
 .main-nav__toggle {
   display: block;
   top: 50%;
-  margin-top: -10px;
+  transform: translateY(-50%);
   right: 0;
   width: 25px;
   height: 15px;
@@ -142,7 +138,7 @@
     width: 25px;
     top: 50%;
     right: 50%;
-    margin-right: -13px;
+    transform: translate(50%, -50%);
   }
 
   @media (min-width: @desktop-width) {
@@ -153,13 +149,17 @@
 .main-nav__contacts {
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 20px;
+    top: 0;
+    transform: translateY(50%);
     right: 0;
     z-index: 25;
   }
 
   @media (min-width: @desktop-width) {
     position: static;
+    top: auto;
+    right: auto;
+    transform: translateY(0);
   }
 }
 
@@ -189,7 +189,7 @@
       position: absolute;
       top: 50%;
       left: 0;
-      margin-top: -1px;
+      transform: translateY(-50%);
       width: 60px;
       height: 2px;
       background-color: @basic-white;

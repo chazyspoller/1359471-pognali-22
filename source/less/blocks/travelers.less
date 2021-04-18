@@ -13,7 +13,7 @@
 }
 
 .travelers__wrapper {
-  padding-top: 68px;
+  padding-top: 67px;
   padding-bottom: 31px;
 
   @media (min-width: @tablet-width) {
@@ -22,7 +22,7 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 50.5%;
     grid-template-rows: 487px;
     column-gap: 193px;
     padding: 130px 0 134px 73px;
@@ -31,6 +31,11 @@
 
 .travelers__intro {
   margin-bottom: 54px;
+  padding: 0 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;

@@ -41,10 +41,12 @@
 .registration__text {
   .reset-margins;
   .text;
-  margin-bottom: 29px;
+  padding: 0 50px;
+  margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 64px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,6 +54,13 @@
   }
 
   &--question {
+    margin-bottom: 30px;
+    padding: 0 30px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
+
     @media (min-width: @desktop-width) {
       margin-bottom: 77px;
     }
@@ -61,6 +70,15 @@
 .registration__link {
   color: @basic-yellow;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: @basic-orange;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .registration__mail {
@@ -79,24 +97,48 @@
   display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px 70px 20px 25px;
+  padding: 16px 70px 17px 25px;
   background-color: @basic-white;
-  border: none;
+  border: 4px solid @basic-white;
   border-radius: 10px;
 
+  &:hover {
+    background-color: @basic-grey;
+    border-color: @basic-grey;
+  }
+
+  &:hover::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    background-color: transparent;
+    color: white;
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 26px 80px 26px 36px;
+    padding: 22px 80px 22px 36px;
     border-radius: 20px;
     .fonts(8; 8; 700);
   }
 
   @media (min-width: @desktop-width) {
-    padding: 27px 340px 26px 36px;
+    padding-right: 340px;
+  }
+
+  &::placeholder {
+    color: @special-grey-dark;
+    opacity: 0.3;
+  }
+
+  &--error {
+    color: @error-color;
+    background-color: @basic-white;
   }
 }
 
 .registration__button {
-  padding: 30px 31px;
+  padding: 31px;
   position: absolute;
   top: 0;
   right: 0;
@@ -107,7 +149,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 29px 158px 28px 36px;
+    padding: 28px 158px 28px 36px;
   }
 
   &::after {

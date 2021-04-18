@@ -28,14 +28,32 @@
 
   &--header {
     background-color: transparent;
+
+    &:hover path,
+    &:focus path {
+      fill-opacity: 0.6;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
   }
 
-  &:hover path,
-  &:focus path {
-    fill-opacity: 0.6;
+  &:not(&--header):hover,
+  &:not(&--header):focus {
+    background-color: @special-yellow-dark;
+  }
+
+  &:not(&--header):active {
+    background-color: @special-yellow-dark;
   }
 
   &:active path {
     fill-opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 62px;
+    height: 62px;
   }
 }

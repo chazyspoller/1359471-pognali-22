@@ -13,11 +13,24 @@
     padding: 28px 32px 28px 32px;
   }
 
+  &:hover,
+  &:focus {
+    background-color: @special-yellow-dark;
+  }
+
+  &:active {
+    color: rgb(@basic-blue-light, 0.3);
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
   &::after {
     content: "";
     position: absolute;
     top: 50%;
-    margin-top: -7px;
+    transform: translateY(-50%);
     right: 22px;
     width: 15px;
     height: 15px;
@@ -30,6 +43,20 @@
 
   &--round::after {
     display: none;
+  }
+
+  &--border {
+    border: 3px solid @basic-blue-text;
+  }
+
+  &--border:hover,
+  &--border:focus {
+    background-color: @basic-blue-text;
+    color: @basic-white;
+  }
+
+  &--border:active {
+    color: rgb(@basic-white, 0.3);
   }
 
   &--steps::after {

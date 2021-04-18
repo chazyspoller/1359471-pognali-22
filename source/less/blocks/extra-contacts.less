@@ -86,5 +86,14 @@
   &--registration {
     color: @basic-yellow;
     text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: @special-yellow-dark;
+    }
+
+    &:active {
+      color: rgba(@basic-yellow, 0.3);
+    }
   }
 }
