@@ -4,7 +4,7 @@
 
 .countries-list__item {
   &:not(:last-of-type) {
-    margin-bottom: 11px;
+    margin-bottom: 8px;
   }
 
   @media (min-width: @tablet-width) {
@@ -25,14 +25,14 @@
 }
 
 .countries-list__info-country {
-  margin-top: -15px;
+  margin-top: -16px;
   position: relative;
   z-index: 10;
   .fonts(0; 2; 500);
   color: rgb(@special-grey-dark, 0.3);
   background-color: @basic-white;
   border-radius: 10px;
-  padding: 24px;
+  padding: 24px 24px 26px 24px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -46,6 +46,7 @@
   .reset-margins;
   .fonts(5; 5; 700);
   color: @basic-black;
+  margin-bottom: 2px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 5px;

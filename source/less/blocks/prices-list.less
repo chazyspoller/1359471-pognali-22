@@ -1,5 +1,35 @@
 .prices-list {
   .list-style-none;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 273px;
+  }
+
+
+  &:not(&--business)::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      top: -20px;
+      bottom: -20px;
+      right: 0;
+      width: 198px;
+      background-color: @special-likes-color;
+      border-radius: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -40px;
+      bottom: -40px;
+      right: 110px;
+      width: 446px;
+    }
+  }
 }
 
 .prices-list__item {
@@ -8,6 +38,12 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 90px;
+  }
+
+  &--business {
+    @media (min-width: @tablet-width) {
+      padding-left: 0;
+    }
   }
 
   div {
@@ -22,8 +58,8 @@
 }
 
 .prices-list__box {
-  padding: 13px 0 16px 0;
-  width: 74%;
+  padding: 12px 0 16px 0;
+  width: 75%;
 
   @media (min-width: @tablet-width) {
     padding: 19px 0 20px 0;
@@ -31,11 +67,20 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &--business {
+    width: 100%;
+
+    @media (min-width: @tablet-width) {
+      padding: 14px 0 12px 0;
+      .fonts(6; 12; 300);
+    }
+  }
 }
 
 .prices-list__name {
   .reset-margins;
-  margin-bottom: 9px;
+  margin-bottom: 6px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -53,7 +98,7 @@
   padding: 9px 13px;
   border-radius: 50%;
   position: absolute;
-  top: 3px;
+  top: 4px;
   right: 0;
 
   @media (min-width: @tablet-width) {

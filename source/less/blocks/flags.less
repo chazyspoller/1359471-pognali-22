@@ -1,47 +1,91 @@
 .flags {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+
+  .list-style-none;
+  .reset-margins;
   display: flex;
+  justify-content: center;
 
-  @media (min-width: @desktop-width) {
-    flex-direction: column;
+  &--single {
+    left: 25px;
+    right: auto;
+    justify-content: flex-start;
+
+    @media (min-width: @tablet-width) {
+      top: 17px;
+      left: auto;
+      right: -35px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 23px;
+    }
   }
 }
 
-.flags__marker {
-  width: 5px;
-  height: 5px;
-  margin: 8px;
-  background-color: rgb(@basic-blue-light, 0.3);
-  border-radius: 50%;
+.flags__flags-item {
+  width: 35px;
+  height: 25px;
 
-  @media (min-width: @tablet-width) {
-    width: 6px;
-    height: 6px;
-    margin: 14.5px;
+  &:not(:last-of-type) {
+    margin-right: 20px;
   }
 
-  @media (min-width: @desktop-width) {
-    margin: 19px;
+  &--single {
+    @media (min-width: @tablet-width) {
+      width: 70px;
+      height: 47px;
+    }
   }
 
-  &--current {
-    background-color: @basic-blue-light;
-  }
-}
-
-.flags__name {
-  display: none;
-  .fonts(4; 8; 400);
-  color: rgb(@basic-black, 0.6);
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-
-  @media (min-width: @desktop-width) {
-    display: block;
-    margin-top: -7px;
-    padding-left: 36px;
+  &--sri-lanka {
+    background-image: url("../../img/mobile/sri-lanka_flag_mobile.png");
   }
 
-  &--current {
-    color: @basic-black;
+  &--france {
+    background-image: url("../../img/mobile/france_flag_mobile.png");
+  }
+
+  &--czech {
+    background-image: url("../../img/mobile/czech_flag_mobile.png");
+  }
+
+  &--chile {
+    background-image: url("../../img/mobile/chile_flag_mobile.png");
+  }
+
+  &--belgium {
+    background-image: url("../../img/mobile/belgium_flag_mobile.png");
+  }
+
+  &--thailand {
+    background-image: url("../../img/mobile/thailand_flag_mobile.png");
+  }
+
+  &--seychelles {
+    background-image: url("../../img/mobile/seychelles_flag_mobile.png");
+  }
+
+  &--england {
+    background-image: url("../../img/mobile/england_flag_mobile.png");
+  }
+
+  &--australia {
+    background-image: url("../../img/mobile/australia_flag_mobile.png");
+  }
+
+  &--germany {
+    background-image: url("../../img/mobile/germany_flag_mobile.png");
+  }
+
+  &--bosnia-and-herzegovina {
+    background-image: url("../../img/mobile/bosnia-and-herzegovina_flag_mobile.png");
+  }
+
+  &--dominica {
+    background-image: url("../../img/mobile/dominica_flag_mobile.png");
   }
 }

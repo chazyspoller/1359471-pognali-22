@@ -1,19 +1,71 @@
 .popup-business {
   background-color: @basic-white;
+  box-shadow: 0 2px 8px rgba(@basic-blue-light, 0.14);
   border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  top: -11px;
+  left: 0;
+  width: 100%;
 
   &--hide {
     display: none;
   }
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 99px;
+    width: 56.8%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
+
+.popup-business__info {
+  padding: 30px 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 90px;
+  }
+}
+
+.popup-business__title {
+  .reset-margins;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.popup-business__list {
+  .reset-margins;
+}
+
 
 .popup-business__close {
   background-color: @special-close;
   border: none;
-  padding: 21px 80px;
+  padding: 17px;
   width: 100%;
   .set-font;
   .fonts(0; 8; 700);
   text-transform: uppercase;
   color: @basic-blue-light;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-grey;
+  }
+
+  &:active {
+    color: rgba(@basic-blue-light, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 41px;
+    text-transform: initial;
+    .fonts(8; 8; 700);
+  }
 }
