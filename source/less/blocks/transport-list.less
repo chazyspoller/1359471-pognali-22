@@ -1,11 +1,52 @@
 .transport-list {
   .list-style-none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   &--profile {
     border: 1px solid @special-border-grey;
     border-radius: 10px;
     padding: 16px;
     box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      padding: 26px;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 24px;
+    }
+  }
+}
+
+//.transport-list__checkbox:checked + .transport-list__item {
+//}
+
+.transport-list__item {
+  display: block;
+  width: 31px;
+  height: 31px;
+  background-color: @basic-white;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 6px rgba(@basic-blue, 0.17);
+  }
+
+  &:active {
+    background-color: @transport-checkbox-active;
+    box-shadow: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 44px;
+    height: 44px;
   }
 }

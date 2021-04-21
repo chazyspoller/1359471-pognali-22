@@ -101,8 +101,18 @@
 .card__link {
   .reset-margins;
   letter-spacing: 0.03em;
-  color: rgb(@basic-black, 0.3);
+  color: @basic-black;
+  opacity: 0.3;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 
   @media (min-width: @tablet-width) {
     letter-spacing: 0.1em;

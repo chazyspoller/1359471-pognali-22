@@ -1,5 +1,4 @@
 .alphabet {
-  .reset-margins;
   .list-style-none;
   box-sizing: border-box;
   width: 100%;
@@ -44,25 +43,37 @@
   margin-top: -1px;
   margin-left: -1px;
 
+  &:hover,
+  &:focus {
+    position: relative;
+    border: 1px solid @counter-border-hover;
+    z-index: 2;
+  }
+
+  &:active {
+    background-color: @basic-blue-light;
+  }
+
   @media (min-width: @tablet-width) {
-    margin: 0;
     .fonts(4; 4; 500);
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
     border: 1px solid @special-border-grey;
     border-radius: 4px;
   }
 
-  //&:hover {
-  //  position: relative;
-  //  border: 1px solid red;
-  //  z-index: 2;
-  //}
-
   &:nth-child(5n) {
     margin-right: -1px;
     border-right: 1px solid @special-border-grey;
+
+    &:hover,
+    &:focus {
+      position: relative;
+      border-right: 1px solid @counter-border-hover;
+      z-index: 2;
+    }
 
     @media (min-width: @tablet-width) {
       margin-right: 0;
@@ -109,13 +120,22 @@
   }
 }
 
-.alphabet__link {
-  display: block;
+.alphabet__button {
+  .set-font;
+  .fonts(-2; 2; 500);
+  background-color: transparent;
+  border: none;
   padding: 12px 0;
+  width: 100%;
   color: @basic-blue-light;
+
+  &:active {
+    color: @basic-white;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 24px 0;
+    .fonts(4; 4; 500);
   }
 
   &--sort {

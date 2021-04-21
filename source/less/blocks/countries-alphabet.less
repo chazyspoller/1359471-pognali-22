@@ -40,6 +40,15 @@
   .fonts(0; 6; 400);
   color: @special-grey-dark;
 
+  &:hover,
+  &:focus {
+    color: @basic-blue-light;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 400);
   }

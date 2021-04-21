@@ -109,6 +109,16 @@
   padding: 6px 0 6px 39px;
   position: relative;
 
+  &:hover::before,
+  &:focus::before {
+    border-color: @counter-border-hover;
+  }
+
+  &:active::before {
+    border: none;
+    background-color: @question-checkbox-active;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 8px 0 8px 58px;
   }
@@ -130,7 +140,7 @@
     }
   }
 
-  input:checked + &::after {
+  .step__question-checkbox:checked + &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -176,6 +186,15 @@
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 
   &--next {
     transform: rotate(180deg);
@@ -240,6 +259,15 @@
   text-transform: uppercase;
   text-align: center;
   color: @basic-blue-light;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     .fonts(8; 8; 700);

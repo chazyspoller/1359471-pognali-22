@@ -9,43 +9,42 @@
   .set-font;
   color: @basic-blue-light;
   text-transform: uppercase;
-  position: relative;
+  position: absolute;
   width: min-content;
   padding: 0 17px;
   background-color: @basic-grey;
-  top: 9px;
-  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   @media (min-width: @tablet-width) {
     letter-spacing: 0.08em;
     top: 100%;
-    margin-top: -15px;
     .fonts(4; 4; 500);
   }
 
   @media (min-width: @desktop-width) {
     letter-spacing: 0.09em;
-    margin-top: -10px;
   }
 
   &--tags {
+    color: @basic-blue;
+
     @media (min-width: @tablet-width) {
       letter-spacing: 0.1em;
     }
 
     @media (min-width: @desktop-width) {
-      position: absolute;
-      margin-left: 22px;
+      left: 22px;
+      transform: translate(0, -50%);
       letter-spacing: 0.07em;
-      margin-top: -15px;
     }
   }
 }
 
 .content-field__tags {
   width: 100%;
+  height: 100%;
   padding: 25px;
-  height: auto;
   box-sizing: border-box;
   resize: none;
   color: @special-grey-dark;
@@ -54,6 +53,16 @@
   background-color: transparent;
   border: 1px solid @special-border-grey;
   border-radius: 10px;
+  vertical-align: top;
+
+  &:hover {
+    border-color: @border-tags-hover;
+  }
+
+  &:focus {
+    border-color: @basic-blue;
+    outline: none;
+  }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 10px;
@@ -63,6 +72,4 @@
 
 .content-field__transport-list {
   .reset-margins;
-  padding: 16px;
-  box-sizing: border-box;
 }
