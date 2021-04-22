@@ -77,6 +77,19 @@
   width: 42px;
   height: 100%;
 
+  &:hover::after,
+  &:hover::before,
+  &:focus::after,
+  &:focus::before {
+    background-color: @counter-controls-hover;
+  }
+
+  &:active::after,
+  &:active::before {
+    background-color: @counter-controls-active;
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     width: 66px;
   }
@@ -132,8 +145,31 @@
   border-radius: 4px;
   box-sizing: border-box;
 
+  &:hover {
+    border-color: @counter-border-hover;
+  }
+
+  &:focus {
+    border-color: @basic-blue;
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 500);
     padding: 22px;
   }
+}
+
+.form-box__item:hover + .form-box__button::after,
+.form-box__item:hover + .form-box__button::before,
+.form-box__item:hover + .form-box__button + .form-box__button::after,
+.form-box__item:hover + .form-box__button + .form-box__button::before {
+  background-color: @counter-border-hover;
+}
+
+.form-box__item:focus + .form-box__button::after,
+.form-box__item:focus + .form-box__button::before,
+.form-box__item:focus + .form-box__button + .form-box__button::after,
+.form-box__item:focus + .form-box__button + .form-box__button::before {
+  background-color: @basic-blue;
 }

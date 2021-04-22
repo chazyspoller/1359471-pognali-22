@@ -1,5 +1,33 @@
 .tour-list {
   .list-style-none;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 42px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background-color: @prices-border;
+    }
+
+    &::after {
+      width: 1px;
+      height: 105%;
+      right: 26%;
+      background: linear-gradient(to bottom, @prices-border 0%, @prices-border 80%, rgba(@basic-white, 0) 100%);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      right: 22%;
+    }
+  }
 }
 
 .tour-list__item {
@@ -8,11 +36,48 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 69% 31%;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 73% 27%;
   }
 
   &:not(:last-of-type) {
     margin-bottom: 22px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    left: 75.9%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: @basic-blue-light;
+    box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      left: 73.9%;
+      width: 14px;
+      height: 14px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 77.9%;
+    }
+  }
+
+  &--empty::before {
+    background-color: @basic-white;
+    border: 1px solid @special-border-grey;
+  }
+
+  &--add::before {
+    background-color: @basic-grey;
   }
 }
 
@@ -22,24 +87,22 @@
   text-transform: uppercase;
   padding: 13px 10px;
   border: 1px solid @special-border-grey;
+  background-color: @basic-white;
   box-sizing: border-box;
   border-radius: 4px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+
+  &:not(&--flag):hover,
+  &:not(&--flag):focus {
+    border-color: @counter-border-hover;
+  }
 
   @media (min-width: @tablet-width) {
-    margin-right: 33px;
     padding: 25px 25px 23px 25px;
     .fonts(4; 4; 500);
     letter-spacing: 0.1em;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-right: 20px;
-  }
-
-  &:active ~ .countries-selection--hide {
-    display: block;
   }
 
   &::after {
@@ -53,12 +116,37 @@
     background: linear-gradient(to right, rgba(@basic-white, 0) 0%, rgba(@basic-white, 0) 20%, @basic-white 50%, @basic-white 100%);
   }
 
+  &--open-dropdown {
+    background-color: @basic-blue-light;
+    border-color: @basic-blue-light;
+    color: @basic-white;
+    z-index: 25;
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
+  }
+
+  &--open-dropdown::after {
+    display: none;
+  }
+
   &--flag {
-    left: -1px;
+    margin-left: -1px;
+    background-image: url("../../img/mobile/bosnia-and-herzegovina_flag_mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &::after {
+      display: none;
+    }
 
     @media (min-width: @tablet-width) {
       border: none;
+      margin-left: 15%;
       padding: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 18%;
     }
   }
 
@@ -75,6 +163,23 @@
   &--add {
     background-color: @basic-grey;
     border: none;
+
+    &:hover,
+    &:focus {
+      background-color: @special-grey;
+    }
+
+    //&:hover .tour-list__button::after,
+    //&:hover .tour-list__button::before,
+    //&:focus .tour-list__button::after,
+    //&:focus .tour-list__button::before {
+    //  background-color: @add-button-hover;
+    //}
+
+    //&:active .tour-list__button::after,
+    //&:active .tour-list__button::before {
+    //  background-color: @add-button-active;
+    //}
 
     &::after {
       display: none;
@@ -98,36 +203,72 @@
   border: none;
   z-index: 3;
 
+  &--close {
+    &:hover::after,
+    &:hover::before,
+    &:focus::after,
+    &:focus::before {
+      background-color: rgba(@basic-white, 1);
+    }
+
+    &:active::after,
+    &:active::before {
+      opacity: 0.1;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      margin: auto;
+      margin-left: -5.5px;
+      width: 11px;
+      height: 1px;
+      background-color: rgba(@basic-white, 0.3);
+      border-radius: 25px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
   &--more {
     background-image: url("../../img/mobile/arrow_more.svg");
     background-repeat: no-repeat;
     background-position: center center;
   }
 
-  &--add::after {
+  &--add::after,
+  &--add::before {
     content: "";
     position: absolute;
+    background-color: @basic-black;
+  }
+
+  &--add::after {
     top: 50%;
     transform: translateY(-50%);
     right: 0;
     width: 14px;
     height: 2px;
-    background-color: @add-button;
   }
 
   &--add::before {
-    content: "";
-    position: absolute;
     top: 0;
     right: 6px;
     width: 2px;
     height: 14px;
-    background-color: @add-button;
   }
 }
 
 .tour-list__delete {
   position: absolute;
+  z-index: 60;
   top: -10px;
   right: -9px;
   width: 21px;

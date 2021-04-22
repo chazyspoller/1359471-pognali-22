@@ -5,7 +5,7 @@
   border-radius: 0 0 4px 4px;
   border-top: none;
   position: absolute;
-  z-index: 20;
+  z-index: 50;
   top: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -17,6 +17,16 @@
       border: none;
       width: 100%;
       box-shadow: 0 8px 16px rgba(@plan-form-shadow-big, 0.18);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 64%;
+        width: 1px;
+        height: 100%;
+        background-color: @scroll-border;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -28,10 +38,6 @@
 
   &--hide {
     display: none;
-  }
-
-  &:hover {
-    display: block;
   }
 }
 
@@ -46,11 +52,7 @@
   .reset-margins;
 
   @media (min-width: @tablet-width) {
-    margin-right: 80px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-right: 102px;
+    margin-right: 14%;
   }
 }
 

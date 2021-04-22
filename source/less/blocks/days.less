@@ -29,7 +29,24 @@
   .fonts(-2; 2; 500);
   color: @basic-blue-light;
   background-color: @basic-grey;
+  box-sizing: border-box;
+  outline: 2px solid transparent;
   border: none;
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    position: relative;
+    z-index: 20;
+    outline: 2px solid @special-weekend-color;
+    outline-offset: -1px;
+    background-color: @basic-blue-light;
+    color: @basic-white;
+
+    @media (min-width: @tablet-width) {
+      outline-width: 4px;
+      outline-offset: -2px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 25px;

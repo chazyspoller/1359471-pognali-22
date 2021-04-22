@@ -1,4 +1,6 @@
 .fun-plans {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     margin-right: 33px;
   }
@@ -6,6 +8,44 @@
   @media (min-width: @desktop-width) {
     margin-right: 0;
     width: 73%;
+  }
+
+  &:first-of-type::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -17px;
+    width: 2px;
+    height: 285px;
+    background-color: @basic-blue-light;
+
+    @media (min-width: @tablet-width) {
+      left: auto;
+      right: -28px;
+      height: 265px;
+    }
+  }
+
+  &--error::before {
+    content: "Это поле должно быть заполнено";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 21px;
+    box-sizing: border-box;
+    border-radius: 0 0 4px 4px;
+    .fonts(0; 4; 400);
+    color: @error-color;
+    background-color: @error-bg;
+
+    @media (min-width: @tablet-width) {
+      .fonts(4; 4; 400);
+    }
+  }
+
+  &--error .fun-plans__plan {
+    border-color: @border-error;
   }
 }
 
@@ -19,19 +59,112 @@
     .fonts(14; 14; 700);
     margin-bottom: 38px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 2px;
+    top: 8px;
+    left: -15px;
+    background-color: @basic-blue-light;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: 0;
+    width: 70px;
+    height: 25px;
+    background: linear-gradient(to right, rgba(@basic-white, 0) 0%, @basic-white 20%, @basic-white 100%);
+  }
+}
+
+.fun-plans__name-text {
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -8px;
+    width: 6px;
+    height: 6px;
+    background-color: @basic-blue-light;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 14px;
+      height: 14px;
+      left: auto;
+      right: -34px;
+    }
+  }
+}
+
+.fun-plans__name-flag {
+  position: absolute;
+  z-index: 50;
+  top: -3px;
+  right: 0;
+  width: 35px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    top: -8px;
+    width: 70px;
+    height: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: auto;
+    right: -155px;
+  }
+
+  &--bosnia-and-herzegovina {
+    background-image: url("../../img/mobile/bosnia-and-herzegovina_flag_mobile.png");
+  }
+
+  &--czech {
+    background-image: url("../../img/mobile/czech_flag_mobile.png");
+  }
 }
 
 .fun-plans__plan {
   border: 1px solid @special-border-grey;
+  background-color: transparent;
   border-radius: 4px;
   resize: none;
   width: 100%;
   height: 220px;
   box-sizing: border-box;
   padding: 10px 14px;
+  vertical-align: top;
   .set-font;
   .fonts(0; 8; 400);
   color: @special-grey-dark;
+  position: relative;
+  z-index: 50;
+
+  &:hover {
+    border-color: @counter-border-hover;
+  }
+
+  &:focus {
+    border-color: @basic-black;
+    outline: none;
+  }
 
   @media (min-width: @tablet-width) {
     height: 142px;
