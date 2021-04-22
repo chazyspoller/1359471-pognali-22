@@ -10,19 +10,19 @@
     width: 73%;
   }
 
-  &:first-of-type::after {
+  & + &::after {
     content: "";
     position: absolute;
-    top: 8px;
+    bottom: 96%;
     left: -17px;
     width: 2px;
-    height: 285px;
+    height: 111.5%;
     background-color: @basic-blue-light;
 
     @media (min-width: @tablet-width) {
       left: auto;
       right: -28px;
-      height: 265px;
+      height: 120%;
     }
   }
 
