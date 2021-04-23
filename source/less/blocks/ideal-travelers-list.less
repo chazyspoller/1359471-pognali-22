@@ -58,6 +58,15 @@
   position: relative;
   margin-bottom: 17px;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 500);
     margin: 0;
@@ -88,6 +97,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  background-image: url("../../img/icons/icon_polygon-dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -108,8 +120,21 @@
   background-color: @basic-white;
   text-transform: uppercase;
   .fonts(1; 1; 700);
+  color: @basic-blue;
   padding: 12px;
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-white;
+    box-shadow: 0 3px 6px rgba(@basic-black, 0.14);
+  }
+
+  &:active {
+    background-color: @special-border-filter;
+    color: rgba(@basic-blue, 0.3);
+    box-shadow: none;
+  }
 
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 700);
