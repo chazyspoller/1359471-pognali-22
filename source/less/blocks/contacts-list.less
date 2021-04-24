@@ -13,14 +13,14 @@
 
   &--main {
     display: none;
-
-    @media (min-width: @tablet-width) {
-      display: flex;
-    }
   }
 
   @media (min-width: @tablet-width) {
     display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-end;
   }
 }
 

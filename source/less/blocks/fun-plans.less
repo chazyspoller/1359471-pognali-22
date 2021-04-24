@@ -10,19 +10,19 @@
     width: 73%;
   }
 
-  &:first-of-type::after {
+  & + &::after {
     content: "";
     position: absolute;
-    top: 8px;
+    bottom: 96%;
     left: -17px;
     width: 2px;
-    height: 285px;
+    height: 111.5%;
     background-color: @basic-blue-light;
 
     @media (min-width: @tablet-width) {
       left: auto;
       right: -28px;
-      height: 265px;
+      height: 120%;
     }
   }
 
@@ -132,12 +132,52 @@
     right: -155px;
   }
 
-  &--bosnia-and-herzegovina {
-    background-image: url("../../img/mobile/bosnia-and-herzegovina_flag_mobile.png");
+  &--sri-lanka {
+    background-image: url("../../img/mobile/sri-lanka_flag_mobile.png");
+  }
+
+  &--france {
+    background-image: url("../../img/mobile/france_flag_mobile.png");
   }
 
   &--czech {
     background-image: url("../../img/mobile/czech_flag_mobile.png");
+  }
+
+  &--usa {
+    background-image: url("../../img/mobile/usa_flag_mobile.png");
+  }
+
+  &--belgium {
+    background-image: url("../../img/mobile/belgium_flag_mobile.png");
+  }
+
+  &--thailand {
+    background-image: url("../../img/mobile/thailand_flag_mobile.png");
+  }
+
+  &--seychelles {
+    background-image: url("../../img/mobile/seychelles_flag_mobile.png");
+  }
+
+  &--england {
+    background-image: url("../../img/mobile/england_flag_mobile.png");
+  }
+
+  &--australia {
+    background-image: url("../../img/mobile/australia_flag_mobile.png");
+  }
+
+  &--germany {
+    background-image: url("../../img/mobile/germany_flag_mobile.png");
+  }
+
+  &--bosnia-and-herzegovina {
+    background-image: url("../../img/mobile/bosnia-and-herzegovina_flag_mobile.png");
+  }
+
+  &--dominica {
+    background-image: url("../../img/mobile/dominica_flag_mobile.png");
   }
 }
 

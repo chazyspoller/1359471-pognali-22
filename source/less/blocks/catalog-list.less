@@ -3,6 +3,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -12,6 +13,11 @@
   .fonts(0; 2; 400);
   text-align: center;
   color: @special-grey-dark;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 9px rgba(@basic-black, 0.16);
+  }
 
   &:hover .catalog-list__avatar,
   &:focus .catalog-list__avatar {
@@ -36,7 +42,7 @@
 }
 
 .catalog-list__info {
-  margin-top: -3px;
+  margin-top: -4px;
   position: relative;
   z-index: 2;
   border-radius: 0 0 10px 10px;

@@ -11,6 +11,7 @@
   @media (min-width: @desktop-width) {
     padding: 36px 42px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
@@ -18,7 +19,7 @@
 
 .card__title {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
@@ -31,6 +32,7 @@
     flex-direction: row;
     justify-content: flex-start;
     margin-bottom: 0;
+    max-width: 40%;
   }
 }
 

@@ -43,14 +43,14 @@
   margin-top: -1px;
   margin-left: -1px;
 
-  &:hover,
-  &:focus {
+  &:not(&--sort):hover,
+  &:not(&--sort):focus {
     position: relative;
     border: 1px solid @counter-border-hover;
     z-index: 2;
   }
 
-  &:active {
+  &:not(&--sort):active {
     background-color: @basic-blue-light;
   }
 
@@ -64,12 +64,13 @@
     border-radius: 4px;
   }
 
-  &:nth-child(5n) {
+  &:nth-child(5n),
+  &:last-of-type {
     margin-right: -1px;
     border-right: 1px solid @special-border-grey;
 
-    &:hover,
-    &:focus {
+    &:not(&--sort):hover,
+    &:not(&--sort):focus {
       position: relative;
       border-right: 1px solid @counter-border-hover;
       z-index: 2;
@@ -143,11 +144,31 @@
       opacity: 0.3;
       padding: 0;
       .fonts(44; 44; 700);
+
+      &:hover,
+      &:focus {
+        opacity: 0.6;
+      }
+
+      &:active {
+        color: @basic-blue-light;
+        opacity: 1;
+      }
     }
 
     @media (min-width: @desktop-width) {
       margin-bottom: 30px;
       opacity: 1;
+      text-align: left;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 1;
+      }
     }
   }
 

@@ -12,16 +12,26 @@
     opacity: 0.3;
   }
 
+  @media (min-width: @tablet-width) {
+    .fonts(8; 8; 700);
+  }
+
   &::before {
     content: "";
     position: absolute;
     top: 50%;
-    margin-top: -2px;
+    margin-top: 2px;
+    transform: translateY(-50%);
     left: -16px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
     background-color: @special-pink;
+
+    @media (min-width: @tablet-width) {
+      width: 8px;
+      height: 8px;
+    }
   }
 
   &--online::before {
@@ -30,15 +40,28 @@
 
   &--ideal {
     .fonts(4; 4; 700);
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    @media (min-width: @tablet-width) {
+      .fonts(14; 14; 700);
+    }
   }
 
   &--ideal::before {
     left: initial;
     right: -60px;
-    transform: translateY(-50%);
 
     @media (min-width: @tablet-width) {
-      margin-top: -2px;
+      right: -30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: auto;
+      left: -26px;
     }
   }
 }
