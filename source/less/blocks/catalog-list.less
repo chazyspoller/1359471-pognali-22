@@ -14,6 +14,11 @@
   text-align: center;
   color: @special-grey-dark;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 9px rgba(@basic-black, 0.16);
+  }
+
   &:hover .catalog-list__avatar,
   &:focus .catalog-list__avatar {
     transform: scale(1.1);
