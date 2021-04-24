@@ -13,6 +13,14 @@
   .list-style-none;
   color: @special-grey-dark;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
+  }
 }
 
 .ideal-traveler-cards__item {
@@ -22,17 +30,75 @@
 }
 
 .ideal-traveler-cards__add-item {
-  width: 100%;
+  .reset-margins;
+  display: block;
   margin-bottom: 18px;
   .set-font;
-  .fonts(1; 14; 700);
   color: @basic-blue-light;
   text-transform: uppercase;
   text-align: center;
   border: none;
   background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
+  }
+}
+
+.ideal-traveler-cards__add-item-name {
+  position: relative;
+  padding-left: 33px;
+  .fonts(1; 14; 700);
+
+  @media (min-width: @tablet-width) {
+    padding-left: 51px;
+    .fonts(4; 4; 700);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 2px;
+    border-radius: 25px;
+    background-color: @basic-blue-light;
+
+    @media (min-width: @tablet-width) {
+      width: 26px;
+    }
+  }
+
+  &::after {
+    transform: rotate(90deg);
+    margin-top: -1px;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .ideal-traveler-cards__pages {
-  margin-bottom: 106px;
+  margin-bottom: 60px + 46px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px + 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px + 75px;
+  }
 }
