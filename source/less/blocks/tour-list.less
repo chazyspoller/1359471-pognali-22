@@ -92,11 +92,15 @@
   border-radius: 4px;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+
+  &:not(&--flag) {
+    cursor: pointer;
+  }
 
   &:not(&--flag):hover,
   &:not(&--flag):focus {
     border-color: @counter-border-hover;
+    z-index: 2;
   }
 
   @media (min-width: @tablet-width) {
@@ -202,6 +206,7 @@
   background-color: transparent;
   border: none;
   z-index: 3;
+  cursor: pointer;
 
   &--close {
     &:hover::after,
@@ -276,6 +281,7 @@
   background-color: @basic-grey;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     top: 50%;
