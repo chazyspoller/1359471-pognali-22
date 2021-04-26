@@ -164,7 +164,7 @@
 .step__scroll {
   margin-bottom: 22px;
   display: grid;
-  grid-template-columns: min-content 1fr min-content;
+  grid-template-columns: 5% 1fr 5%;
   border-top: 1px solid @scroll-border;
   border-bottom: 1px solid @scroll-border;
 }
@@ -182,11 +182,12 @@
 }
 
 .step__scroll-button {
+  .reset-margins;
   border: none;
   background-color: transparent;
   background-image: url("../../img/icons/scroll-back.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   opacity: 0.3;
   cursor: pointer;
 
