@@ -2,8 +2,29 @@
   .set-wrapper;
   padding-top: 32px;
 
+  background-image: url("../../img/mobile/traveller_illustration_mobile.png");
+  background-repeat: no-repeat;
+  background-position: 62% 162px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/mobile/traveller_illustration_mobile@2x.png");
+    background-size: 192px 255px;
+  }
+
   @media (min-width: @tablet-width) {
-    padding-top: 29px;
+    padding-top: 30px;
+    background-image:
+      url("../../img/tablet/traveller_illustration_tablet.png"),
+      url("../../img/tablet/header_bg_tablet.jpg");
+    background-position: 72% 50.5%, center 65.3%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../img/tablet/traveller_illustration_tablet@2x.png"),
+        url("../../img/tablet/header_bg_tablet@2x.jpg");
+      background-size: 372px, 1479px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -13,25 +34,34 @@
     background-color: @basic-blue;
     border-radius: 0 0 60px 60px;
     padding-bottom: 123px;
+    background-image:
+      url("../../img/desktop/traveller_illustration_desktop.png"),
+      url("../../img/desktop/header_bg_desktop.jpg");
+    background-position: 60% bottom, center -1px;
+    background-size: auto, cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../img/desktop/traveller_illustration_desktop@2x.png"),
+        url("../../img/desktop/header_bg_desktop@2x.jpg");
+      background-size: 431px, 100%;
+    }
   }
 }
 
 .intro__title {
   .reset-margins;
   padding: 0 16px 267px 16px;
-  background-image: url("../img/mobile/traveller_illustration_mobile.png");
-  background-repeat: no-repeat;
-  background-position: 55px bottom;
   .fonts(20; 24; 700);
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 86px;
+    padding-bottom: 88px;
     .fonts(44; 54; 700);
   }
 
   @media (min-width: @desktop-width) {
-    padding: 110px 0 101px 69px;
+    padding: 100px 0 108px 69px;
     text-align: left;
   }
 }
@@ -62,12 +92,12 @@
 
   @media (min-width: @tablet-width) {
     background-color: transparent;
-    padding: 0 45% 0 32px;
-    margin-bottom: 211px;
+    padding: 0 32px;
+    margin-bottom: 215px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 10px 81px 0 0;
+    padding: 0 0 0 60px;
     text-align: left;
     margin: auto 0;
   }
@@ -78,8 +108,16 @@
   .text;
   padding: 0 84px 0 25px;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     .fonts(12; 17; 300);
+
+    br {
+      display: inline-block;
+    }
   }
 
   @media (min-width: @desktop-width) {

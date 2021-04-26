@@ -3,9 +3,6 @@
   background-color: @special-prices-bg;
   border-radius: 0 0 30px 30px;
   padding-top: 60px;
-  background-image: url("../img/mobile/prices_mobile.png");
-  background-repeat: no-repeat;
-  background-position: right 97px;
   .fonts(0; 0; 300);
   color: @special-grey-dark;
 
@@ -23,10 +20,46 @@
 
   @media (min-width: @tablet-width) {
     padding: 74px 0 85px 0;
+    background-position: 80% 400px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 107px 72px 187px 72px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 150;
+    top: 40px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url("../../img/mobile/prices_mobile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/mobile/prices_mobile@2x.png");
+      background-size: 100px;
+    }
+
+    @media (min-width: @tablet-width) {
+      top: auto;
+      bottom: 45px;
+      right: 45px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 198px;
+      height: 198px;
+      bottom: 270px;
+      right: 73px;
+      background-image: url("../../img/desktop/prices_desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/desktop/prices_desktop@2x.png");
+        background-size: 198px;
+      }
+    }
   }
 }
 

@@ -1,19 +1,54 @@
 .service {
   background-color: @basic-blue-text;
-  background-image: url("../img/mobile/about_mobile.png");
+  background-image:
+    url("../../img/mobile/about_mobile.png"),
+    url("../../img/mobile/service_back.svg");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: 90% bottom, left 280px;
   border-radius: 0 0 30px 30px;
   padding-top: 240px;
+  min-height: 630px;
+  box-sizing: border-box;
   .set-wrapper;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../../img/mobile/about_mobile@2x.png"),
+      url("../../img/mobile/service_back.svg");
+    background-size: 292px, 113px;
+  }
 
   @media (min-width: @tablet-width) {
     border-radius: 0 0 60px 60px;
+    padding-top: 240px;
+    background-image:
+      url("../../img/tablet/about_tablet.png"),
+      url("../../img/tablet/service_back_tablet.svg");
+    background-position: 98% 382px, 40px 335px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../img/tablet/about_tablet@2x.png"),
+        url("../../img/tablet/service_back_tablet.svg");
+      background-size: 376px, 688px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-top: -60px;
     padding-top: 60px;
+
+    background-image:
+      url("../../img/desktop/about_desktop.png"),
+      url("../../img/desktop/service_back_desktop.svg");
+    background-position: 92.5% bottom, 60px 128px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../img/desktop/about_desktop@2x.png"),
+        url("../../img/desktop/service_back_desktop.svg");
+      background-size: 630px, 212px;
+    }
   }
 }
 
@@ -21,11 +56,11 @@
   padding: 72px 24px 34px 24px;
 
   @media (min-width: @tablet-width) {
-    padding: 137px 320px 89px 34px;
+    padding: 137px 34px 89px 34px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 132px 630px 163px 34px;
+    padding: 128px 72px 163px 72px;
   }
 }
 
@@ -36,11 +71,27 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .service__text {
   .reset-margins;
   .text;
+
+  @media (min-width: 550px) {
+    padding-right: 30%;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 45%;
+  }
 
   &:not(:last-of-type) {
     margin-bottom: 20px;
@@ -48,10 +99,18 @@
     @media (min-width: @tablet-width) {
       margin-bottom: 31px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 38px;
+    }
   }
 
   &:last-of-type {
     margin-bottom: 52px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 88px;
+    }
   }
 }
 

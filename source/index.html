@@ -16,7 +16,11 @@
       <nav class="page-header__menu main-nav">
         <div class="main-nav__box-top">
           <a class="main-nav__logo">
-            <img src="img/mobile/logo_mobile.png" alt="Логотип Погнали" width="96" height="15">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/desktop/logo_desktop.png 1x, img/desktop/logo_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/tablet/logo_tablet.png 1x, img/tablet/logo_tablet@2x.png 2x">
+              <img src="img/mobile/logo_mobile.png" srcset="img/mobile/logo_mobile@2x.png 2x" alt="Логотип Погнали" width="96" height="15">
+            </picture>
           </a>
           <button class="main-nav__toggle" aria-label="Открыть меню" type="button"></button>
         </div>
@@ -79,9 +83,7 @@
     <h1 class="visually-hidden">Сервис для поиска попутчиков для путешествий Погнали</h1>
     <section class="main-content__intro intro">
       <h2 class="visually-hidden">Знакомство с сервисом</h2>
-      <div class="intro__wrapper">
-        <p class="intro__title">В&nbsp;путешествие<br> с&nbsp;крутыми<br> попутчиками!</p>
-      </div>
+      <p class="intro__title">В&nbsp;путешествие<br> с&nbsp;крутыми<br> попутчиками!</p>
       <ul class="intro__contacts contacts-list">
         <li class="contacts-list__item">
           <a class="button button--round contacts-list__link contacts-list__link--phone" href="" aria-label="Позвонить">
@@ -98,8 +100,8 @@
         </li>
       </ul>
       <blockquote class="intro__quote">
-        <p class="intro__text">«Лучшее приложение, что я видел в жизни!»</p>
-        <cite class="intro__text intro__text--bold">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+        <p class="intro__text">«Лучшее приложение,<br> что&nbsp;я&nbsp;видел в&nbsp;жизни!»</p>
+        <cite class="intro__text intro__text--bold">Мурат Эльтазин<br> главный редактор газеты<br> «гаджетлайф»</cite>
       </blockquote>
       <ol class="intro__plan plan-list">
         <li class="plan-list__item plan-list__item--1">
@@ -123,7 +125,7 @@
     <section class="main-content__service service">
       <div class="service__wrapper">
         <h2 class="service__title title-sections">О сервисе</h2>
-        <p class="service__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих. </p>
+        <p class="service__text">Любое путешествие веселее с&nbsp;попутчиками, которые&nbsp;на одной волне с&nbsp;тобой! Делитесь своими идеями путешествий&nbsp;и черпайте вдохновение в чужих. </p>
         <p class="service__text service__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
         <a class="button service__link service__link--hide" href="">Подробнее</a>
       </div>
@@ -132,11 +134,14 @@
       <div class="direction__wrapper">
         <div class="direction__intro">
           <h2 class="direction__title title-sections">Направления</h2>
-          <p class="direction__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+          <p class="direction__text">Мы не продаем туры и&nbsp;ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         </div>
         <ul class="direction__countries countries-list">
           <li class="countries-list__item">
-            <img class="countries-list__image" src="img/mobile/thailand_mobile.jpg" alt="Остров Таиланда" width="270" height="110">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/tablet/thailand_tablet.jpg 1x, img/tablet/thailand_tablet@2x.jpg 2x">
+              <img class="countries-list__image" src="img/mobile/thailand_mobile.jpg" srcset="img/mobile/thailand_mobile@2x.jpg 2x" alt="Остров Таиланда" width="270" height="110">
+            </picture>
             <div class="countries-list__info-country">
               <ul class="countries-list__flags flags flags--single">
                 <li class="flags__flags-item flags__flags-item--single flags__flags-item--thailand"></li>
@@ -147,7 +152,10 @@
             </div>
           </li>
           <li class="countries-list__item">
-            <img class="countries-list__image" src="img/mobile/france_mobile.jpg" alt="Улица в городе Франции" width="270" height="110">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/tablet/france_tablet.jpg 1x, img/tablet/france_tablet@2x.jpg 2x">
+              <img class="countries-list__image" src="img/mobile/france_mobile.jpg" srcset="img/mobile/france_mobile@2x.jpg 2x" alt="Улица в городе Франции" width="270" height="110">
+            </picture>
             <div class="countries-list__info-country">
               <ul class="countries-list__flags flags flags--single">
                 <li class="flags__flags-item flags__flags-item--single flags__flags-item--france"></li>
@@ -158,7 +166,10 @@
             </div>
           </li>
           <li class="countries-list__item">
-            <img class="countries-list__image" src="img/mobile/czech_mobile.jpg" alt="Берег реки в городе Чехии" width="270" height="110">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/tablet/czech_tablet.jpg 1x, img/tablet/czech_tablet@2x.jpg 2x">
+              <img class="countries-list__image" src="img/mobile/czech_mobile.jpg" srcset="img/mobile/czech_mobile@2x.jpg 2x" alt="Берег реки в городе Чехии" width="270" height="110">
+            </picture>
             <div class="countries-list__info-country">
               <ul class="countries-list__flags flags flags--single">
                 <li class="flags__flags-item flags__flags-item--single flags__flags-item--czech"></li>
@@ -182,7 +193,10 @@
         <ul class="travelers__catalog catalog-list">
           <li class="catalog-list__item">
             <a class="catalog-list__avatar-link" href="">
-              <img class="catalog-list__avatar" src="img/mobile/avatar_tanya_firsova.jpg" alt="Аватар Татьяны Фирсовой" width="270" height="270">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/desktop/avatar_tanya_firsova.jpg 1x, img/desktop/avatar_tanya_firsova@2x.jpg 2x">
+                <img class="catalog-list__avatar" src="img/mobile/avatar_tanya_firsova_mobile.jpg" srcset="img/mobile/avatar_tanya_firsova_mobile@2x.jpg 2x" alt="Аватар Татьяны Фирсовой" width="270" height="270">
+              </picture>
             </a>
             <div class="catalog-list__level level level--99">
               <p class="level__number">99</p>
@@ -214,7 +228,10 @@
           </li>
           <li class="catalog-list__item">
             <a class="catalog-list__avatar-link" href="">
-              <img class="catalog-list__avatar" src="img/mobile/avatar_demin.jpg" alt="Аватар Пети Демина" width="270" height="270">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/desktop/avatar_demin.jpg 1x, img/desktop/avatar_demin@2x.jpg 2x">
+                <img class="catalog-list__avatar" src="img/mobile/avatar_demin_mobile.jpg" srcset="img/mobile/avatar_demin_mobile@2x.jpg 2x" alt="Аватар Пети Демина" width="270" height="270">
+              </picture>
             </a>
             <div class="catalog-list__level level level--80">
               <p class="level__number">80</p>
@@ -339,7 +356,11 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="page-footer__logo">
-        <img src="img/mobile/logo_mobile_dark.png" alt="Логотип Погнали" width="96" height="15">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/desktop/logo_desktop_dark.png 1x, img/desktop/logo_desktop_dark@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/tablet/logo_tablet_dark.png 1x, img/tablet/logo_tablet_dark@2x.png 2x">
+          <img src="img/mobile/logo_mobile_dark.png" srcset="img/mobile/logo_mobile_dark@2x.png 2x" alt="Логотип Погнали" width="96" height="15">
+        </picture>
       </a>
       <ul class="page-footer__social social-list">
         <li class="social-list__item">

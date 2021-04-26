@@ -1,14 +1,42 @@
 .travelers {
   background-color: @basic-blue-text;
-  background-image: url("../img/mobile/travelers_mobile.png");
+  background-image:
+    url("../../img/desktop/smolov_back_desktop.png"),
+    url("../../img/mobile/rogovaya_back_mobile.png"),
+    url("../../img/mobile/service_back.svg");
   background-repeat: no-repeat;
-  background-position: left 94px;
+  background-position: 86% 94px, left 367px, left 94px;
   border-radius: 0 0 30px 30px;
   .set-wrapper;
   padding-top: 60px;
 
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../../img/desktop/smolov_back_desktop@2x.png"),
+      url("../../img/mobile/rogovaya_back_mobile@2x.png"),
+      url("../../img/mobile/service_back.svg");
+    background-size: 143px, 62px, 113px;
+  }
+
   @media (min-width: @tablet-width) {
     border-radius: 0 0 60px 60px;
+    background-image:
+      url("../../img/desktop/smolov_back_desktop.png"),
+      url("../../img/desktop/rogovaya_back_desktop.png"),
+      url("../../img/desktop/service_back_desktop.svg");
+    background-position: 40px 489px, 84.7% 144px, 40px 134px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../img/desktop/smolov_back_desktop@2x.png"),
+        url("../../img/desktop/rogovaya_back_desktop@2x.png"),
+        url("../../img/desktop/service_back_desktop.svg");
+      background-size: 143px, 285px, 212px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 42.1% 202px, 16.5% 454px, 60px 138px;
   }
 }
 
@@ -48,14 +76,34 @@
 .travelers__title {
   .reset-margins;
   margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .travelers__text {
   .reset-margins;
   .text;
 
+  @media (min-width: @tablet-width) {
+    padding-right: 30%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 45px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 25px;
+    }
   }
 }
 
