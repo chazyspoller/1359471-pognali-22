@@ -3,7 +3,7 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: max-content 3fr 1fr;
+    grid-template-columns: max-content 2fr 1fr;
     align-items: center;
   }
 }
@@ -78,6 +78,21 @@
 
 .main-nav__logo {
   .fonts(0; 0);
+
+  img {
+    width: 96px;
+    height: 15px;
+
+    @media (min-width: @tablet-width) {
+      width: 166px;
+      height: 42px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 200px;
+      height: 52px;
+    }
+  }
 }
 
 .main-nav__toggle {
@@ -90,6 +105,7 @@
   border: none;
   background-color: transparent;
   position: absolute;
+  cursor: pointer;
 
   &::after,
   &::before {
@@ -149,8 +165,8 @@
 .main-nav__contacts {
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 0;
-    transform: translateY(50%);
+    top: 50%;
+    transform: translateY(-50%);
     right: 0;
     z-index: 25;
   }

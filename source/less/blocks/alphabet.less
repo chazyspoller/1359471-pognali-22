@@ -91,6 +91,19 @@
   }
 
   &--sort {
+    @media (max-width: @mobile-only-width) {
+      &:hover,
+      &:focus {
+        position: relative;
+        border: 1px solid @counter-border-hover;
+        z-index: 2;
+      }
+
+      &:active {
+        background-color: @basic-blue-light;
+      }
+    }
+
     @media (min-width: @tablet-width) {
       border: none;
       background-color: transparent;
@@ -129,6 +142,7 @@
   padding: 12px 0;
   width: 100%;
   color: @basic-blue-light;
+  cursor: pointer;
 
   &:active {
     color: @basic-white;
@@ -160,6 +174,7 @@
       margin-bottom: 30px;
       opacity: 1;
       text-align: left;
+      cursor: auto;
 
       &:hover,
       &:focus {

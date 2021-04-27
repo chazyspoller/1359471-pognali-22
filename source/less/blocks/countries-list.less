@@ -1,10 +1,36 @@
 .countries-list {
   .list-style-none;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 100;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 20%;
+      background-image: linear-gradient(to top, rgba(@basic-grey, 1) 0%, rgba(@basic-grey, 0.7) 30%, rgba(@basic-grey, 0) 100%);
+    }
+  }
 }
 
 .countries-list__item {
+  picture {
+    .fonts(-16; -16; 0);
+
+    @media (min-width: @tablet-width) {
+      order: 2;
+    }
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 8px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 11px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -15,12 +41,13 @@
 .countries-list__image {
   border-radius: 15px 15px 0 0;
   width: 100%;
+  height: 110px;
   object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    order: 2;
     border-radius: 0 20px 20px 0;
-    max-width: 186px;
+    min-width: 186px;
+    height: 140px;
   }
 }
 
@@ -38,7 +65,7 @@
     width: 100%;
     margin-top: 0;
     border-radius: 20px 0 0 20px;
-    padding: 30px 29px 61px 29px;
+    padding: 28px 29px 58px 29px;
   }
 }
 
@@ -50,11 +77,17 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 5px;
+    .fonts(8; 8; 700);
   }
 }
 
 .countries-list__text {
   .reset-margins;
+  .fonts(0; 2; 500);
+
+  @media (min-width: @tablet-width) {
+    .fonts(4; 4; 500);
+  }
 }
 
 .countries-list__users {
@@ -63,10 +96,12 @@
   position: absolute;
   top: 28px;
   right: 24px;
+  .fonts(0; 2; 500);
 
   @media (min-width: @tablet-width) {
     top: auto;
-    bottom: 26px;
+    bottom: 20px;
     left: 58px;
+    .fonts(4; 4; 500);
   }
 }

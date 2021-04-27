@@ -54,10 +54,21 @@
     height: 45px;
     background-image: url("../../img/icons/map_mark.svg");
     background-repeat: no-repeat;
+    background-size: 100%;
 
     @media (min-width: 423px) {
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 68px;
+      height: 68px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 90px;
+      height: 90px;
     }
   }
 }
