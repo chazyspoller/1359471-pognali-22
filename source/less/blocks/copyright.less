@@ -1,6 +1,7 @@
 .copyright {
   display: flex;
   align-items: center;
+  position: relative;
 
   &:hover,
   &:focus {
@@ -9,6 +10,19 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: @border-footer;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 
