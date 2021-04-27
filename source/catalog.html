@@ -16,7 +16,11 @@
       <nav class="page-header__menu main-nav">
         <div class="main-nav__box-top">
           <a class="main-nav__logo" href="index.html">
-            <img src="img/mobile/logo_mobile.png" alt="Логотип Погнали" width="96" height="15">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop.png 1x, img/desktop/logo-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.png 1x, img/tablet/logo-tablet@2x.png 2x">
+              <img src="img/mobile/logo-mobile.png" srcset="img/mobile/logo-mobile@2x.png 2x" alt="Логотип Погнали" width="96" height="15">
+            </picture>
           </a>
           <button class="main-nav__toggle" aria-label="Открыть меню" type="button"></button>
         </div>
@@ -1098,7 +1102,11 @@
   <footer class="page-footer page-footer--inner">
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html">
-        <img src="img/mobile/logo_mobile_dark.png" alt="Логотип Погнали" width="96" height="15">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-dark.png 1x, img/desktop/logo-desktop-dark@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet-dark.png 1x, img/tablet/logo-tablet-dark@2x.png 2x">
+          <img src="img/mobile/logo-mobile-dark.png" srcset="img/mobile/logo-mobile-dark@2x.png 2x" alt="Логотип Погнали" width="96" height="15">
+        </picture>
       </a>
       <ul class="page-footer__social social-list">
         <li class="social-list__item">
