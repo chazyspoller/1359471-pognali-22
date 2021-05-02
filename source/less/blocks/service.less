@@ -24,7 +24,7 @@
     background-image:
       url("../../img/tablet/about-tablet.png"),
       url("../../img/tablet/service-back-tablet.svg");
-    background-position: 98% 382px, 40px 335px;
+    background-position: 98% 81.5%, 40px 41.8%;
 
     @media (min-resolution: 2dppx) {
       background-image:
@@ -53,10 +53,10 @@
 }
 
 .service__wrapper {
-  padding: 72px 24px 34px 24px;
+  padding: 71px 24px 33px 24px;
 
   @media (min-width: @tablet-width) {
-    padding: 137px 34px 89px 34px;
+    padding: 134px 34px 89px 34px;
   }
 
   @media (min-width: @desktop-width) {
@@ -69,7 +69,7 @@
   margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   @media (min-width: @desktop-width) {
@@ -90,11 +90,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 45%;
+    padding-right: 47%;
+
+    br {
+      display: none;
+    }
   }
 
   &:not(:last-of-type) {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 31px;
@@ -108,8 +112,18 @@
   &:last-of-type {
     margin-bottom: 52px;
 
+    @media (min-width: @tablet-width) {
+      margin-bottom: 55px;
+    }
+
     @media (min-width: @desktop-width) {
       margin-bottom: 88px;
+    }
+  }
+
+  &--bold {
+    @media (min-width: @desktop-width) {
+      padding-right: 60%;
     }
   }
 }
@@ -123,7 +137,7 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    width: 274px;
+    width: 275px;
     box-sizing: border-box;
   }
 }

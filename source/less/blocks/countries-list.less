@@ -26,10 +26,14 @@
   }
 
   &:not(:last-of-type) {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 11px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 10px;
     }
   }
 
@@ -59,13 +63,20 @@
   color: rgb(@special-grey-dark, 0.3);
   background-color: @basic-white;
   border-radius: 10px;
-  padding: 24px 24px 26px 24px;
+  padding: 24px 24px 8px 24px;
+  min-height: 89px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 100%;
+    min-height: 140px;
     margin-top: 0;
     border-radius: 20px 0 0 20px;
-    padding: 28px 29px 58px 29px;
+    padding: 28px 29px 42px 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 21px;
   }
 }
 
@@ -74,6 +85,7 @@
   .fonts(5; 5; 700);
   color: @basic-black;
   margin-bottom: 2px;
+  padding-right: 30%;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 5px;
@@ -84,9 +96,24 @@
 .countries-list__text {
   .reset-margins;
   .fonts(0; 2; 500);
+  padding-right: 30%;
+
+  br {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 500);
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    br {
+      display: none;
+    }
   }
 }
 
@@ -95,13 +122,38 @@
   color: rgb(@basic-blue, 0.3);
   position: absolute;
   top: 28px;
-  right: 24px;
+  left: 75.3%;
   .fonts(0; 2; 500);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: -19px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../../img/icons/icon-users.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media (min-width: @tablet-width) {
+      width: 22px;
+      height: 22px;
+      left: -30px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     top: auto;
-    bottom: 20px;
+    bottom: 22px;
     left: 58px;
     .fonts(4; 4; 500);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 60px;
+    bottom: 24px;
   }
 }

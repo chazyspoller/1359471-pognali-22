@@ -1,14 +1,12 @@
 .transport {
   .list-style-none;
   .reset-margins;
-  padding: 0 70px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   &--catalog {
-    padding: 0;
     margin-top: 16px;
     justify-content: flex-start;
 
@@ -24,26 +22,61 @@
 }
 
 .transport__item {
-  width: 32px;
-  height: 32px;
-  background-color: red;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--disabled::before {
+    opacity: 0.15;
+  }
+
+  &--plane::before {
+    background-image: url("../../img/icons/icon-plane.svg");
+  }
+
   &--plane:hover .transport__item-hint {
     display: block;
+  }
+
+  &--bus::before {
+    background-image: url("../../img/icons/icon-bus.svg");
   }
 
   &--bus:hover .transport__item-hint {
     display: block;
   }
 
+  &--bicycle::before {
+    background-image: url("../../img/icons/icon-bicycle.svg");
+  }
+
   &--bicycle:hover .transport__item-hint {
     display: block;
   }
 
+  &--foot::before {
+    background-image: url("../../img/icons/icon-run.svg");
+  }
+
   &--foot:hover .transport__item-hint {
     display: block;
+  }
+
+  & + & {
+    margin-left: 8px;
   }
 
   &--catalog {
@@ -54,7 +87,7 @@
     }
 
     @media (min-width: @tablet-width) {
-      background-color: red;
+      background-color: transparent;
 
       & + & {
         margin-left: 0;

@@ -17,23 +17,26 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: flex-end;
+    max-width: 30%;
   }
 
   @media (min-width: @desktop-width) {
     justify-content: flex-end;
+    max-width: 100%;
   }
 }
 
 .contacts-list__link {
   display: block;
-  padding: 10px 11px;
   color: @basic-blue;
   text-transform: uppercase;
+  position: relative;
   .fonts(0; 0);
 
   &--login {
     .fonts(1; 4; 700);
-    padding: 10px 38px;
+    padding: 10px 39px;
 
     &:hover,
     &:focus {
@@ -53,6 +56,10 @@
   &--phone {
     background-color: @basic-orange;
 
+    &::before {
+      background-image: url("../../img/icons/phone.svg");
+    }
+
     &:hover,
     &:focus {
       background-color: @hover-orange;
@@ -62,6 +69,10 @@
   &--mail {
     background-color: @special-yellow-dark;
 
+    &::before {
+      background-image: url("../../img/icons/mail.svg");
+    }
+
     &:hover,
     &:focus {
       background-color: @basic-orange;
@@ -70,17 +81,31 @@
 
   &--phone,
   &--mail {
-    &:active path {
-      fill-opacity: 0.3;
+    padding: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 19px;
+      height: 19px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:active::before {
+      opacity: 0.3;
     }
 
     @media (min-width: @tablet-width) {
       display: none;
-      padding: 16px 17px;
     }
 
     @media (min-width: @desktop-width) {
       display: block;
+      padding: 25px;
     }
   }
 }
