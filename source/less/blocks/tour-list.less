@@ -170,22 +170,23 @@
       background-color: @special-grey;
     }
 
-    //&:hover .tour-list__button::after,
-    //&:hover .tour-list__button::before,
-    //&:focus .tour-list__button::after,
-    //&:focus .tour-list__button::before {
-    //  background-color: @add-button-hover;
-    //}
+    &:hover .tour-list__button--add,
+    &:focus .tour-list__button--add {
+      opacity: 0.3;
+    }
 
-    //&:active .tour-list__button::after,
-    //&:active .tour-list__button::before {
-    //  background-color: @add-button-active;
-    //}
+    &:active .tour-list__button--add {
+      opacity: 0.1;
+    }
 
     &::after {
       display: none;
     }
   }
+}
+
+.tour-list__field--open-dropdown ~ .tour-list__delete {
+  display: none;
 }
 
 .tour-list__name {
@@ -200,7 +201,7 @@
   height: 14px;
   top: 50%;
   transform: translateY(-50%);
-  right: 15px;
+  right: 5px;
   background-color: transparent;
   border: none;
   z-index: 3;
@@ -241,7 +242,7 @@
   }
 
   &--more {
-    background-image: url("../../img/mobile/arrow_more.svg");
+    background-image: url("../../img/mobile/arrow-more.svg");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -264,6 +265,10 @@
   &--add::before {
     width: 2px;
     height: 14px;
+  }
+
+  &--add {
+    opacity: 0.2;
   }
 }
 

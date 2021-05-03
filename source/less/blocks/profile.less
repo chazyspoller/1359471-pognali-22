@@ -4,7 +4,7 @@
 }
 
 .profile__wrapper {
-  padding: 34px 0 94px 0;
+  padding: 24px 0 94px 0;
   display: grid;
   grid-template-columns: repeat(1fr, 4);
   grid-template-rows: repeat(min-content, 4);
@@ -12,6 +12,7 @@
   position: relative;
 
   picture {
+    line-height: 0;
     margin-left: auto;
   }
 
@@ -50,7 +51,6 @@
   border-radius: 50%;
   grid-column-start: 3;
   grid-column-end: 5;
-  margin: auto;
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -133,7 +133,7 @@
   grid-column-end: 5;
 
   &:not(:last-of-type) {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
