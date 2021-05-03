@@ -4,32 +4,37 @@
   border-radius: 20px;
   overflow: hidden;
   position: absolute;
-  z-index: 100;
-  top: -11px;
+  z-index: 200;
+  top: 70.86%;
   left: 0;
-  width: 100%;
+  right: 0;
+  width: 84.4%;
+  margin: 0 auto;
 
   &--hide {
     display: none;
   }
 
   @media (min-width: @tablet-width) {
-    top: 0;
+    top: 66.12%;
+    width: 89.5%;
   }
 
   @media (min-width: @desktop-width) {
-    top: 99px;
-    width: 56.8%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 59.3%;
+    width: 52.1%;
   }
 }
 
 .popup-business__info {
-  padding: 30px 25px;
+  padding: 32px 25px 35px 25px;
 
   @media (min-width: @tablet-width) {
-    padding: 52px 90px;
+    padding: 50px 93px 53px 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 60px 53px 60px;
   }
 }
 
@@ -37,6 +42,10 @@
   .reset-margins;
   margin-bottom: 28px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .popup-business__list {
@@ -47,7 +56,7 @@
 .popup-business__close {
   background-color: @special-close;
   border: none;
-  padding: 17px;
+  padding: 18px 17px 16px 17px;
   width: 100%;
   .set-font;
   .fonts(0; 8; 700);
@@ -64,7 +73,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 41px;
+    padding: 39px 41px 44px 41px;
     text-transform: initial;
     .fonts(8; 8; 700);
   }

@@ -4,7 +4,6 @@
   border-radius: 0 0 30px 30px;
   padding-top: 60px;
   .fonts(0; 0; 300);
-  color: @special-grey-dark;
 
   @media (min-width: @tablet-width) {
     border-radius: 0 0 60px 60px;
@@ -19,19 +18,19 @@
   z-index: 100;
 
   @media (min-width: @tablet-width) {
-    padding: 74px 0 85px 0;
+    padding: 70px 0 87px 0;
     background-position: 80% 400px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 107px 72px 187px 72px;
+    padding: 103px 72px 188px 72px;
   }
 
   &::before {
     content: "";
     position: absolute;
-    z-index: 150;
-    top: 40px;
+    z-index: 10;
+    top: 37px;
     right: 0;
     width: 100px;
     height: 100px;
@@ -51,7 +50,7 @@
     @media (min-width: @desktop-width) {
       width: 198px;
       height: 198px;
-      bottom: 270px;
+      bottom: 35.3%;
       right: 73px;
       background-image: url("../../img/desktop/prices-desktop.png");
 
@@ -70,21 +69,25 @@
 
   @media (min-width: @tablet-width) {
     text-align: center;
-    margin-bottom: 73px;
+    margin-bottom: 75px;
     padding-right: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 107px;
+    margin-bottom: 135px;
   }
 }
 
 .prices__catalog {
   .reset-margins;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 59px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
   }
 }
 
@@ -92,18 +95,58 @@
   display: block;
   .fonts(0; 0; 700);
   color: @special-links;
-
+  position: relative;
 
   &:hover,
   &:focus {
-    opacity: 0.7;
+    color: rgba(@special-links, 0.7);
   }
 
   &:active {
+    color: rgba(@special-links, 0.3);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 0.7;
+  }
+
+  &:active::after {
     opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 700);
+    padding-left: 68px + 21px;
+    width: max-content;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      width: 68px;
+      height: 68px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: @special-likes-color;
+      border-radius: 50%;
+    }
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      width: 68px;
+      height: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background-image: url("../../img/icons/icon-businessman.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }

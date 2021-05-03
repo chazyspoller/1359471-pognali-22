@@ -5,12 +5,12 @@
   color: @basic-blue-light;
   border: none;
   position: relative;
-  padding: 22px 23px 22px 23px;
+  padding: 21px 40px 23px 23px;
 
   @media (min-width: @tablet-width) {
     border-radius: 20px;
     .fonts(8; 8; 700);
-    padding: 28px 32px 28px 32px;
+    padding: 28px 50px 28px 32px;
   }
 
   &:hover,
@@ -32,9 +32,16 @@
     top: 50%;
     transform: translateY(-50%);
     right: 22px;
-    width: 15px;
-    height: 15px;
-    background: url("../img/icons/polygon.svg") no-repeat 0 0;
+    width: 11px;
+    height: 12px;
+    box-sizing: border-box;
+    border-left: 10px solid #192144;
+    border-bottom: 6px solid transparent;
+    border-top: 6px solid transparent;
+
+    @media (min-width: @tablet-width) {
+      right: 33px;
+    }
   }
 
   &--round {
@@ -55,8 +62,18 @@
     color: @basic-white;
   }
 
+  &--border:hover::after,
+  &--border:focus::after {
+    border-left-color: @basic-white;
+  }
+
   &--border:active {
     color: rgb(@basic-white, 0.3);
+  }
+
+  &--border:active::after {
+    border-left-color: @basic-white;
+    opacity: 0.3;
   }
 
   &--steps::after {

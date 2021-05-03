@@ -1,6 +1,7 @@
 .prices-list {
   .list-style-none;
   position: relative;
+  color: @special-grey-dark;
 
   @media (min-width: @tablet-width) {
     padding-right: 35px;
@@ -15,8 +16,8 @@
     @media (min-width: @tablet-width) {
       content: "";
       position: absolute;
-      top: -45px;
-      bottom: -45px;
+      top: -40px;
+      bottom: -40px;
       right: 0;
       width: 198px;
       background-color: @special-likes-color;
@@ -24,9 +25,9 @@
     }
 
     @media (min-width: @desktop-width) {
-      top: -51px;
-      bottom: -51px;
-      right: 110px;
+      top: -50px;
+      bottom: -50px;
+      right: 112px;
       width: 446px;
     }
   }
@@ -59,21 +60,31 @@
 
 .prices-list__box {
   padding: 12px 0 16px 0;
+  box-sizing: border-box;
   width: 75%;
 
   @media (min-width: @tablet-width) {
-    padding: 19px 0 20px 0;
+    padding: 19px 0 19.5px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
 
+  @media (min-width: @tablet-width) {
+    padding: 18px 0 20px 0;
+  }
+
   &--business {
     width: 100%;
+    padding: 11px 0 11px 0;
 
     @media (min-width: @tablet-width) {
       padding: 14px 0 12px 0;
       .fonts(6; 12; 300);
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 11px 0 15px 0;
     }
   }
 }
@@ -83,6 +94,10 @@
   margin-bottom: 6px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  &--business {
     margin-bottom: 0;
   }
 }
@@ -97,6 +112,7 @@
   color: @basic-white;
   padding: 9px 13px;
   border-radius: 50%;
+  z-index: 15;
   position: absolute;
   top: 4px;
   right: 0;

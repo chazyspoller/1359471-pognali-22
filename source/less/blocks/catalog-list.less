@@ -29,7 +29,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 45.5%;
+    width: 45.3%;
   }
 
   &:not(:last-of-type) {
@@ -44,13 +44,21 @@
 .catalog-list__info {
   margin-top: -4px;
   position: relative;
+  box-sizing: border-box;
   z-index: 2;
   border-radius: 0 0 10px 10px;
   background-color: @basic-white;
-  padding: 23px 0 23px 0;
+  padding: 26px 0 22px 0;
+  min-height: 158px;
 
   @media (min-width: @tablet-width) {
     border-radius: 0 0 20px 20px;
+    padding: 30px 0 28px 0;
+    min-height: 198px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 28px 0;
   }
 }
 
@@ -83,17 +91,36 @@
   position: absolute;
   top: 17px;
   left: 17px;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    left: 23px;
+  }
 }
 
 .catalog-list__name {
   .reset-margins;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
+  }
 }
 
 .catalog-list__tags {
   .reset-margins;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
   padding: 0 40px;
+
+  @media (min-width: @tablet-width) {
+    .fonts(4; 7; 400);
+    padding: 0 30px;
+    margin-bottom: 24px;
+  }
 }
 
 .catalog-list__transport-list {

@@ -26,12 +26,16 @@
   }
 }
 
-.copyright__link-text {
+.copyright__link {
   .fonts(0; 0; 400);
+  width: 100%;
+  display: flex;
+  align-items: center;
   color: @special-grey-dark;
 
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 400);
+    width: max-content;
   }
 }
 
@@ -40,6 +44,7 @@
   margin-left: auto;
   line-height: 0;
   margin-top: 5px;
+  fill: @basic-blue-text;
 
   @media (min-width: @tablet-width) {
     margin-left: 23px;

@@ -11,10 +11,10 @@
 
 .direction__wrapper {
   padding-top: 68px;
-  padding-bottom: 35px;
+  padding-bottom: 34px;
 
   @media (min-width: @tablet-width) {
-    padding: 73px 35px 80px 35px;
+    padding: 70px 35px 80px 35px;
     background-image:
       url("../../img/desktop/direction-back.png"),
       url("../../img/desktop/direction-back.svg");
@@ -31,15 +31,15 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 170px;
-    padding: 161px 73px 138px 73px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 57px;
+    padding: 161px 73px 149px 70px;
     background-position: right 88px, left 88px;
   }
 }
 
 .direction__intro {
-  margin-bottom: 64px;
+  margin-bottom: 60px;
   padding-left: 24px;
   padding-right: 24px;
 
@@ -54,7 +54,8 @@
     grid-row-start: 1;
     grid-row-end: -1;
     margin-bottom: 0;
-    padding-right: 180px;
+    margin-left: 115px;
+    padding-right: 100px;
   }
 }
 
@@ -63,19 +64,24 @@
   margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 61px;
   }
 }
 
 .direction__text {
   .reset-margins;
   .text;
+  line-height: 23px;
   color: @special-grey-dark;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 100px;
+  }
 }
 
 .direction__countries {
   .reset-margins;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 46px;
@@ -93,14 +99,22 @@
 .direction__link {
   display: block;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: -1;
     box-sizing: border-box;
-    max-height: 80px;
-    width: 274px;
+    max-width: 274px;
     margin-top: auto;
+    margin-bottom: -11px;
+    margin-left: 115px;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 }

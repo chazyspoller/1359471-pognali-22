@@ -24,7 +24,7 @@
       url("../../img/desktop/travelers-smolov-back.png"),
       url("../../img/desktop/travelers-rogovaya-back.png"),
       url("../../img/desktop/service-back-desktop.svg");
-    background-position: 40px 489px, 84.7% 144px, 40px 134px;
+    background-position: 40px 41.5%, 84.7% 13.5%, 40px 11.8%;
 
     @media (min-resolution: 2dppx) {
       background-image:
@@ -36,32 +36,33 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 42.1% 202px, 16.5% 454px, 60px 138px;
+    background-position: 42.1% 194px, 16.5% 446px, 60px 132px;
   }
 }
 
 .travelers__wrapper {
   padding-top: 67px;
-  padding-bottom: 31px;
+  padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
-    padding: 141px 34px 87px 34px;
+    padding: 138px 34px 87px 34px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 50.5%;
     column-gap: 193px;
-    padding: 130px 0 134px 73px;
+    padding: 134px 0 134px 70px;
   }
 }
 
 .travelers__intro {
-  margin-bottom: 54px;
+  margin-bottom: 56px;
   padding: 0 24px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    margin-bottom: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -80,29 +81,58 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 56px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -7px;
+  }
 }
 
 .travelers__text {
   .reset-margins;
   .text;
+  padding-right: 2%;
+
+  br {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     padding-right: 30%;
+    line-height: 34px;
+
+    br {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-right: 0;
+    line-height: 33px;
+  }
+
+  &--bold {
+    br {
+      display: none;
+    }
+
+    @media (min-width: @tablet-width) {
+      line-height: 26px;
+
+      br {
+        display: block;
+      }
+    }
   }
 
   &:not(:last-of-type) {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 45px;
+      margin-bottom: 38px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-bottom: 25px;
+      margin-bottom: 41px;
     }
   }
 }
@@ -110,6 +140,10 @@
 .travelers__catalog {
   .reset-margins;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 81px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
@@ -119,6 +153,11 @@
 .travelers__link {
   display: block;
 
+  @media (min-width: @tablet-width) {
+    min-width: 620px;
+    box-sizing: border-box;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -126,7 +165,8 @@
     grid-row-end: -1;
     box-sizing: border-box;
     max-height: 80px;
-    width: 274px;
+    min-width: 0;
+    max-width: 280px;
     margin-top: auto;
   }
 }
