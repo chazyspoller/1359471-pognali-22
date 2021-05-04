@@ -7,12 +7,13 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    width: 49%;
+    width: 48.8%;
   }
 
   @media (min-width: @desktop-width) {
     column-gap: 16px;
-    row-gap: 14px;
+    row-gap: 15px;
+    width: 51%;
   }
 
   &--sort {
@@ -52,6 +53,7 @@
 
   &:not(&--sort):active {
     background-color: @basic-blue-light;
+    border: 1px solid @basic-blue-light;
   }
 
   @media (min-width: @tablet-width) {
@@ -139,7 +141,7 @@
   .fonts(-2; 2; 500);
   background-color: transparent;
   border: none;
-  padding: 12px 0;
+  padding: 11px 0;
   width: 100%;
   color: @basic-blue-light;
   cursor: pointer;

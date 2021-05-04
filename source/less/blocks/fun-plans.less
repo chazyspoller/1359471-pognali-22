@@ -13,16 +13,24 @@
   & + &::after {
     content: "";
     position: absolute;
-    bottom: 96%;
-    left: -17px;
+    bottom: 96.1%;
+    left: -15px;
     width: 2px;
-    height: 111.5%;
+    height: 108.1%;
     background-color: @basic-blue-light;
 
     @media (min-width: @tablet-width) {
       left: auto;
-      right: -28px;
-      height: 120%;
+      right: -27px;
+      bottom: 95.5%;
+      height: 122%;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: auto;
+      right: -45px;
+      bottom: 95%;
+      height: 122%;
     }
   }
 
@@ -50,9 +58,11 @@
 }
 
 .fun-plans__name {
-  display: block;
+  display: inline-block;
+  width: 100%;
   .fonts(2; 2; 500);
   color: @basic-blue-light;
+  margin-top: 2px;
   margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
@@ -63,9 +73,9 @@
   &::before {
     content: "";
     position: absolute;
-    width: 11px;
+    width: 15px;
     height: 2px;
-    top: 8px;
+    top: 10px;
     left: -15px;
     background-color: @basic-blue-light;
 
@@ -87,14 +97,20 @@
 
 .fun-plans__name-text {
   position: relative;
-  display: block;
+  display: inline-block;
+  width: 100%;
+  margin-left: 11px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
 
   &::before {
     content: "";
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -8px;
+    left: -14px;
     width: 6px;
     height: 6px;
     background-color: @basic-blue-light;
@@ -104,7 +120,11 @@
       width: 14px;
       height: 14px;
       left: auto;
-      right: -34px;
+      right: -33px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: -51px;
     }
   }
 }
@@ -112,7 +132,7 @@
 .fun-plans__name-flag {
   position: absolute;
   z-index: 50;
-  top: -3px;
+  top: -2px;
   right: 0;
   width: 35px;
   height: 25px;
@@ -128,6 +148,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: -3px;
     left: auto;
     right: -155px;
   }
@@ -237,10 +258,10 @@
   width: 100%;
   height: 220px;
   box-sizing: border-box;
-  padding: 10px 14px;
+  padding: 7px 12px;
   vertical-align: top;
   .set-font;
-  .fonts(0; 8; 400);
+  .fonts(0; 7; 400);
   color: @special-grey-dark;
   position: relative;
   z-index: 50;

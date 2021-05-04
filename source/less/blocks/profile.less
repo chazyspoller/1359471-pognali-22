@@ -18,6 +18,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 66px 35px 118px 35px;
+    row-gap: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -33,11 +34,12 @@
   grid-column-start: 1;
   grid-column-end: 3;
   margin: auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 2;
-    margin: 0;
+    margin: auto auto auto 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -106,6 +108,7 @@
 
   @media (min-width: @tablet-width) {
     border-radius: 10px;
+    margin-bottom: 0;
     padding: 20px;
     letter-spacing: 0.09em;
   }

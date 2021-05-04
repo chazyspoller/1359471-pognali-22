@@ -124,19 +124,39 @@
           <ul class="content-field__transport-list transport-list transport-list--profile">
             <li>
               <input class="visually-hidden transport-list__checkbox" type="checkbox" name="plane" id="plane" checked>
-              <label class="transport-list__item" for="plane"><span class="visually-hidden">Авиаперелет</span></label>
+              <label class="transport-list__item" for="plane">
+                <svg width="23" height="22">
+                  <use xlink:href="img/sprite.svg#icon-plane"></use>
+                </svg>
+                <span class="visually-hidden">Авиаперелет</span>
+              </label>
             </li>
             <li>
               <input class="visually-hidden transport-list__checkbox" type="checkbox" name="bus" id="bus" checked>
-              <label class="transport-list__item" for="bus"><span class="visually-hidden">Автотранспорт</span></label>
+              <label class="transport-list__item" for="bus">
+                <svg width="18" height="20">
+                  <use xlink:href="img/sprite.svg#icon-bus"></use>
+                </svg>
+                <span class="visually-hidden">Автотранспорт</span>
+              </label>
             </li>
             <li>
               <input class="visually-hidden transport-list__checkbox" type="checkbox" name="bycicle" id="bycicle">
-              <label class="transport-list__item" for="bycicle"><span class="visually-hidden">Велосипед</span></label>
+              <label class="transport-list__item" for="bycicle">
+                <svg width="25" height="25">
+                  <use xlink:href="img/sprite.svg#icon-bycicle"></use>
+                </svg>
+                <span class="visually-hidden">Велосипед</span>
+              </label>
             </li>
             <li>
               <input class="visually-hidden transport-list__checkbox" type="checkbox" name="run" id="run" checked>
-              <label class="transport-list__item" for="run"><span class="visually-hidden">Пешком</span></label>
+              <label class="transport-list__item" for="run">
+                <svg width="22" height="24">
+                  <use xlink:href="img/sprite.svg#icon-run"></use>
+                </svg>
+                <span class="visually-hidden">Пешком</span>
+              </label>
             </li>
           </ul>
         </form>
@@ -173,19 +193,24 @@
       <div class="plan-form__wrapper">
         <h2 class="visually-hidden">План поездки</h2>
         <p class="plan-form__title title-sections title-sections--form">Добавить план:</p>
-        <div class="plan-form__marks marks">
-          <p class="marks__marker marks__marker--current"><span class="marks__name marks__name--current">Даты</span></p>
-          <p class="marks__marker"><span class="marks__name">Маршрут</span></p>
-          <p class="marks__marker"><span class="marks__name">Развлечения</span></p>
-        </div>
+        <ul class="plan-form__marks marks marks--dots">
+          <li class="marks__mark marks__mark marks__mark--current"></li>
+          <li class="marks__mark marks__mark"></li>
+          <li class="marks__mark marks__mark"></li>
+        </ul>
         <form class="plan-form__steps-form" action="https://echo.htmlacademy.ru/" method="GET">
           <div class="plan-form__step step"  id="first-step">
             <h3 class="step__title"><span class="step__title-number-step">Шаг 1.</span> Даты пребывания</h3>
-            <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+            <ul class="step__marks marks">
+              <li class="marks__mark marks__mark--current">Даты</li>
+              <li class="marks__mark">Маршрут</li>
+              <li class="marks__mark">Развлечения</li>
+            </ul>
+            <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
             <div class="step__counter-info">
               <div class="step__form-box form-box">
                 <label class="form-box__title" for="travelers">Ищу попутчиков:</label>
-                <p class="form-box__unit">чел.</p>
+                <p class="form-box__unit form-box__unit--people">чел.</p>
                 <div class="form-box__counter">
                   <input class="form-box__item" type="text" name="travelers" id="travelers" value="2">
                   <button class="form-box__button form-box__button--minus" aria-label="Минус 1" type="button"></button>
@@ -369,7 +394,12 @@
           </div>
           <div class="plan-form__step step" id="second-step">
             <h3 class="step__title"><span class="step__title-number-step">Шаг 2.</span> Маршрут</h3>
-            <p class="step__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+            <ul class="step__marks marks">
+              <li class="marks__mark">Даты</li>
+              <li class="marks__mark marks__mark--current">Маршрут</li>
+              <li class="marks__mark">Развлечения</li>
+            </ul>
+            <p class="step__text">Укажите страны, которые вы хотели бы посетить.<br> Это может быть одна или сразу несколько.</p>
             <ul class="step__tour-list tour-list">
               <li class="tour-list__item">
                 <div class="tour-list__field">
@@ -394,7 +424,7 @@
               <li class="tour-list__item tour-list__item--empty">
                 <div class="tour-list__field tour-list__field--empty tour-list__field--dropdown">
                   <p class="tour-list__name" tabindex="0">Выберите страну</p>
-                  <button class="tour-list__button tour-list__button--more tour-list__button--close" aria-label="Выбрать страну" type="button"></button>
+                  <button class="tour-list__button tour-list__button--more tour-list__button--open" aria-label="Выбрать страну" type="button"></button>
                 </div>
                 <div class="tour-list__countries-selection countries-selection countries-selection--hide countries-selection--sort">
                   <div class="countries-selection__box">
@@ -528,7 +558,12 @@
           </div>
           <div class="plan-form_step step" id="third-step">
             <h3 class="step__title"><span class="step__title-number-step">Шаг 3.</span> Развлечения</h3>
-            <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <ul class="step__marks marks">
+              <li class="marks__mark">Даты</li>
+              <li class="marks__mark">Маршрут</li>
+              <li class="marks__mark marks__mark--current">Развлечения</li>
+            </ul>
+            <p class="step__text">Наконец, расскажите о своих планах времяпровождения.<br> Можно писать в свободной форме и ставить тэги.</p>
             <div class="step__fun-plans fun-plans">
               <label class="fun-plans__name" for="country-0">
                 <span class="fun-plans__name-text">Босния и Герцеговина</span>
@@ -541,7 +576,7 @@
                 <span class="fun-plans__name-text">Чехия</span>
                 <span class="fun-plans__name-flag fun-plans__name-flag--czech"></span>
               </label>
-              <textarea class="fun-plans__plan" name="plans" id="country-1" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              <textarea class="fun-plans__plan" name="plans" id="country-1" placeholder="План действий" required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
             </div>
             <div class="step__buttons">
               <button class="button button--round button--steps step__button-submit" type="submit">Отправить</button>
@@ -598,9 +633,6 @@
   <script>
     var navMain = document.querySelector('.main-nav__menu');
     var navToggle = document.querySelector('.main-nav__toggle');
-    var openCountriesSelection = document.querySelector('.tour-list__field--dropdown');
-    var countriesSelection = document.querySelector('.tour-list__countries-selection');
-    var closeCountriesSelection = document.querySelector('.tour-list__button--close');
 
     navMain.classList.remove('main-nav__menu--nojs');
 
@@ -616,17 +648,35 @@
       }
     });
 
+    var openCountriesSelection = document.querySelector('.tour-list__field--dropdown');
+    var countriesSelection = document.querySelector('.tour-list__countries-selection');
+    var closeCountriesSelection = document.querySelector('.tour-list__button--open');
+
     openCountriesSelection.addEventListener('click', function() {
-      if (openCountriesSelection.classList.contains('tour-list__field--open-dropdown')) {
-        openCountriesSelection.classList.remove('tour-list__field--open-dropdown');
-        closeCountriesSelection.classList.remove('tour-list__button--close');
-        closeCountriesSelection.classList.add('tour-list__button--more');
-        countriesSelection.classList.add('countries-selection--hide');
-      } else {
+      if (!openCountriesSelection.classList.contains('tour-list__field--open-dropdown')) {
         openCountriesSelection.classList.add('tour-list__field--open-dropdown');
         closeCountriesSelection.classList.add('tour-list__button--close');
         closeCountriesSelection.classList.remove('tour-list__button--more');
         countriesSelection.classList.remove('countries-selection--hide');
+      } else {
+        openCountriesSelection.classList.remove('tour-list__field--open-dropdown');
+        closeCountriesSelection.classList.remove('tour-list__button--close');
+        closeCountriesSelection.classList.add('tour-list__button--more');
+        countriesSelection.classList.add('countries-selection--hide');
+      }
+    });
+
+    var buttonStepsSubmit = document.querySelector('.step__button-submit');
+    var funPlans = document.querySelectorAll('.fun-plans');
+    var textareaFunPlans = document.querySelectorAll('.fun-plans__plan');
+
+    buttonStepsSubmit.addEventListener('click', function() {
+      for (let i=0; i < textareaFunPlans.length; i++) {
+        if (textareaFunPlans[i].value == '') {
+        funPlans[i].classList.add('fun-plans--error');
+        } else {
+          funPlans[i].classList.remove('fun-plans--error');
+        }
       }
     });
   </script>
