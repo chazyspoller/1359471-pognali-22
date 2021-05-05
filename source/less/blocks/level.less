@@ -15,6 +15,18 @@
     background-image: url("../../img/mobile/level-80.svg");
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 24px;
+    width: 30px;
+    height: 1px;
+    background-color: @basic-white;
+    opacity: 0.3;
+  }
+
   &--profile {
     width: 100px;
     height: 100px;
@@ -30,6 +42,22 @@
     @media (min-width: @desktop-width) {
       width: 95px;
       height: 95px;
+    }
+  }
+
+  &--profile::before {
+    bottom: 43px;
+    width: 51px;
+    background-color: @special-grey-dark;
+
+    @media (min-width: @tablet-width) {
+      bottom: 40px;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: 37px;
+      height: 2px;
+      background-color: @basic-white;
     }
   }
 
@@ -55,6 +83,11 @@
   &--profile {
     .fonts(22; 22; 700);
     color: @basic-blue;
+    margin: auto auto 10px auto;
+
+    @media (min-width: @tablet-width) {
+      margin: auto auto 8px auto;
+    }
 
     @media (min-width: @desktop-width) {
       color: @basic-white;
@@ -73,11 +106,16 @@
 .level__name {
   .reset-margins;
   .fonts(-2; -2; 400);
-  margin: 0 auto auto auto;
+  margin: 0 auto 10px auto;
 
   &--profile {
     .fonts(2; 2; 400);
     color: @special-grey-dark;
+    margin: 0 auto 20px auto;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 auto 15px auto;
+    }
 
     @media (min-width: @desktop-width) {
       color: @basic-white;

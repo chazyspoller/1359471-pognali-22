@@ -4,7 +4,7 @@
 }
 
 .profile__wrapper {
-  padding: 34px 0 94px 0;
+  padding: 24px 0 94px 0;
   display: grid;
   grid-template-columns: repeat(1fr, 4);
   grid-template-rows: repeat(min-content, 4);
@@ -12,11 +12,13 @@
   position: relative;
 
   picture {
+    line-height: 0;
     margin-left: auto;
   }
 
   @media (min-width: @tablet-width) {
     padding: 66px 35px 118px 35px;
+    row-gap: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,11 +34,12 @@
   grid-column-start: 1;
   grid-column-end: 3;
   margin: auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 2;
-    margin: 0;
+    margin: auto auto auto 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -50,7 +53,6 @@
   border-radius: 50%;
   grid-column-start: 3;
   grid-column-end: 5;
-  margin: auto;
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -106,6 +108,7 @@
 
   @media (min-width: @tablet-width) {
     border-radius: 10px;
+    margin-bottom: 0;
     padding: 20px;
     letter-spacing: 0.09em;
   }
@@ -133,7 +136,7 @@
   grid-column-end: 5;
 
   &:not(:last-of-type) {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 0;

@@ -3,6 +3,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
+    margin-top: -4px;
     padding-top: 42px;
 
     &::before,
@@ -24,8 +25,11 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 0;
+    padding-top: 65px;
+
     &::after {
-      right: 22%;
+      right: 22.5%;
     }
   }
 }
@@ -36,21 +40,30 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 69% 31%;
+    grid-template-columns: 69% 23%;
+    column-gap: 5%;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 73% 27%;
+    grid-template-columns: 73% 14.1%;
   }
 
   &:not(:last-of-type) {
     margin-bottom: 22px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 15px;
+    }
   }
 
   &::before {
     content: "";
     position: absolute;
-    z-index: 20;
+    z-index: 3;
     top: 50%;
     left: 75.9%;
     transform: translate(-50%, -50%);
@@ -67,23 +80,39 @@
     }
 
     @media (min-width: @desktop-width) {
-      left: 77.9%;
+      left: 77.5%;
+    }
+  }
+
+  &:not(&:last-of-type)::after {
+    content: "";
+    position: absolute;
+    left: 73.9%;
+    bottom: -17px;
+    width: 8px;
+    height: 10px;
+    background-image: url("../../img/icons/tour-list-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      display: none;
     }
   }
 
   &--empty::before {
-    background-color: @basic-white;
+    background-color: transparent;
     border: 1px solid @special-border-grey;
-  }
 
-  &--add::before {
-    background-color: @basic-grey;
+    @media (min-width: @tablet-width) {
+      background-color: @basic-white;
+    }
   }
 }
 
 .tour-list__field {
   .fonts(-2; 2; 500);
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 11px 10px;
   border: 1px solid @special-border-grey;
@@ -100,11 +129,10 @@
   &:not(&--flag):hover,
   &:not(&--flag):focus {
     border-color: @counter-border-hover;
-    z-index: 2;
   }
 
   @media (min-width: @tablet-width) {
-    padding: 25px 25px 23px 25px;
+    padding: 24px 25px 24px 25px;
     .fonts(4; 4; 500);
     letter-spacing: 0.1em;
   }
@@ -121,12 +149,25 @@
   }
 
   &--open-dropdown {
+    padding-left: 15px;
+    padding-bottom: 12px;
+    letter-spacing: 0.02em;
     background-color: @basic-blue-light;
     border-color: @basic-blue-light;
     color: @basic-white;
-    z-index: 25;
+    z-index: 30;
     border-end-end-radius: 0;
     border-end-start-radius: 0;
+
+    @media (min-width: @tablet-width) {
+      padding: 24px 25px 24px 25px;
+      letter-spacing: 0.1em;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 22px 25px 25px 25px;
+      letter-spacing: 0.1em;
+    }
   }
 
   &--open-dropdown::after {
@@ -143,11 +184,6 @@
 
     @media (min-width: @tablet-width) {
       border: none;
-      margin-left: 15%;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-left: 18%;
     }
   }
 
@@ -164,28 +200,34 @@
   &--add {
     background-color: @basic-grey;
     border: none;
+    padding: 12px 10px;
+
+    @media (min-width: @tablet-width) {
+      padding: 25px 25px 25px 25px;
+    }
 
     &:hover,
     &:focus {
       background-color: @special-grey;
     }
 
-    //&:hover .tour-list__button::after,
-    //&:hover .tour-list__button::before,
-    //&:focus .tour-list__button::after,
-    //&:focus .tour-list__button::before {
-    //  background-color: @add-button-hover;
-    //}
+    &:hover .tour-list__button--add,
+    &:focus .tour-list__button--add {
+      opacity: 0.3;
+    }
 
-    //&:active .tour-list__button::after,
-    //&:active .tour-list__button::before {
-    //  background-color: @add-button-active;
-    //}
+    &:active .tour-list__button--add {
+      opacity: 0.1;
+    }
 
     &::after {
       display: none;
     }
   }
+}
+
+.tour-list__field--open-dropdown ~ .tour-list__delete {
+  display: none;
 }
 
 .tour-list__name {
@@ -200,22 +242,39 @@
   height: 14px;
   top: 50%;
   transform: translateY(-50%);
-  right: 15px;
+  right: 5px;
   background-color: transparent;
   border: none;
   z-index: 3;
   cursor: pointer;
 
-  &--close {
-    &:hover::after,
-    &:hover::before,
-    &:focus::after,
-    &:focus::before {
-      background-color: rgba(@basic-white, 1);
+  @media (min-width: @tablet-width) {
+    right: 20px;
+  }
+
+  &--more {
+    background-image: url("../../img/mobile/arrow-more.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      background-size: 20px 24px;
     }
 
-    &:active::after,
-    &:active::before {
+    @media (min-width: @desktop-width) {
+      background-size: 24px 27px;
+    }
+  }
+
+  &--close {
+    opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
       opacity: 0.1;
     }
 
@@ -227,8 +286,18 @@
       margin-left: -5.5px;
       width: 11px;
       height: 1px;
-      background-color: rgba(@basic-white, 0.3);
+      background-color: @basic-white;
       border-radius: 25px;
+
+      @media (min-width: @tablet-width) {
+        width: 24px;
+        height: 2px;
+        margin-left: -10px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-left: -13px;
+      }
     }
 
     &::before {
@@ -238,12 +307,6 @@
     &::after {
       transform: rotate(-45deg);
     }
-  }
-
-  &--more {
-    background-image: url("../../img/mobile/arrow_more.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
   }
 
   &--add::after,
@@ -259,11 +322,23 @@
   &--add::after {
     width: 14px;
     height: 2px;
+
+    @media (min-width: @tablet-width) {
+      width: 20px;
+    }
   }
 
   &--add::before {
     width: 2px;
     height: 14px;
+
+    @media (min-width: @tablet-width) {
+      height: 20px;
+    }
+  }
+
+  &--add {
+    opacity: 0.2;
   }
 }
 
@@ -282,9 +357,16 @@
 
   @media (min-width: @tablet-width) {
     top: 50%;
-    right: 0;
+    right: 2px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.1;
     transform: translateY(-50%);
     background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 5px;
   }
 
   &::before,
@@ -295,8 +377,13 @@
     margin-left: -5.5px;
     width: 11px;
     height: 1px;
-    background-color: @delete-button;
+    background-color: @basic-black;
     border-radius: 25px;
+
+    @media (min-width: @tablet-width) {
+      width: 24px;
+      height: 2px;
+    }
   }
 
   &::before {

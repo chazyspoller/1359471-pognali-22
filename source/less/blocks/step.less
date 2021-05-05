@@ -1,16 +1,32 @@
 .step {
   background-color: @basic-white;
   border-radius: 10px;
-  padding: 24px 25px 23px 25px;
+  padding: 23px 25px 23px 25px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     border-radius: 30px;
-    padding: 48px 40px 56px 40px;
+    padding: 46px 40px 56px 40px;
   }
 
   @media (min-width: @desktop-width) {
     border-radius: 60px;
     padding: 100px 160px 106px 160px;
+  }
+
+  &:not(&:first-of-type) {
+    padding-bottom: 12px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 44px;
+      padding-bottom: 55px;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 97px 160px 103px 160px;
+      margin-bottom: 44px;
+    }
   }
 }
 
@@ -23,6 +39,10 @@
     .fonts(20; 20; 700);
     margin-bottom: 35px;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 75%;
+  }
 }
 
 .step__title-number-step {
@@ -33,36 +53,52 @@
   }
 }
 
+.step__marks {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 106px;
+    right: 195px;
+  }
+}
+
 .step__text {
   .reset-margins;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   color: @special-grey-dark;
+
+  br {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     .fonts(4; 8; 400);
     margin-bottom: 38px;
+
+    br {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 55px;
-    width: 55%;
+    width: 58.5%;
   }
 }
 
 .step__counter-info {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-bottom: 45px;
+    margin-bottom: 34px;
   }
 
   @media (min-width: @desktop-width) {
     border-top: 1px solid @prices-border;
     padding-top: 30px;
-    margin-bottom: 33px;
+    margin-bottom: 22px;
     position: relative;
   }
 }
@@ -75,12 +111,12 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
     order: 1;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 25px;
+    margin-bottom: 13px;
     order: 0;
     max-width: 53%;
   }
@@ -99,6 +135,7 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
+    top: 46px;
     right: 0;
     max-width: 50%;
   }
@@ -106,7 +143,7 @@
 
 
 .step__question-name {
-  display: block;
+  display: inline-block;
   padding: 6px 0 6px 39px;
   position: relative;
   cursor: pointer;
@@ -128,7 +165,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     width: 26px;
     height: 26px;
@@ -145,7 +183,8 @@
   .step__question-checkbox:checked + &::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     width: 26px;
     height: 26px;
@@ -164,9 +203,17 @@
 .step__scroll {
   margin-bottom: 22px;
   display: grid;
-  grid-template-columns: 5% 1fr 5%;
+  grid-template-columns: 10% 1fr 10%;
   border-top: 1px solid @scroll-border;
   border-bottom: 1px solid @scroll-border;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 18px;
+  }
 }
 
 .step__scroll-title {
@@ -186,6 +233,7 @@
   border: none;
   background-color: transparent;
   background-image: url("../../img/icons/scroll-back.svg");
+  background-size: 9px 19px;
   background-repeat: no-repeat;
   background-position: left;
   opacity: 0.3;
@@ -200,16 +248,31 @@
     opacity: 0.1;
   }
 
+  @media (min-width: @tablet-width) {
+    background-size: 19px 34px;
+    background-position: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: 19px 30px;
+    background-position: left;
+  }
+
   &--next {
+    margin-top: -1px;
     transform: rotate(180deg);
+
+    @media (min-width: @tablet-width) {
+      margin-top: -3px;
+    }
   }
 }
 
 .step__month {
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -218,6 +281,8 @@
 }
 
 .step__buttons {
+  margin-top: -1px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -226,7 +291,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 5px;
+    margin-top: 56px;
+  }
+}
+
+.step:last-of-type .step__buttons {
+  @media (min-width: @desktop-width) {
+    margin-top: 58px;
   }
 }
 
@@ -234,22 +305,23 @@
   display: block;
   .fonts(1; 14; 700);
   text-transform: uppercase;
-  padding: 7px;
+  padding: 5px;
   text-align: center;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     .fonts(8; 8; 700);
     text-transform: initial;
-    padding: 28px 0 28px 34px;
-    width: 47%;
+    box-sizing: border-box;
+    padding: 28px 50px 28px 34px;
+    width: 53%;
     text-align: left;
     border-radius: 20px;
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 25%;
+    width: 28.6%;
   }
 
   &--first {
@@ -277,7 +349,8 @@
     .fonts(8; 8; 700);
     text-transform: initial;
     position: relative;
-    padding-left: 35px;
+    padding-left: 40px;
+    max-width: 35%;
 
     &::before {
       content: "";
@@ -291,30 +364,40 @@
       background-size: contain;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 50%;
+  }
 }
 
 .step__tour-list {
   .reset-margins;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 58px;
+    margin-bottom: 0;
   }
 }
 
 .step__fun-plans {
-  margin-bottom: 27px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 51px;
+    margin-bottom: 50px;
   }
 
-  @media (min-width: @desktop-width) {
-    margin-bottom: 52px;
+  &:first-of-type {
+    @media (min-width: @tablet-width) {
+      margin-top: 70px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 135px;
+    }
   }
 }
 
@@ -324,15 +407,14 @@
   .fonts(1; 14; 700);
   text-transform: uppercase;
   text-align: center;
-  padding: 8px;
-  margin-top: -5px;
-  margin-bottom: 13px;
+  padding: 6px 5px 5px 5px;
+  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     .fonts(8; 8; 700);
     text-transform: initial;
     padding: 28px 0 28px 34px;
-    width: 47%;
+    width: 53.2%;
     text-align: left;
     border-radius: 20px;
     margin-bottom: 0;

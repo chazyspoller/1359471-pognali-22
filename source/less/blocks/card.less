@@ -1,15 +1,15 @@
 .card {
   background-color: @basic-white;
   border-radius: 11px;
-  padding: 23px;
+  padding: 23px 24px 25px 24px;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding: 40px 40px 14px 40px;
+    padding: 39px 40px 17px 40px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 36px 42px;
+    padding: 36px 42px 37px 42px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -20,12 +20,12 @@
 .card__title {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-bottom: 34px;
+    margin-bottom: 52px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,7 +70,13 @@
     .fonts(4; 4; 500);
     letter-spacing: 0.1em;
     display: grid;
-    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-columns: 33% 47% 20%;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 30% 52% 18%;
+    min-width: 50%;
+    max-width: 60%;
   }
 }
 
@@ -80,7 +86,7 @@
   &:not(:last-of-type) {
     margin-bottom: 5px;
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @tablet-width) {
       margin-bottom: 0;
     }
   }
@@ -88,7 +94,7 @@
   &:last-of-type {
     margin-bottom: 24px;
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @tablet-width) {
       margin-bottom: 0;
     }
   }

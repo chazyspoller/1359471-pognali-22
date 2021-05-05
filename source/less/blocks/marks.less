@@ -1,47 +1,78 @@
 .marks {
-  display: flex;
+  .reset-margins;
+  .list-style-none;
+  display: none;
 
   @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    max-height: 200px;
+  }
+
+  &--dots {
+    display: flex;
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
   }
 }
 
-.marks__marker {
-  width: 5px;
-  height: 5px;
-  margin: 8px;
-  background-color: rgb(@basic-blue-light, 0.3);
-  border-radius: 50%;
+.marks__mark {
+  position: relative;
+  width: 21px;
+  height: 21px;
 
   @media (min-width: @tablet-width) {
-    width: 6px;
-    height: 6px;
-    margin: 14.5px;
+    width: 35px;
+    height: 35px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 19px;
-  }
+    .fonts(4; 8; 400);
+    color: rgb(@basic-black, 0.6);
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    padding-left: 38px;
+    margin-right: 10px;
+    width: max-content;
+    max-width: 300px;
+    height: auto;
 
-  &--current {
-    background-color: @basic-blue-light;
-  }
-}
-
-.marks__name {
-  display: none;
-  .fonts(4; 8; 400);
-  color: rgb(@basic-black, 0.6);
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-
-  @media (min-width: @desktop-width) {
-    display: block;
-    margin-top: -7px;
-    padding-left: 36px;
+    & + & {
+      margin-top: 20px;
+    }
   }
 
   &--current {
     color: @basic-black;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background-color: rgb(@basic-blue-light, 0.3);
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 6px;
+      height: 6px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 6px;
+      height: 6px;
+      left: 0;
+    }
+  }
+
+  &--current::before {
+    background-color: @basic-blue-light;
   }
 }
