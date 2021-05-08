@@ -1,6 +1,6 @@
 .ideal-traveler-item {
   background-color: @basic-white;
-  padding: 15px 18px 23px 18px;
+  padding: 14px 18px 23px 18px;
   box-sizing: border-box;
   border-radius: 20px;
   position: relative;
@@ -20,14 +20,14 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 35px 25px 26px 35px;
+    padding: 34px 25px 26px 35px;
+    grid-template-rows: max-content repeat(3, min-content);
   }
 
   @media (min-width: @desktop-width) {
     padding: 0;
     grid-template-columns: max-content 2fr 1fr min-content 43px;
-    grid-template-rows: 46px min-content 1fr min-content 42px;
-    max-height: 285px;
+    grid-template-rows: 48px min-content 1fr min-content 42px;
   }
 }
 
@@ -38,6 +38,7 @@
   border-radius: 50%;
   margin-right: 16px;
   overflow: hidden;
+  line-height: 0;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
@@ -55,7 +56,7 @@
     width: 285px;
     height: 100%;
     border-radius: 20px 0 0 20px;
-    margin-right: 62px;
+    margin-right: 55px;
     grid-row-start: 1;
     grid-row-end: 6;
   }
@@ -76,7 +77,7 @@
   @media (min-width: @desktop-width) {
     border-radius: 20px 0 0 20px;
     width: 285px;
-    height: 285px;
+    height: 100%;
   }
 }
 
@@ -92,11 +93,13 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    margin-top: -4px;
   }
 
   @media (min-width: @desktop-width) {
     grid-row-start: 2;
     grid-row-end: 3;
+    margin-left: 7px;
   }
 }
 
@@ -105,24 +108,27 @@
   .fonts(-1; 2; 400);
   grid-column-start: 1;
   grid-column-end: 4;
-  margin-top: 12px;
-  margin-bottom: 15px;
-  padding-right: 60px;
+  margin: 13px 0 14px 8px;
+  padding-right: 40px;
 
   @media (min-width: @tablet-width) {
     .fonts(4; 7; 400);
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 0;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    margin-left: 2px;
+    padding-right: 100px;
   }
 
   @media (min-width: @desktop-width) {
     grid-row-start: 3;
     grid-row-end: 4;
-    margin-top: 20px;
+    margin-top: 22px;
+    margin-left: 7px;
+    padding-right: 80px;
   }
 }
 
@@ -135,7 +141,7 @@
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 5;
-    margin-top: 22px;
+    margin-top: 16px;
   }
 
   @media (min-width: @desktop-width) {
@@ -151,8 +157,7 @@
   .list-style-none;
   .reset-margins;
   .fonts(-1; 0; 500);
-  margin-top: 21px;
-  margin-bottom: 15px;
+  margin: 18px 0 12px 8px;
   color: @basic-blue-light;
   text-transform: uppercase;
 
@@ -162,7 +167,7 @@
     justify-content: flex-start;
     align-items: center;
     .fonts(4; 4; 500);
-    margin-bottom: 0;
+    margin: 19px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -171,11 +176,19 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  &--small {
+    margin-bottom: 16px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .ideal-traveler-item__dreamland-item {
   & + & {
-    margin-top: 14px;
+    margin-top: 12px;
   }
   padding-left: 40px;
   position: relative;
@@ -183,15 +196,19 @@
   @media (min-width: @tablet-width) {
     & + & {
       margin-top: 0;
-      margin-left: 25px;
     }
-    padding-left: 47px;
+
+    &:not(&:last-of-type) {
+      margin-right: 25px;
+    }
+
+    padding: 3px 0 2px 47px;
   }
 
   @media (min-width: @desktop-width) {
     & + & {
-      margin-top: 17px;
-      margin-left: 0;
+      margin-top: 12px;
+      margin-right: 0;
     }
     padding-left: 53px;
   }
@@ -315,6 +332,7 @@
 .ideal-traveler-item__transport {
   grid-column-start: 1;
   grid-column-end: 3;
+  margin-left: 2px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 3;
@@ -329,13 +347,23 @@
     grid-row-start: 4;
     grid-row-end: 5;
     margin: auto 0;
+    margin-left: -3px;
+  }
+}
+
+.ideal-traveler-item__transport-list {
+  margin-top: 16px;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
   }
 }
 
 .ideal-traveler-item__level-catalog {
   grid-column-start: 3;
   grid-column-end: 4;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 3;
@@ -354,8 +382,11 @@
 }
 
 .ideal-traveler-item__level {
-  margin: 0 auto;
-  margin-top: 10px;
+  margin: 9px 4px 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 5px auto 0 auto;
+  }
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
@@ -366,7 +397,7 @@
   .reset-margins;
   position: relative;
   z-index: 2;
-  padding-left: 7px;
+  margin-left: -2px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -375,11 +406,16 @@
   &--countries {
     @media (min-width: @tablet-width) {
       display: block;
+      padding-left: 40px;
     }
 
     @media (min-width: @desktop-width) {
       display: none;
     }
+  }
+
+  &--level {
+    margin-right: -5px;
   }
 
   &::before {
@@ -434,7 +470,7 @@
 
   @media (min-width: @tablet-width) {
     position: static;
-    margin: auto 0;
+    margin: auto 0 5px 0;
   }
 }
 
@@ -446,10 +482,28 @@
   background-color: @basic-grey;
   border-radius: 50%;
   cursor: pointer;
+  position: relative;
 
   &:hover,
   &:focus {
     background-color: @special-likes-color;
+  }
+
+  &:hover .ideal-traveler-item__like-icon,
+  &:focus .ideal-traveler-item__like-icon {
+    &--disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &:active .ideal-traveler-item__like-icon {
+    &--active {
+      opacity: 0.3;
+    }
+
+    &--disabled {
+      opacity: 0.1;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -467,6 +521,29 @@
   }
 }
 
+.ideal-traveler-item__like-icon {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &--active {
+    fill: @likes;
+  }
+
+  &--disabled {
+    fill: @basic-blue-text;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .ideal-traveler-item__like-number {
   .fonts(-2; 0; 700);
   color: @basic-blue;
@@ -480,16 +557,15 @@
   display: block;
   text-align: center;
   .fonts(1; 1; 700);
-  padding: 13px;
+  padding: 12px;
   text-transform: uppercase;
   color: @basic-blue;
 
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 700);
     padding: 15px;
-    width: 44%;
-    max-height: 50px;
-    margin: auto 0;
+    width: 35%;
+    margin: auto 1px 5px -4px;
   }
 
   @media (min-width: @desktop-width) {

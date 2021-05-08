@@ -40,6 +40,7 @@
 
   &--ideal {
     .fonts(4; 4; 700);
+    display: inline-block;
 
     &:hover,
     &:focus {
@@ -53,10 +54,12 @@
 
   &--ideal::before {
     left: initial;
-    right: -60px;
+    right: -46px;
+    top: 10px;
 
     @media (min-width: @tablet-width) {
-      right: -30px;
+      right: -32px;
+      top: 50%;
     }
 
     @media (min-width: @desktop-width) {

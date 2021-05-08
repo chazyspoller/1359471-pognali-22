@@ -6,13 +6,24 @@
   display: flex;
   flex-direction: column;
   background-color: rgb(@basic-black, 0.6);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &--99 {
-    background-image: url("../../img/mobile/level-99.svg");
+    background-image: url("../../img/icons/level-99.svg");
   }
 
   &--80 {
-    background-image: url("../../img/mobile/level-80.svg");
+    background-image: url("../../img/icons/level-80.svg");
+  }
+
+  &--25 {
+    background-image: url("../../img/icons/level-25.svg");
+  }
+
+  &--50 {
+    background-image: url("../../img/icons/level-50.svg");
   }
 
   &::before {
@@ -62,15 +73,15 @@
   }
 
   &--catalog {
-    width: 45px;
-    height: 45px;
+    width: 46px;
+    height: 46px;
     background-color: transparent;
     color: @basic-blue-light;
     background-size: cover;
 
     @media (min-width: @tablet-width) {
-      width: 60px;
-      height: 60px;
+      width: 61px;
+      height: 61px;
     }
   }
 }

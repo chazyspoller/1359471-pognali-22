@@ -39,9 +39,14 @@
   height: 25px;
   background-size: contain;
   background-repeat: no-repeat;
+  position: relative;
 
   &:not(:last-of-type) {
     margin-right: 20px;
+  }
+
+  &:hover .flags__item-hint {
+    display: block;
   }
 
   &--single {

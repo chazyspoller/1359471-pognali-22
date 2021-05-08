@@ -1,32 +1,55 @@
+.ideal-travelers-list {
+  background-color: @basic-yellow;
+  border-radius: 20px;
+  padding: 24px 20px 22px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 37px 34px 36px 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 46px 46px 48px 48px;
+  }
+}
+
 .ideal-travelers-list__title {
   .reset-margins;
   .fonts(6; 6; 700);
   letter-spacing: 0.02em;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
+  padding: 0 5px;
 
   @media (min-width: @tablet-width) {
     .fonts(14; 14; 700);
     letter-spacing: 0;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 23px;
   }
 }
 
 .ideal-travelers-list__item {
   .reset-margins;
-  padding: 12px 0;
+  padding: 11px 5px 10px 5px;
   border: none;
   border-top: 1px solid @special-border-filter;
 
   &:first-of-type {
     @media (min-width: @tablet-width) {
       border-top: 1px solid @special-border-filter;
-      padding-top: 38px;
+      padding-top: 37px;
     }
   }
 
   &:last-of-type {
+    padding-bottom: 3px;
+
     @media (min-width: @tablet-width) {
       border-bottom: 1px solid @special-border-filter;
+      padding-top: 7px;
       padding-bottom: 37px;
     }
   }
@@ -44,10 +67,12 @@
     grid-template-columns: 1fr 4fr;
     align-items: center;
     border: none;
+    padding: 19px 0 7px 0;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
+    padding: 10px 0 11px 0;
   }
 }
 
@@ -56,24 +81,34 @@
   .fonts(0; 2; 700);
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 17px;
 
   &:hover,
   &:focus {
     opacity: 0.6;
+
+    @media (min-width: @tablet-width) {
+      opacity: 1;
+    }
+
+    @media (min-width: @desktop-width) {
+      opacity: 0.6;
+    }
   }
 
   &:active {
     opacity: 0.3;
+
+    @media (min-width: @tablet-width) {
+      opacity: 1;
+    }
+
+    @media (min-width: @desktop-width) {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 500);
-    margin: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 23px;
   }
 }
 
@@ -98,9 +133,6 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-image: url("../../img/icons/icon-polygon-dropdown.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -109,10 +141,23 @@
   @media (min-width: @desktop-width) {
     display: initial;
   }
-}
 
-.ideal-travelers-list__filter-list {
-  .reset-margins;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url("../../img/icons/icon-polygon-dropdown.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  &--opendropdown::before {
+    transform: translateY(-50%) rotate(180deg);
+  }
 }
 
 .ideal-travelers-list__button {
@@ -140,7 +185,7 @@
   @media (min-width: @tablet-width) {
     .fonts(4; 4; 700);
     padding: 15px;
-    margin-top: 36px;
+    margin-top: 35px;
   }
 
   @media (min-width: @desktop-width) {

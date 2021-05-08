@@ -7,12 +7,10 @@
   align-items: center;
 
   &--catalog {
-    margin-top: 16px;
     justify-content: flex-start;
 
     @media (min-width: @tablet-width) {
       flex-direction: column;
-      margin-top: 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -26,6 +24,7 @@
   height: 25px;
   border-radius: 50%;
   position: relative;
+
 
   &::before {
     content: "";
@@ -45,34 +44,42 @@
 
   &--plane::before {
     background-image: url("../../img/icons/icon-plane.svg");
+    background-size: 20px 21px;
+
+    @media (min-width: @tablet-width) {
+      background-size: auto;
+    }
   }
 
-  &--plane:hover .transport__item-hint {
+  &:hover .transport__item-hint {
     display: block;
   }
 
   &--bus::before {
     background-image: url("../../img/icons/icon-bus.svg");
-  }
+    background-size: 17px 19px;
 
-  &--bus:hover .transport__item-hint {
-    display: block;
+    @media (min-width: @tablet-width) {
+      background-size: auto;
+    }
   }
 
   &--bicycle::before {
     background-image: url("../../img/icons/icon-bicycle.svg");
-  }
+    background-size: 23px 24px;
 
-  &--bicycle:hover .transport__item-hint {
-    display: block;
+    @media (min-width: @tablet-width) {
+      background-size: auto;
+    }
   }
 
   &--foot::before {
     background-image: url("../../img/icons/icon-run.svg");
-  }
+    background-size: 20px 23px;
 
-  &--foot:hover .transport__item-hint {
-    display: block;
+    @media (min-width: @tablet-width) {
+      background-size: auto;
+    }
   }
 
   & + & {
@@ -81,6 +88,8 @@
 
   &--catalog {
     background-color: @basic-grey;
+    width: 32px;
+    height: 32px;
 
     & + & {
       margin-left: 1px;
@@ -94,30 +103,12 @@
       }
     }
   }
-}
 
-.transport__item-hint {
-  .reset-margins;
-  display: none;
-  position: absolute;
-  z-index: 50;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 13px;
-  padding: 18px 25px;
-  border-radius: 4px;
-  color: @basic-white;
-  background-color: @transport-name-bg;
+  &--catalog::before {
+    background-size: 14px 16px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -7px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 10px;
-    background-image: url("../../img/icons/transport-polygon.svg");
+    @media (min-width: @tablet-width) {
+      background-size: auto;
+    }
   }
 }
