@@ -6,7 +6,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 35px 25px 28px;
+    padding: 25px 17px 24px 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 24px;
   }
 }
 
@@ -19,12 +23,17 @@
     display: flex;
     flex-wrap: wrap;
     .fonts(4; 4; 700);
+    max-width: 80%;
   }
+}
+
+.pages__item {
+  padding: 13px 0;
 }
 
 .pages__item-link {
   color: @basic-blue-light;
-  padding: 14px 20px;
+  padding: 13px 20px;
   border-radius: 50%;
 
   &:hover,
@@ -48,7 +57,7 @@
 
   @media (min-width: @tablet-width) {
     justify-content: space-between;
-    width: 15%;
+    width: 13.9%;
   }
 
   @media (min-width: @desktop-width) {
@@ -75,7 +84,7 @@
   display: block;
   text-align: center;
   width: 50%;
-  padding: 15px 0 10px 0;
+  padding: 17px 0 9px 0;
   box-sizing: border-box;
 
   &:hover,

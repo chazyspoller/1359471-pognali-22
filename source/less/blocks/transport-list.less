@@ -1,13 +1,30 @@
 .transport-list {
+  .reset-margins;
   .list-style-none;
   display: flex;
   flex-wrap: wrap;
+
+  &--hide {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--nojs {
+    display: flex;
+  }
 
   &--profile {
     justify-content: center;
     border: 1px solid @special-border-grey;
     border-radius: 10px;
-    padding: 16px 16px 14px 16px;
+    padding: 15px 16px 15px 16px;
     box-sizing: border-box;
 
     @media (min-width: @tablet-width) {
@@ -23,6 +40,18 @@
 
   &--filter {
     justify-content: flex-start;
+    padding: 16px 0 10px 0;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+      margin-top: -4px;
+      margin-left: -4px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 20px 0 10px 0;
+      margin: 0;
+    }
   }
 }
 
@@ -43,7 +72,7 @@
 
 .transport-list__item-box {
   & + & {
-    margin-left: 1px;
+    margin-left: 2px;
   }
 }
 
@@ -60,8 +89,15 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 16px;
+    height: 16px;
     transform: translate(-50%, -50%);
     fill: @transport-icon-disabled;
+
+    @media (min-width: @tablet-width) {
+      width: 23px;
+      height: 22px;
+    }
   }
 
   &:hover,
@@ -83,6 +119,10 @@
   &:active svg {
     fill-opacity: 0.1;
     fill: @basic-blue-light;
+  }
+
+  &:hover .transport-list__item-hint {
+    display: block;
   }
 
   @media (min-width: @tablet-width) {

@@ -355,42 +355,44 @@
   border-radius: 50%;
   cursor: pointer;
 
+  &:hover::before {
+    opacity: 0.3;
+  }
+
+  &:active::before {
+    opacity: 0.05;
+  }
+
   @media (min-width: @tablet-width) {
     top: 50%;
-    right: 2px;
+    right: -2px;
     width: 30px;
     height: 30px;
-    opacity: 0.1;
     transform: translateY(-50%);
     background-color: transparent;
   }
 
   @media (min-width: @desktop-width) {
-    right: 5px;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    margin: auto;
-    margin-left: -5.5px;
-    width: 11px;
-    height: 1px;
-    background-color: @basic-black;
-    border-radius: 25px;
-
-    @media (min-width: @tablet-width) {
-      width: 24px;
-      height: 2px;
-    }
+    right: 0;
   }
 
   &::before {
-    transform: rotate(45deg);
-  }
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../img/icons/icon-close.svg");
+    background-repeat: no-repeat;
+    background-size: 9px 11px;
+    opacity: 0.1;
 
-  &::after {
-    transform: rotate(-45deg);
+    @media (min-width: @tablet-width) {
+      width: 22px;
+      height: 24px;
+      background-size: auto;
+    }
   }
 }

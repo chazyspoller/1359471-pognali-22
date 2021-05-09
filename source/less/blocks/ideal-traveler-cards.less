@@ -12,20 +12,27 @@
   .reset-margins;
   .list-style-none;
   color: @special-grey-dark;
-  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 52px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 66px;
+    margin-bottom: 50px;
   }
 }
 
 .ideal-traveler-cards__item {
-  &:not(:last-of-type) {
-    margin-bottom: 10px;
+  & + & {
+    margin-top: 10px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 40px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -33,6 +40,7 @@
   .reset-margins;
   display: block;
   padding: 18px;
+  margin-bottom: 2px;
   .set-font;
   color: @basic-blue-light;
   text-transform: uppercase;
@@ -42,11 +50,20 @@
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 52px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 66px;
+    margin-bottom: 53px;
+  }
+
+  &:hover .ideal-traveler-cards__add-item-name::before,
+  &:focus .ideal-traveler-cards__add-item-name::before {
+    opacity: 0.6;
+  }
+
+  &:active .ideal-traveler-cards__add-item-name::before {
+    opacity: 0.3;
   }
 }
 
@@ -60,35 +77,23 @@
     .fonts(4; 4; 700);
   }
 
-  &::before,
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     width: 18px;
-    height: 2px;
-    border-radius: 25px;
-    background-color: @basic-blue-light;
+    height: 18px;
+    background-image: url("../../img/icons/icon-plus-more.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 
     @media (min-width: @tablet-width) {
       width: 26px;
+      height: 26px;
+      background-size: 26px 26px;
     }
-  }
-
-  &::after {
-    transform: rotate(90deg);
-    margin-top: -1px;
-  }
-
-  &:hover::before,
-  &:focus::before {
-    opacity: 0.6;
-  }
-
-  &:active::before {
-    opacity: 0.3;
   }
 }
 
