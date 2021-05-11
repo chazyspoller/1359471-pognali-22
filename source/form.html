@@ -630,75 +630,9 @@
     </div>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.main-nav__menu');
-    var navLogo = document.querySelector('.main-nav__logo');
-    var navToggle = document.querySelector('.main-nav__toggle');
-    //var body = document.querySelector('.page__body');
-
-    navMain.classList.remove('main-nav__menu--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav__menu--closed')) {
-        navMain.classList.remove('main-nav__menu--closed');
-        navMain.classList.add('main-nav__menu--opened');
-        navToggle.classList.add('main-nav__toggle--close');
-        navLogo.classList.add('main-nav__logo--dark')
-        //body.classList.add('page__body--lock-scroll');
-      } else {
-        navMain.classList.add('main-nav__menu--closed');
-        navMain.classList.remove('main-nav__menu--opened');
-        navToggle.classList.remove('main-nav__toggle--close');
-        //body.classList.remove('page__body--lock-scroll');
-        if (!pageHeader.classList.contains('page-header--scroll')) {
-          navLogo.classList.remove('main-nav__logo--dark')
-        }
-      }
-    });
-
-    var openCountriesSelection = document.querySelector('.tour-list__field--dropdown');
-    var countriesSelection = document.querySelector('.tour-list__countries-selection');
-    var closeCountriesSelection = document.querySelector('.tour-list__button--open');
-
-    openCountriesSelection.addEventListener('click', function() {
-      if (!openCountriesSelection.classList.contains('tour-list__field--open-dropdown')) {
-        openCountriesSelection.classList.add('tour-list__field--open-dropdown');
-        closeCountriesSelection.classList.add('tour-list__button--close');
-        closeCountriesSelection.classList.remove('tour-list__button--more');
-        countriesSelection.classList.remove('countries-selection--hide');
-      } else {
-        openCountriesSelection.classList.remove('tour-list__field--open-dropdown');
-        closeCountriesSelection.classList.remove('tour-list__button--close');
-        closeCountriesSelection.classList.add('tour-list__button--more');
-        countriesSelection.classList.add('countries-selection--hide');
-      }
-    });
-
-    var buttonStepsSubmit = document.querySelector('.step__button-submit');
-    var funPlans = document.querySelectorAll('.fun-plans');
-    var textareaFunPlans = document.querySelectorAll('.fun-plans__plan');
-
-    buttonStepsSubmit.addEventListener('click', function() {
-      for (let i=0; i < textareaFunPlans.length; i++) {
-        if (textareaFunPlans[i].value == '') {
-        funPlans[i].classList.add('fun-plans--error');
-        } else {
-          funPlans[i].classList.remove('fun-plans--error');
-        }
-      }
-    });
-
-    var pageHeader = document.querySelector('.page-header');
-
-    window.addEventListener('scroll', function() {
-      if (window.pageYOffset >= (pageHeader.offsetHeight - 2)) {
-        pageHeader.classList.add('page-header--scroll');
-        navLogo.classList.add('main-nav__logo--dark')
-      } else {
-        pageHeader.classList.remove('page-header--scroll');
-        navLogo.classList.remove('main-nav__logo--dark')
-      }
-    });
-  </script>
+  <script src="js/main-menu.js"></script>
+  <script src="js/header-scroll.js"></script>
+  <script src="js/countries-add.js"></script>
+  <script src="js/form-scripts.js"></script>
 </body>
 </html>
