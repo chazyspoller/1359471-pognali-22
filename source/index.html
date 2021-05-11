@@ -11,7 +11,7 @@
   <title>HTML Academy: Погнали</title>
 </head>
 <body class="page__body page__body--main-page">
-  <header class="page-header page-header--scroll">
+  <header class="page-header">
     <div class="page-header__wrapper">
       <nav class="page-header__menu main-nav">
         <div class="main-nav__box-top">
@@ -457,10 +457,12 @@
 
   <script>
     var navMain = document.querySelector('.main-nav__menu');
+    var navLogo = document.querySelector('.main-nav__logo');
     var navToggle = document.querySelector('.main-nav__toggle');
     var popupPrices = document.querySelector('.popup-business');
     var buttonPopupPricesOpen = document.querySelector('.prices__link');
     var buttonPopupPricesClose = document.querySelector('.popup-business__close');
+    var body = document.querySelector('.page__body');
 
     navMain.classList.remove('main-nav__menu--nojs');
 
@@ -469,10 +471,16 @@
         navMain.classList.remove('main-nav__menu--closed');
         navMain.classList.add('main-nav__menu--opened');
         navToggle.classList.add('main-nav__toggle--close');
+        navLogo.classList.add('main-nav__logo--dark')
+        body.classList.add('page__body--lock-scroll');
       } else {
         navMain.classList.add('main-nav__menu--closed');
         navMain.classList.remove('main-nav__menu--opened');
         navToggle.classList.remove('main-nav__toggle--close');
+        body.classList.remove('page__body--lock-scroll');
+        if (!pageHeader.classList.contains('page-header--scroll')) {
+          navLogo.classList.remove('main-nav__logo--dark')
+        }
       }
     });
 
@@ -491,6 +499,18 @@
 
     registrationButton.addEventListener('click', function() {
       registrationForm.classList.add('registration__mail--submitted');
+    });
+
+    var pageHeader = document.querySelector('.page-header');
+
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset >= (pageHeader.offsetHeight - 2)) {
+        pageHeader.classList.add('page-header--scroll');
+        navLogo.classList.add('main-nav__logo--dark')
+      } else {
+        pageHeader.classList.remove('page-header--scroll');
+        navLogo.classList.remove('main-nav__logo--dark')
+      }
     });
   </script>
 </body>
