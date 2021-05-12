@@ -6,6 +6,14 @@
     grid-template-columns: max-content 2fr 1fr;
     align-items: center;
   }
+
+  &--margin-top-menu {
+    padding-top: 8px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+    }
+  }
 }
 
 .main-nav__menu {
@@ -177,11 +185,11 @@
   }
 
   &::after {
-    top: 1px;
+    top: 2px;
   }
 
   &::before {
-    bottom: 3px;
+    bottom: 2px;
   }
 
   @media (min-width: @tablet-width) {

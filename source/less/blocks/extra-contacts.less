@@ -26,7 +26,7 @@
   margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 39px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -78,8 +78,17 @@
       color: @special-yellow-dark;
     }
 
+    &:hover .extra-contacts__icon,
+    &:focus .extra-contacts__icon {
+      fill: @special-yellow-dark;
+    }
+
     &:active {
       color: rgba(@basic-yellow, 0.3);
+    }
+
+    &:active .extra-contacts__icon {
+      fill: rgba(@basic-yellow, 0.3);
     }
   }
 }
@@ -92,6 +101,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  fill: @basic-yellow;
 
   &--phone {
     left: 13px;
@@ -121,7 +131,7 @@
     @media (min-width: @desktop-width) {
       width: 47px;
       height: 50px;
-      left: 22px;
+      left: 21px;
     }
   }
 }

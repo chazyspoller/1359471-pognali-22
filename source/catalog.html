@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
@@ -17,9 +17,9 @@
         <div class="main-nav__box-top">
           <a class="main-nav__logo" href="index.html">
             <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/logo-desktop.webp 1x, img/webp/logo-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/logo-tablet.webp 1x, img/webp/logo-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/webp/logo-mobile.webp 1x, img/webp/logo-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/logo-desktop.webp 1x, img/desktop/logo-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/logo-tablet.webp 1x, img/tablet/logo-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/mobile/logo-mobile.webp 1x, img/mobile/logo-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop.png 1x, img/desktop/logo-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.png 1x, img/tablet/logo-tablet@2x.png 2x">
               <img src="img/mobile/logo-mobile.png" srcset="img/mobile/logo-mobile@2x.png 2x" alt="Логотип Погнали" width="96" height="15">
@@ -888,10 +888,10 @@
                   </label>
                 </li>
                 <li class="transport-list__item-box">
-                  <input class="visually-hidden transport-list__checkbox" type="checkbox" name="bycicle" id="bycicle">
-                  <label class="transport-list__item" for="bycicle">
+                  <input class="visually-hidden transport-list__checkbox" type="checkbox" name="bicycle" id="bicycle">
+                  <label class="transport-list__item" for="bicycle">
                     <svg width="16" height="16">
-                      <use xlink:href="img/sprite.svg#icon-bycicle"></use>
+                      <use xlink:href="img/sprite.svg#icon-bicycle"></use>
                     </svg>
                     <span class="transport-list__item-hint item-hint">Велосипед</span>
                   </label>
@@ -936,9 +936,9 @@
             <li class="ideal-traveler-cards__item ideal-traveler-item">
               <a class="ideal-traveler-item__avatar-link" href="">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/avatar-firsova-desktop-catalog.webp 1x, img/webp/avatar-firsova-desktop-catalog@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/avatar-firsova-tablet-catalog.webp 1x, img/webp/avatar-firsova-tablet-catalog@2x.webp 2x">
-                  <source type="image/webp" srcset="img/webp/avatar-firsova-mobile-catalog.webp 1x, img/webp/avatar-firsova-mobile-catalog@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/avatar-firsova-desktop-catalog.webp 1x, img/desktop/avatar-firsova-desktop-catalog@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/avatar-firsova-tablet-catalog.webp 1x, img/tablet/avatar-firsova-tablet-catalog@2x.webp 2x">
+                  <source type="image/webp" srcset="img/mobile/avatar-firsova-mobile-catalog.webp 1x, img/mobile/avatar-firsova-mobile-catalog@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/desktop/avatar-firsova-desktop-catalog.jpg 1x, img/desktop/avatar-firsova-desktop-catalog@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/tablet/avatar-firsova-tablet-catalog.jpg 1x, img/tablet/avatar-firsova-tablet-catalog@2x.jpg 2x">
                   <img class="ideal-traveler-item__avatar" src="img/mobile/avatar-firsova-mobile-catalog.jpg" srcset="img/mobile/avatar-firsova-mobile-catalog@2x.jpg 2x" alt="Аватар Татьяны Фирсовой" width="70" height="70">
@@ -970,13 +970,13 @@
                   <li class="transport__item transport__item--plane transport__item--catalog">
                     <p class="transport__item-hint item-hint">Авиаперелет</p>
                   </li>
-                  <li class="transport__item transport__item--bus transport__item--catalog">
+                  <li class="transport__item transport__item--bus transport__item--disabled transport__item--catalog">
                     <p class="transport__item-hint item-hint">Автотранспорт</p>
                   </li>
-                  <li class="transport__item transport__item--bicycle transport__item--catalog">
+                  <li class="transport__item transport__item--bicycle transport__item--disabled transport__item--catalog">
                     <p class="transport__item-hint item-hint">Велосипед</p>
                   </li>
-                  <li class="transport__item transport__item--foot transport__item--catalog">
+                  <li class="transport__item transport__item--foot transport__item--disabled transport__item--catalog">
                     <p class="transport__item-hint item-hint">Пешком</p>
                   </li>
                 </ul>
@@ -1005,9 +1005,9 @@
             <li class="ideal-traveler-cards__item ideal-traveler-item">
               <a class="ideal-traveler-item__avatar-link" href="">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/avatar-demin-desktop-catalog.webp 1x, img/webp/avatar-demin-desktop-catalog@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/avatar-demin-tablet-catalog.webp 1x, img/webp/avatar-demin-tablet-catalog@2x.webp 2x">
-                  <source type="image/webp" srcset="img/webp/avatar-demin-mobile-catalog.webp 1x, img/webp/avatar-demin-mobile-catalog@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/avatar-demin-desktop-catalog.webp 1x, img/desktop/avatar-demin-desktop-catalog@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/avatar-demin-tablet-catalog.webp 1x, img/tablet/avatar-demin-tablet-catalog@2x.webp 2x">
+                  <source type="image/webp" srcset="img/mobile/avatar-demin-mobile-catalog.webp 1x, img/mobile/avatar-demin-mobile-catalog@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/desktop/avatar-demin-desktop-catalog.jpg 1x, img/desktop/avatar-demin-desktop-catalog@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/tablet/avatar-demin-tablet-catalog.jpg 1x, img/tablet/avatar-demin-tablet-catalog@2x.jpg 2x">
                   <img class="ideal-traveler-item__avatar" src="img/mobile/avatar-demin-mobile-catalog.jpg" srcset="img/mobile/avatar-demin-mobile-catalog@2x.jpg 2x" alt="Аватар Пети Демина" width="70" height="70">
@@ -1039,7 +1039,7 @@
                   <li class="transport__item transport__item--bus transport__item--catalog">
                     <p class="transport__item-hint item-hint">Автотранспорт</p>
                   </li>
-                  <li class="transport__item transport__item--bicycle transport__item--catalog">
+                  <li class="transport__item transport__item--bicycle transport__item--disabled transport__item--catalog">
                     <p class="transport__item-hint item-hint">Велосипед</p>
                   </li>
                   <li class="transport__item transport__item--foot transport__item--catalog">
@@ -1071,9 +1071,9 @@
             <li class="ideal-traveler-cards__item ideal-traveler-item">
               <a class="ideal-traveler-item__avatar-link" href="">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/avatar-smolov-desktop-catalog.webp 1x, img/webp/avatar-smolov-desktop-catalog@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/avatar-smolov-tablet-catalog.webp 1x, img/webp/avatar-smolov-tablet-catalog@2x.webp 2x">
-                  <source type="image/webp" srcset="img/webp/avatar-smolov-mobile-catalog.webp 1x, img/webp/avatar-smolov-mobile-catalog@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/avatar-smolov-desktop-catalog.webp 1x, img/desktop/avatar-smolov-desktop-catalog@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/avatar-smolov-tablet-catalog.webp 1x, img/tablet/avatar-smolov-tablet-catalog@2x.webp 2x">
+                  <source type="image/webp" srcset="img/mobile/avatar-smolov-mobile-catalog.webp 1x, img/mobile/avatar-smolov-mobile-catalog@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/desktop/avatar-smolov-desktop-catalog.jpg 1x, img/desktop/avatar-smolov-desktop-catalog@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/tablet/avatar-smolov-tablet-catalog.jpg 1x, img/tablet/avatar-smolov-tablet-catalog@2x.jpg 2x">
                   <img class="ideal-traveler-item__avatar" src="img/mobile/avatar-smolov-mobile-catalog.jpg" srcset="img/mobile/avatar-smolov-mobile-catalog@2x.jpg 2x" alt="Аватар Марка Смолова" width="70" height="70">
@@ -1105,13 +1105,13 @@
                   <li class="transport__item transport__item--plane transport__item--catalog">
                     <p class="transport__item-hint item-hint">Авиаперелет</p>
                   </li>
-                  <li class="transport__item transport__item--bus transport__item--catalog">
+                  <li class="transport__item transport__item--bus transport__item--disabled transport__item--catalog">
                     <p class="transport__item-hint item-hint">Автотранспорт</p>
                   </li>
                   <li class="transport__item transport__item--bicycle transport__item--catalog">
                     <p class="transport__item-hint item-hint">Велосипед</p>
                   </li>
-                  <li class="transport__item transport__item--foot transport__item--catalog">
+                  <li class="transport__item transport__item--foot transport__item--disabled transport__item--catalog">
                     <p class="transport__item-hint item-hint">Пешком</p>
                   </li>
                 </ul>
@@ -1140,9 +1140,9 @@
             <li class="ideal-traveler-cards__item ideal-traveler-item">
               <a class="ideal-traveler-item__avatar-link" href="">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/avatar-rogovaya-desktop-catalog.webp 1x, img/webp/avatar-rogovaya-desktop-catalog@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/avatar-rogovaya-tablet-catalog.webp 1x, img/webp/avatar-rogovaya-tablet-catalog@2x.webp 2x">
-                  <source type="image/webp" srcset="img/webp/avatar-rogovaya-mobile-catalog.webp 1x, img/webp/avatar-rogovaya-mobile-catalog@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/avatar-rogovaya-desktop-catalog.webp 1x, img/desktop/avatar-rogovaya-desktop-catalog@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/avatar-rogovaya-tablet-catalog.webp 1x, img/tablet/avatar-rogovaya-tablet-catalog@2x.webp 2x">
+                  <source type="image/webp" srcset="img/mobile/avatar-rogovaya-mobile-catalog.webp 1x, img/mobile/avatar-rogovaya-mobile-catalog@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/desktop/avatar-rogovaya-desktop-catalog.jpg 1x, img/desktop/avatar-rogovaya-desktop-catalog@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/tablet/avatar-rogovaya-tablet-catalog.jpg 1x, img/tablet/avatar-rogovaya-tablet-catalog@2x.jpg 2x">
                   <img class="ideal-traveler-item__avatar" src="img/mobile/avatar-rogovaya-mobile-catalog.jpg" srcset="img/mobile/avatar-rogovaya-mobile-catalog@2x.jpg 2x" alt="Аватар Ларисы Роговой" width="70" height="70">
@@ -1174,10 +1174,10 @@
                   <li class="transport__item transport__item--bus transport__item--catalog">
                     <p class="transport__item-hint item-hint">Автотранспорт</p>
                   </li>
-                  <li class="transport__item transport__item--bicycle transport__item--catalog">
+                  <li class="transport__item transport__item--bicycle transport__item--disabled transport__item--catalog">
                     <p class="transport__item-hint item-hint">Велосипед</p>
                   </li>
-                  <li class="transport__item transport__item--foot transport__item--catalog">
+                  <li class="transport__item transport__item--foot transport__item--disabled transport__item--catalog">
                     <p class="transport__item-hint item-hint">Пешком</p>
                   </li>
                 </ul>
@@ -1233,9 +1233,9 @@
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html">
         <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/logo-desktop-dark.webp 1x, img/webp/logo-desktop-dark@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/logo-tablet-dark.webp 1x, img/webp/logo-tablet-dark@2x.webp 2x">
-          <source type="image/webp" srcset="img/webp/logo-mobile-dark.webp 1x, img/webp/logo-mobile-dark@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-dark.webp 1x, img/desktop/logo-desktop-dark@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/logo-tablet-dark.webp 1x, img/tablet/logo-tablet-dark@2x.webp 2x">
+          <source type="image/webp" srcset="img/mobile/logo-mobile-dark.webp 1x, img/mobile/logo-mobile-dark@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-dark.png 1x, img/desktop/logo-desktop-dark@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet-dark.png 1x, img/tablet/logo-tablet-dark@2x.png 2x">
           <img src="img/mobile/logo-mobile-dark.png" srcset="img/mobile/logo-mobile-dark@2x.png 2x" alt="Логотип Погнали" width="96" height="15">
@@ -1275,9 +1275,9 @@
     </div>
   </footer>
 
-  <script src="js/main-menu.js"></script>
-  <script src="js/header-scroll.js"></script>
-  <script src="js/filters-countries.js"></script>
-  <script src="js/filters.js"></script>
+  <script src="js/main-menu.min.js"></script>
+  <script src="js/header-scroll.min.js"></script>
+  <script src="js/filters-countries.min.js"></script>
+  <script src="js/filters.min.js"></script>
 </body>
 </html>

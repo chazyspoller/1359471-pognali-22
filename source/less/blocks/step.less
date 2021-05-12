@@ -158,6 +158,10 @@
     background-color: @question-checkbox-active;
   }
 
+  &:active::after {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 8px 0 8px 58px;
   }
@@ -393,7 +397,7 @@
 
   &:first-of-type {
     @media (min-width: @tablet-width) {
-      margin-top: 70px;
+      margin-top: 69px;
     }
 
     @media (min-width: @desktop-width) {

@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   background-color: rgb(@basic-black, 0.6);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -36,6 +36,14 @@
     height: 1px;
     background-color: @basic-white;
     opacity: 0.3;
+
+    @media (min-width: @tablet-width) {
+      bottom: 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: 25px;
+    }
   }
 
   &--profile {
@@ -78,10 +86,25 @@
     background-color: transparent;
     color: @basic-blue-light;
     background-size: cover;
+    position: relative;
 
     @media (min-width: @tablet-width) {
-      width: 61px;
-      height: 61px;
+      width: 62px;
+      height: 62px;
+    }
+  }
+
+  &--catalog::before {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inherit;
+      bottom: 26px;
+      background-color: @special-grey-dark;
+    }
+
+    @media (min-width: @tablet-width) {
+      bottom: 25px;
     }
   }
 }
@@ -89,7 +112,11 @@
 .level__number {
   .reset-margins;
   .fonts(8; 8; 700);
-  margin: auto auto 0 auto;
+  margin: auto auto 3px auto;
+
+  @media (min-width: @tablet-width) {
+    margin: auto auto 0 auto;
+  }
 
   &--profile {
     .fonts(22; 22; 700);
@@ -109,7 +136,7 @@
     margin: auto;
 
     @media (min-width: @tablet-width) {
-      margin: auto auto 0 auto;
+      margin: auto auto 2px auto;
     }
   }
 }
@@ -117,7 +144,15 @@
 .level__name {
   .reset-margins;
   .fonts(-2; -2; 400);
-  margin: 0 auto 10px auto;
+  margin: 0 auto 9px auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto 11px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto 11px auto;
+  }
 
   &--profile {
     .fonts(2; 2; 400);
@@ -137,6 +172,7 @@
     color: @basic-black;
     opacity: 0.4;
     display: none;
+    margin: 0 auto 10px auto;
 
     @media (min-width: @tablet-width) {
       display: initial;
