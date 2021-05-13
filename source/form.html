@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
@@ -11,7 +11,7 @@
   <title>HTML Academy: Погнали</title>
 </head>
 <body class="page__body">
-  <header class="page-header page-header--inner page-header--scroll">
+  <header class="page-header page-header--inner">
     <div class="page-header__wrapper">
       <nav class="page-header__menu main-nav">
         <div class="main-nav__box-top">
@@ -110,6 +110,8 @@
           <p class="level__name level__name--profile">level</p>
         </div>
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/avatar-demin-desktop-form.webp 1x, img/desktop/avatar-demin-desktop-form@2x.webp 2x">
+          <source type="image/webp" srcset="img/tablet/avatar-demin-tablet-form.webp 1x, img/tablet/avatar-demin-tablet-form@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/desktop/avatar-demin-desktop-form.jpg 1x, img/desktop/avatar-demin-desktop-form@2x.jpg 2x">
           <img class="profile__avatar" src="img/tablet/avatar-demin-tablet-form.jpg" srcset="img/tablet/avatar-demin-tablet-form@2x.jpg 2x" alt="Аватар Пети Демина" width="100" height="100">
         </picture>
@@ -141,10 +143,10 @@
               </label>
             </li>
             <li>
-              <input class="visually-hidden transport-list__checkbox" type="checkbox" name="bycicle" id="bycicle">
-              <label class="transport-list__item" for="bycicle">
+              <input class="visually-hidden transport-list__checkbox" type="checkbox" name="bicycle" id="bicycle">
+              <label class="transport-list__item" for="bicycle">
                 <svg width="16" height="16">
-                  <use xlink:href="img/sprite.svg#icon-bycicle"></use>
+                  <use xlink:href="img/sprite.svg#icon-bicycle"></use>
                 </svg>
                 <span class="transport-list__item-hint item-hint">Велосипед</span>
               </label>
@@ -591,6 +593,9 @@
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html">
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-dark.webp 1x, img/desktop/logo-desktop-dark@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/logo-tablet-dark.webp 1x, img/tablet/logo-tablet-dark@2x.webp 2x">
+          <source type="image/webp" srcset="img/mobile/logo-mobile-dark.webp 1x, img/mobile/logo-mobile-dark@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/desktop/logo-desktop-dark.png 1x, img/desktop/logo-desktop-dark@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet-dark.png 1x, img/tablet/logo-tablet-dark@2x.png 2x">
           <img src="img/mobile/logo-mobile-dark.png" srcset="img/mobile/logo-mobile-dark@2x.png 2x" alt="Логотип Погнали" width="96" height="15">
@@ -630,55 +635,9 @@
     </div>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.main-nav__menu');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav__menu--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav__menu--closed')) {
-        navMain.classList.remove('main-nav__menu--closed');
-        navMain.classList.add('main-nav__menu--opened');
-        navToggle.classList.add('main-nav__toggle--close');
-      } else {
-        navMain.classList.add('main-nav__menu--closed');
-        navMain.classList.remove('main-nav__menu--opened');
-        navToggle.classList.remove('main-nav__toggle--close');
-      }
-    });
-
-    var openCountriesSelection = document.querySelector('.tour-list__field--dropdown');
-    var countriesSelection = document.querySelector('.tour-list__countries-selection');
-    var closeCountriesSelection = document.querySelector('.tour-list__button--open');
-
-    openCountriesSelection.addEventListener('click', function() {
-      if (!openCountriesSelection.classList.contains('tour-list__field--open-dropdown')) {
-        openCountriesSelection.classList.add('tour-list__field--open-dropdown');
-        closeCountriesSelection.classList.add('tour-list__button--close');
-        closeCountriesSelection.classList.remove('tour-list__button--more');
-        countriesSelection.classList.remove('countries-selection--hide');
-      } else {
-        openCountriesSelection.classList.remove('tour-list__field--open-dropdown');
-        closeCountriesSelection.classList.remove('tour-list__button--close');
-        closeCountriesSelection.classList.add('tour-list__button--more');
-        countriesSelection.classList.add('countries-selection--hide');
-      }
-    });
-
-    var buttonStepsSubmit = document.querySelector('.step__button-submit');
-    var funPlans = document.querySelectorAll('.fun-plans');
-    var textareaFunPlans = document.querySelectorAll('.fun-plans__plan');
-
-    buttonStepsSubmit.addEventListener('click', function() {
-      for (let i=0; i < textareaFunPlans.length; i++) {
-        if (textareaFunPlans[i].value == '') {
-        funPlans[i].classList.add('fun-plans--error');
-        } else {
-          funPlans[i].classList.remove('fun-plans--error');
-        }
-      }
-    });
-  </script>
+  <script src="js/main-menu.min.js"></script>
+  <script src="js/header-scroll.min.js"></script>
+  <script src="js/countries-add.min.js"></script>
+  <script src="js/form-scripts.min.js"></script>
 </body>
 </html>
