@@ -60,14 +60,46 @@
 }
 
 .transport-list__checkbox:checked + .transport-list__item {
-  &:hover svg,
-  &:focus svg {
+  &:hover svg {
     fill-opacity: 0.7;
   }
 
   &:active svg {
     fill-opacity: 0.3;
   }
+}
+
+.transport-list__checkbox:focus + .transport-list__item {
+  box-shadow: 0 2px 6px rgba(@basic-blue, 0.17);
+}
+
+.transport-list__checkbox:focus + .transport-list__item svg {
+  fill-opacity: 1;
+  fill: @transport-icon-disabled-hover;
+}
+
+.transport-list__checkbox:focus + .transport-list__item .transport-list__item-hint {
+  display: block;
+}
+
+.transport-list__checkbox:checked:focus + .transport-list__item svg {
+  fill-opacity: 0.7;
+  fill: @basic-blue-light;
+}
+
+.transport-list__checkbox:active + .transport-list__item {
+  background-color: @transport-checkbox-active;
+  box-shadow: none;
+}
+
+.transport-list__checkbox:active + .transport-list__item svg {
+  fill-opacity: 0.1;
+  fill: @basic-blue-light;
+}
+
+.transport-list__checkbox:checked:active + .transport-list__item svg {
+  fill-opacity: 0.3;
+  fill: @basic-blue-light;
 }
 
 .transport-list__item-box {
@@ -100,13 +132,11 @@
     }
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     box-shadow: 0 2px 6px rgba(@basic-blue, 0.17);
   }
 
-  &:hover svg,
-  &:focus svg {
+  &:hover svg {
     fill-opacity: 1;
     fill: @transport-icon-disabled-hover;
   }

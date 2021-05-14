@@ -1,8 +1,7 @@
 var navMenu = document.querySelector('.main-nav__menu');
 var navLogo = document.querySelector('.main-nav__logo');
 var navToggle = document.querySelector('.main-nav__toggle');
-var headerMain = document.querySelector('.main-nav');
-//var body = document.querySelector('.page__body');
+var headerMainBox = document.querySelector('.main-nav__box-top');
 
 navMenu.classList.remove('main-nav__menu--nojs');
 
@@ -12,14 +11,12 @@ navToggle.addEventListener('click', function() {
     navMenu.classList.add('main-nav__menu--opened');
     navToggle.classList.add('main-nav__toggle--close');
     navLogo.classList.add('main-nav__logo--dark')
-    headerMain.classList.add('main-nav--margin-top-menu');
-    //body.classList.add('page__body--lock-scroll');
+    headerMainBox.classList.add('main-nav__box-top--menu-opened');
   } else {
     navMenu.classList.add('main-nav__menu--closed');
     navMenu.classList.remove('main-nav__menu--opened');
     navToggle.classList.remove('main-nav__toggle--close');
-    headerMain.classList.remove('main-nav--margin-top-menu');
-    //body.classList.remove('page__body--lock-scroll');
+    headerMainBox.classList.remove('main-nav__box-top--menu-opened');
     if (!pageHeader.classList.contains('page-header--scroll')) {
       navLogo.classList.remove('main-nav__logo--dark')
     }
