@@ -25,6 +25,8 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
@@ -37,7 +39,10 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: false }))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      ignoreCustomFragments: [ /<br>\s/gi ]
+    }))
     .pipe(gulp.dest("build"));
 }
 
