@@ -6,14 +6,6 @@
     grid-template-columns: max-content 2fr 1fr;
     align-items: center;
   }
-
-  &--margin-top-menu {
-    padding-top: 8px;
-
-    @media (min-width: @tablet-width) {
-      padding-top: 0;
-    }
-  }
 }
 
 .main-nav__menu {
@@ -26,6 +18,9 @@
   z-index: 11;
   margin: 0 -25px;
   padding: 117px 25px 28px 25px;
+  max-height: 100vh;
+  overflow: scroll;
+  box-sizing: border-box;
 
   a {
     color: @basic-blue-text;
@@ -45,6 +40,8 @@
   &--nojs {
     position: static;
     display: block;
+    overflow: auto;
+    max-height: none;
   }
 
   @media (min-width: @tablet-width) {
@@ -58,6 +55,7 @@
     display: block;
     .reset-margins;
     background-color: transparent;
+    overflow: auto;
   }
 }
 
@@ -81,6 +79,17 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     margin-right: 40px;
+  }
+
+  &--menu-opened {
+    background-color: white;
+    padding-top: 19px + 8px;
+    padding-bottom: 19px - 8px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 44px;
+      padding-bottom: 36px;
+    }
   }
 }
 
@@ -311,6 +320,7 @@
       &:hover,
       &:focus {
         transform: translateY(-100%);
+        outline: none;
       }
 
       &:active {

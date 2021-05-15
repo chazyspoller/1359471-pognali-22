@@ -129,6 +129,7 @@
   &:focus {
     background-color: transparent;
     color: white;
+    outline: none;
   }
 
   @media (min-width: @tablet-width) {
@@ -149,18 +150,19 @@
 }
 
 .registration__button {
-  padding: 31px 30px;
+  padding: 0 30px;
   position: absolute;
+  height: 100%;
   top: 0;
   right: 0;
 
   @media (min-width: @tablet-width) {
     border-radius: 0 20px 20px 0;
-    padding: 40px 40px;
+    padding: 0 40px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 28px 50px 28px 35px;
+    padding: 0 50px 0 35px;
     text-align: left;
     min-width: 324px;
     box-sizing: border-box;

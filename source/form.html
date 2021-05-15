@@ -3,11 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="HTML Academy, Погнали">
+  <meta name="description" content="Проект интенсива HTML Academy. Адаптивная верстка и автоматизация: Погнали">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2">
   <title>HTML Academy: Погнали</title>
 </head>
 <body class="page__body">
@@ -404,8 +410,8 @@
             <p class="step__text">Укажите страны, которые вы хотели бы посетить.<br> Это может быть одна или сразу несколько.</p>
             <ul class="step__tour-list tour-list">
               <li class="tour-list__item">
-                <div class="tour-list__field">
-                  <p class="tour-list__name" tabindex="0">Босния и герцеговина</p>
+                <div class="tour-list__field" tabindex="0">
+                  <p class="tour-list__name">Босния и герцеговина</p>
                   <button class="tour-list__button tour-list__button--more" aria-label="Выбрать страну" type="button"></button>
                 </div>
                 <ul class="tour-list__field tour-list__field--flag flags flags--profile">
@@ -414,8 +420,8 @@
                 <button class="tour-list__delete" aria-label="Удалить" type="button"></button>
               </li>
               <li class="tour-list__item">
-                <div class="tour-list__field">
-                  <p class="tour-list__name" tabindex="0">Чехия</p>
+                <div class="tour-list__field" tabindex="0">
+                  <p class="tour-list__name">Чехия</p>
                   <button class="tour-list__button tour-list__button--more" aria-label="Выбрать страну" type="button"></button>
                 </div>
                 <ul class="tour-list__field tour-list__field--flag flags flags--profile">
@@ -424,8 +430,8 @@
                 <button class="tour-list__delete" aria-label="Удалить" type="button"></button>
               </li>
               <li class="tour-list__item tour-list__item--empty">
-                <div class="tour-list__field tour-list__field--empty tour-list__field--dropdown">
-                  <p class="tour-list__name" tabindex="0">Выберите страну</p>
+                <div class="tour-list__field tour-list__field--empty tour-list__field--dropdown" tabindex="0">
+                  <p class="tour-list__name">Выберите страну</p>
                   <button class="tour-list__button tour-list__button--more tour-list__button--open" aria-label="Выбрать страну" type="button"></button>
                 </div>
                 <div class="tour-list__countries-selection countries-selection countries-selection--hide countries-selection--sort">
@@ -547,8 +553,8 @@
                 <button class="tour-list__delete" aria-label="Удалить" type="button"></button>
               </li>
               <li class="tour-list__item tour-list__item--empty tour-list__item--add">
-                <div class="tour-list__field tour-list__field--empty tour-list__field--add">
-                  <p class="tour-list__name" tabindex="0">Добавить страну</p>
+                <div class="tour-list__field tour-list__field--empty tour-list__field--add" tabindex="0">
+                  <p class="tour-list__name">Добавить страну</p>
                   <button class="tour-list__button tour-list__button--add" aria-label="Добавить" type="button"></button>
                 </div>
               </li>

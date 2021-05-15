@@ -33,6 +33,14 @@
 
   &--nojs {
     display: block;
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 }
 

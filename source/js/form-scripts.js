@@ -19,8 +19,6 @@ const minus = document.querySelectorAll('.form-box__button--minus');
 var days = document.getElementById('days');
 var travelers = document.getElementById('travelers');
 
-console.log(days);
-
 for (let i=0; i < plus.length; i++) {
   plus[i].addEventListener('click', function() {
     if (i == 0) {
