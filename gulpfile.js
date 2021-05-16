@@ -171,7 +171,7 @@ const build = gulp.series(
     scripts,
     sprite,
     createWebp
-  ),
+  )
 );
 
 exports.build = build;
