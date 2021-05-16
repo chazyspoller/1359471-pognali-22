@@ -1,8 +1,8 @@
 .service {
   background-color: @basic-blue-text;
   background-image:
-    url("../../img/mobile/about-mobile.png"),
-    url("../../img/mobile/service-back.svg");
+    url("../img/mobile/about-mobile.png"),
+    url("../img/mobile/service-back.svg");
   background-repeat: no-repeat;
   background-position: 90% bottom, left 280px;
   border-radius: 0 0 30px 30px;
@@ -13,8 +13,8 @@
 
   @media (min-resolution: 2dppx) {
     background-image:
-      url("../../img/mobile/about-mobile@2x.png"),
-      url("../../img/mobile/service-back.svg");
+      url("../img/mobile/about-mobile@2x.png"),
+      url("../img/mobile/service-back.svg");
     background-size: 292px, 113px;
   }
 
@@ -22,14 +22,14 @@
     border-radius: 0 0 60px 60px;
     padding-top: 240px;
     background-image:
-      url("../../img/tablet/about-tablet.png"),
-      url("../../img/tablet/service-back-tablet.svg");
+      url("../img/tablet/about-tablet.png"),
+      url("../img/tablet/service-back-tablet.svg");
     background-position: 98% 81.5%, 40px 41.8%;
 
     @media (min-resolution: 2dppx) {
       background-image:
-        url("../../img/tablet/about-tablet@2x.png"),
-        url("../../img/tablet/service-back-tablet.svg");
+        url("../img/tablet/about-tablet@2x.png"),
+        url("../img/tablet/service-back-tablet.svg");
       background-size: 376px, 688px;
     }
   }
@@ -39,14 +39,14 @@
     padding-top: 60px;
 
     background-image:
-      url("../../img/desktop/about-desktop.png"),
-      url("../../img/desktop/service-back-desktop.svg");
+      url("../img/desktop/about-desktop.png"),
+      url("../img/desktop/service-back-desktop.svg");
     background-position: 92.5% 100.5%, 60px 128px;
 
     @media (min-resolution: 2dppx) {
       background-image:
-        url("../../img/desktop/about-desktop@2x.png"),
-        url("../../img/desktop/service-back-desktop.svg");
+        url("../img/desktop/about-desktop@2x.png"),
+        url("../img/desktop/service-back-desktop.svg");
       background-size: 630px, 212px;
     }
   }
@@ -81,12 +81,20 @@
   .reset-margins;
   .text;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: 550px) {
     padding-right: 30%;
   }
 
   @media (min-width: @tablet-width) {
     padding-right: 50%;
+
+    br {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop-width) {
